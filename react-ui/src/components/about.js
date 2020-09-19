@@ -68,7 +68,7 @@ function About(props) {
         <ModalBody>
           
         <b>Tips</b><br /><br />
-            <p><b>1.	Dietary Changes:<br /> </b>
+            <p><b>1.	Dietary Changes: <br /> </b>
             Changing your eating habits in the case of a minor deficiency. For example, people with iron deficiency anemia should include more meat, eggs, dark meat poultry, vegetables, and legumes in their diet.          </p>
             <p><b>2.	Supplements<br /> </b>
             We recommend that you get most of the nutrients from food. In some cases, you may need to take supplements or multivitamins. Please consult your doctor before taking any nutritional supplements.</p>
