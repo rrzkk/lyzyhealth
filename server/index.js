@@ -4,7 +4,7 @@ const path = require('path');
 //const numCPUs = require('os').cpus().length;
 
 const isDev = process.env.NODE_ENV !== 'production';
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3306;
 
 const bodyParser = require("body-parser");
 const { createDecipher } = require('crypto');
@@ -21,14 +21,14 @@ const { createDecipher } = require('crypto');
 
 
   const mysql = require('mysql');
-  const connection = mysql.createConnection('mysql://bdc826fff72f21:63713686@us-cdbr-east-02.cleardb.com/heroku_4cf6028dd328a70?reconnect=true');
+  //const connection = mysql.createConnection('mysql://bdc826fff72f21:63713686@us-cdbr-east-02.cleardb.com/heroku_4cf6028dd328a70?reconnect=true');
 
-  // const connection = mysql.createConnection({
-  // host     : 'localhost',
-  // user     : 'bbf1b2354da5c3',
-  // password : 'a06d34c7',
-  // database : 'mysql://bbf1b2354da5c3:a06d34c7@us-cdbr-east-02.cleardb.com/heroku_4b9b2690911366b?reconnect=true'
-  // });
+  const connection = mysql.createConnection({
+   host     : 'us-cdbr-east-02.cleardb.com',
+   user     : 'bdc826fff72f21',
+   password : '63713686',
+  database : 'mysql://bdc826fff72f21:63713686@us-cdbr-east-02.cleardb.com/heroku_4cf6028dd328a70?reconnect=true'
+   });
 
 
   app.get(
