@@ -1,0 +1,60 @@
+{
+  "name": "ieapp",
+  "version": "0.1.0",
+  "engines": {
+    "node": "14.x",
+    "yarn": "1.x"
+  },
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "bootstrap": "^4.5.2",
+    "bootstrap-social": "^5.1.1",
+    "canvas": "^2.6.1",
+    "font-awesome": "^4.7.0",
+    "framer": "^1.2.5",
+    "framer-motion": "^2.6.5",
+    "md5": "^2.3.0",
+    "prop-type": "^0.0.1",
+    "react": "^17.0.0-rc.1",
+    "react-animation-component": "^0.2.3",
+    "react-animation-components": "^3.0.0",
+    "react-bootstrap": "^1.3.0",
+    "react-clickable": "^1.1.0",
+    "react-dom": "^16.13.1",
+    "react-parallax": "^3.0.3",
+    "react-popper": "^2.2.3",
+    "react-redux": "^7.2.1",
+    "react-redux-form": "^1.16.14",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "react-scroll-parallax": "^2.3.4",
+    "reactstrap": "^8.5.1",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

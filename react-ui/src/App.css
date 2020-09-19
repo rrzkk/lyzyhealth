@@ -1,0 +1,579 @@
+
+.Introduction{
+  height: 1000px !important;
+  width: 100%;
+z-index: -1;
+  background-image: url(background.jpg) !important;
+}
+.square {
+  border-radius: 20px;
+  margin: auto;
+  height: 50px;
+  width: 50px;
+  background-image: linear-gradient(to bottom, #ff9999, #ff5b5b),
+    linear-gradient(to bottom, #e5b1ff, #e5b1ff);
+  
+}
+.clam{
+
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  background-image: url(foodicon/clam.png);
+  background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.eggs {
+
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  background-image: url(foodicon/eggs.png);
+  background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.fish {
+
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  background-image: url(foodicon/fish.png);
+  background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.lupin {
+
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  background-image: url(foodicon/lupin.png);
+  background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.milk {
+ 
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  background-image: url(foodicon/milk.png);
+  background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.peanut {
+
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  background-image: url(foodicon/peanut.png);
+  background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.seeds {
+
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  background-image: url(foodicon/seeds.png);
+  background-size:     cover;                  
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.soybean{
+
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  background-image: url(foodicon/soybean.png);
+  background-size:     cover;                    
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.treenuts{
+
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  background-image: url(foodicon/treenuts.png);
+  background-size:     cover;                  
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.wheat{
+
+  margin: auto;
+  height: 90px;
+  width: 90px;
+  background-image: url(foodicon/wheat.png);
+  background-size:     cover;                
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.inficon{
+ 
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  background-image: url(informationicon.png);
+  background-size:     cover;                
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.chaicon{
+ 
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  background-image: url(trophy.png);
+  background-size:     cover;                
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.repicon{
+  border-radius: 20px;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  background-image: url(replacementicon.png);
+  background-size:     cover;                
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+#change{
+color: #eeeeee;
+font-size: 50px !important;
+font-weight: bolder;
+background-color:rgba(14, 199, 196, 0.3);
+
+}
+#intro1a{
+  color: #eeeeee;
+font-size: 35px !important;
+font-weight: bolder;
+background-color:rgba(14, 199, 196, 0.3);
+}
+.introlist ul{
+  color: #eeeeee;
+}
+.AllBackground{
+  
+
+   /* The image used */
+   background-image: url("mainbg.jpg");
+
+   /* Full height */
+   height: 100%;
+   min-height: 900px;
+ 
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding-bottom: 50px;
+
+}
+
+
+.intospace{
+  height: 100px;
+}
+
+.row-header{
+  margin:0px 0px;
+  padding:0px auto;
+}
+
+.row-content {
+  margin:0px 0px;
+  padding: 50px 0px 50px 0px;
+ 
+  min-height:400px;
+
+}
+
+.footer{
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+ 
+  width: 100%;
+  background-color:rgba(255,255,254,0.5) !important;
+}
+.jumbotron {
+  padding:50px 0px 50px 0px !important;
+  margin:0px 0px !important;
+  background-color: rgba(255,255,255,0.5) !important;
+}
+
+address{
+  font-size:80%;
+  margin:0px;
+  color:#0f0f0f;
+}
+
+#navbar-dark {
+  background-color: rgba(0, 0, 0,0.7);
+}
+
+#navlink{
+  color: white;
+}
+
+.footer li a{
+  color: #0f0f0f;
+}
+address a{
+  color: #0f0f0f;
+}
+#homecards{
+  margin: 50px 0px 0px 0px;
+}
+
+
+.motionul {
+  width: 400px;
+  align-self: end;
+  display: inline-flex;
+ 
+  background: "#2E2B5F";
+  padding: 20px;
+  border-radius: 25px;
+ margin: 10px;
+
+}
+
+.allergybg{
+
+  min-height: 220px;
+  background: rgba(245, 245, 245, 0.8);
+  padding: 20px;
+  border-radius: 25px;
+ 
+}
+.allergy-title
+  {
+    margin: 40px;
+   
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
+   
+  }
+
+
+.motionli{
+
+background-color: white;
+width: 400px;
+border-radius: 10px;
+padding: 20px;
+margin-bottom: 0px;
+overflow: hidden;
+cursor: pointer;}
+
+.allergyreplacements{
+ align-content: center;
+ align-items: center;
+  text-align: center;
+  
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #666;
+  border-radius: 20px;
+}
+
+.outlineA {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 10px solid white;
+  border-radius: 50%;
+
+}
+.homeban{
+
+  min-height: 220px;
+  background: rgba(245, 245, 245, 0.6);
+  padding: 10px;
+}
+.homeban1{
+  min-height:60px;
+  background: rgba(245, 245, 245, 0.6);
+  padding: 10px;
+
+ 
+}
+.homeban2{
+
+  min-height: 220px;
+  background: rgba(214, 214, 214, 0.6);
+ 
+
+ 
+}
+
+
+.homeban3{
+
+  min-height: 220px;
+  background: rgba(225, 225, 225, 0.9);
+  padding: 20px;
+
+}
+.homepic{
+  max-width: 100%;
+
+}
+.threepic{
+  max-width: 50%;
+}
+
+.homefont{
+  font-family:"Comic Sans MS", cursive, sans-serif ;
+  text-align: justify !important;
+
+    display: inline-block;
+    width: 100%;	
+    overflow: hidden;
+   
+
+}
+@font-face {
+  font-family: 'ak'; 
+  src: url('./fonts/Aneska\ Kids.ttf');
+}
+@font-face {
+  font-family: 'ga';
+  src: url('./fonts/Garetha.ttf');
+}
+
+.aboutmain{
+
+  background: rgba(214, 214, 214, 0.9);
+}
+.div220{
+  min-height: 220px;
+}
+.aboutquestion{
+
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  background-image: url(about/questionmark.png);
+  background-size:     cover;                
+    background-repeat:   no-repeat;
+    background-position: center center;  
+    position: relative;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.aboutcardo {
+  align-self: center;
+  border-radius: 25px;
+  width: 220px;
+  align-self: end;
+  display: flex;
+ 
+  background-color: 	rgb(82,74,172,0.4);
+  padding-bottom: 10px;
+  padding-right: 10px;
+  border-radius: 25px;
+ margin: 10px;
+
+}
+.aboutcardi{
+  border-radius: 25px;
+  background-color: #19227c;
+  color:white;
+    width: 220px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  cursor: pointer;
+text-align: center;}
+
+.aboutmodel{
+  width: 600px !important;
+ 
+}
+.close{
+  background-image: url(about/closeicon.jfif);
+  background-size:     20px 20px;                
+  background-repeat:   no-repeat;
+  background-position: 0px 10px;  
+  position: relative;
+  cursor: pointer;
+}
+.challengebg{
+  background: rgba(245, 245, 245, 0.9);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.racemap{
+ 
+  width: 100%;
+
+  background-size: cover;
+}
+.racecar{
+
+  width: 100%;
+
+  background-size: cover;
+}
+.challengecard{
+  margin-top: 20px;
+  border-radius: 30px !important;
+  min-height: 380px;
+}
+.cardshade{
+  background: rgba(200, 200, 200, 0.8);
+  padding-right: 10px;
+  padding-bottom: 10px;
+  
+}
+.buttonC{
+  margin-left: auto;
+  align-self: flex-end;
+}
+.allergytitle{
+  text-align: center;
+}
+.hometitle{
+  width: 70%;
+  z-index: 2147483647;
+  
+}
+.hometitle2{
+  width: 100%;
+  z-index: 2147483647;
+  
+}
+.wrapper {
+  width: 50px;
+  height:50px;
+  position: fixed;
+  top: 90%;
+  left: 5%;
+  transform: translateX(-50%) translateY(-50%);
+  
+}
+
+
+.progressbartc{
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 30px;
+  justify-items: center !important;
+
+}
+.headernav{
+ 
+  margin-left: auto;
+}
+.btn-lg{
+  background-color: #ffaa00 !important;
+  border: none !important;
+}
+
+.challengetitle{
+  background: rgba(245, 245, 245, 0.9);
+}
+.challengesub{
+ 
+    margin: 40px;
+   
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.cardimg{
+  width: 30% !important;
+  align-self: center;
+  justify-self: center;
+  margin-left: 35%;
+  margin-bottom: 10px;
+}
+.cMap{
+ 
+  align-self: center;
+}
+.challengelog{
+  margin-top: 20px;
+  border-radius: 30px !important;
+ background-color: rgba(250, 250, 250, 0.9) !important;
+}
+.buttonmap{
+ text-align: center;
+}
+.mapbtn{
+  margin: 0;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.cardbtn{
+  position: relative;
+  margin-top: 30px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
