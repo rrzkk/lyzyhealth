@@ -9,24 +9,10 @@ const PORT = process.env.PORT || 5000;
 const bodyParser = require("body-parser");
 const { createDecipher } = require('crypto');
 
-// Multi-process to utilize all CPU cores.
-/*if (!isDev && cluster.isMaster) {
-  console.error(`Node cluster master ${process.pid} is running`);
-
-  // Fork workers.
-  for (let i = 0; i < numCPUs; i++) {
-    cluster.fork();
-  }
-
-  cluster.on('exit', (worker, code, signal) => {
-    console.error(`Node cluster worker ${worker.process.pid} exited: code ${code}, signal ${signal}`);
-  });
-
-} else {*/
   
   const app = express();
   app.use(bodyParser.json());
-  var jsonParser = bodyParser.json()
+
 
   // Priority serve any static files.
   app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
@@ -35,7 +21,7 @@ const { createDecipher } = require('crypto');
 
 
   const mysql = require('mysql');
-  const connection = mysql.createConnection('mysql://bbf1b2354da5c3:a06d34c7@us-cdbr-east-02.cleardb.com/heroku_4b9b2690911366b?reconnect=true');
+  const connection = mysql.createConnection('mysql://bdc826fff72f21:63713686@us-cdbr-east-02.cleardb.com/heroku_4cf6028dd328a70?reconnect=true');
 
   // const connection = mysql.createConnection({
   // host     : 'localhost',
