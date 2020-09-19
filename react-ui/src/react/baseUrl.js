@@ -1,1 +1,1 @@
-export const baseUrl = "https://lyzyhealth.herokuapp.com//";
+export const baseUrl = "https://lyzyhealth.herokuapp.com/";
