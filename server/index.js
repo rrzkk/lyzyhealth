@@ -21,14 +21,14 @@ const { createDecipher } = require('crypto');
 
 
   const mysql = require('mysql');
-  //const connection = mysql.createConnection('mysql://bdc826fff72f21:63713686@us-cdbr-east-02.cleardb.com/heroku_4cf6028dd328a70?reconnect=true');
+  const connection = mysql.createConnection('mysql://bdc826fff72f21:63713686@us-cdbr-east-02.cleardb.com/heroku_4cf6028dd328a70?reconnect=true');
 
-  const connection = mysql.createConnection({
+  /*const connection = mysql.createConnection({
    host     : 'us-cdbr-east-02.cleardb.com',
    user     : 'bdc826fff72f21',
    password : '63713686',
-  database : 'mysql://bdc826fff72f21:63713686@us-cdbr-east-02.cleardb.com/heroku_4cf6028dd328a70?reconnect=true'
-   });
+  // database : 'mysql://bdc826fff72f21:63713686@us-cdbr-east-02.cleardb.com/heroku_4cf6028dd328a70?reconnect=true'
+  // });*/
 
 
   app.get(
