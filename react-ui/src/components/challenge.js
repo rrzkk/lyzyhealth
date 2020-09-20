@@ -96,7 +96,7 @@ function ChallengeCom(props) {
         };
 
         
-        scrollToAnchor('challengehead');
+       // scrollToAnchor('challengehead');
 
         window.addEventListener("resize", handleResize);
 
@@ -241,7 +241,7 @@ function ChallengeCom(props) {
         //}
         //const itemsR = test.map(el => { return (<ListGroupItem>{el.username}</ListGroupItem>) });
 
-        const itemT = props.uc.map((el, index) => {
+        const itemT = props.uc.slice(0,10).map((el, index) => {
             return (
                 <tr>
                     <th>{index + 1}</th>
