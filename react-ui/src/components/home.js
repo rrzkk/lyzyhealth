@@ -42,7 +42,7 @@ function Home(props) {
 
 
       <Parallax y={[0, 0]}>
-        <div className="container homeban1"></div>
+        <div className="container homeban"></div>
       </Parallax>
       <Parallax y={[0, 0]}>
         <div className="container homeban">
@@ -76,6 +76,10 @@ function Home(props) {
         </div>
       </Parallax>
 
+      <Parallax y={[0, 0]}>
+        <div className="container homeban1"></div>
+      </Parallax>
+
       <div className="container homeban">
         <div className="row">
           <Parallax y={[31, 0]} x={[-20, 60]} className="col-12 col-md-6 ">
@@ -88,9 +92,39 @@ function Home(props) {
         </div>
       </div>
 
- 
+      <div className="container homeban">
+        <div className="row">
+          <div className="col-12 col-md-3">
+            <div className="container homebanNews">
+              <div style={{textAlign:"center"}}><h style={{ fontSize: 25, fontFamily: 'ga', color:"#3D550C" }}>iron deficiency</h></div>
+              <div style={{textAlign:"center"}}><h style={{ fontSize: 15 }} className="homefont">Anemia affects approximately 25 percent of people worldwide, and iron deficiency is said to be responsible for 50 percent of all anemias.</h></div>
+            </div>
+          </div>
+          <div className="col-12 col-md-3">
+            <div className="container homebanNews">
+              <div style={{textAlign:"center"}}><h style={{ fontSize: 25, fontFamily: 'ga', color:"#3D550C" }}>vitamin D deficiency</h></div>
+                <div style={{textAlign:"center"}}><h style={{ fontSize: 15 }} className="homefont">Nearly one third of Australian adults are suffering vitamin D deficiency. Without enough taken, you might have hormonal imbalance, low bone mineral density and High blood pressure</h></div>
+            </div>
+          </div>
+          <div className="col-12 col-md-3">
+            <div className="container homebanNews">
+            <div style={{textAlign:"center"}}><h style={{ fontSize: 25, fontFamily: 'ga', color:"#3D550C" }}>vitamin B deficiency</h></div>
+                <div style={{textAlign:"center"}}><h style={{ fontSize: 15 }} className="homefont">Vitamin B12 deficiency affects up to 15 percent of people, and without enough vitamin B12, pale skin, constipation and diarrhea become common.</h></div>
+            </div>
+          </div>
+          <div className="col-12 col-md-3">
+            <div className="container homebanNews">
+            <div style={{textAlign:"center"}}><h style={{ fontSize: 25, fontFamily: 'ga', color:"#3D550C" }}>calcium deficiency</h></div>
+                <div style={{textAlign:"center"}}><h style={{ fontSize: 15 }} className="homefont">Over half of all Australians consume inadequate levels of calcium from food sources. Lack of calcium will cause muscle cramping, osteoporosis and dental problems.</h></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Parallax y={[0, 0]}>
+        <div className="container homeban1"></div>
+      </Parallax>
+      {/* <Parallax y={[0, 0]}>
         <div className="container homeban">
         <Parallax y={[0, 0]}>
           <div className="row">
@@ -121,7 +155,7 @@ function Home(props) {
           </div>
           </Parallax>
         </div>
-      </Parallax>
+      </Parallax> */}
 
 
 
