@@ -15,9 +15,7 @@ import {uc} from './uc'
 
 export const ConfigureStore = () => {
     const store = createStore(
-        combineReducers({
-
-          
+        combineReducers({  
             information,
             allchallenges,
             newchallenges,

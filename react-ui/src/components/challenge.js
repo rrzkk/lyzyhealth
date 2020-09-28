@@ -328,7 +328,7 @@ function ChallengeCom(props) {
                 <div className="row">
                 <div className="col-12 col-md-6 ">
                     <i>Log in to play this game is recommonded</i><br /><br />
-                    <b>1. Choose all three challenges you want to finish today</b><br /><br />
+                    <b>1. Choose all three challenges you want to finish today!</b><br /><br />
                     <b>2. Finish the cahllenges</b><br /><br />
                     <b>3. Go to the map to see your progress (your car would upgrade when you have finished enough challenges)</b><br /><br />
                     <b>4. Compare your progress with all other players</b><br /><br />

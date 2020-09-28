@@ -1,6 +1,8 @@
 export const allergyinfo=[
     {
         "allergy_name": "Cow's milk",
+        "note":"If you are allergy to shellfish, you will probabl",
+        "notedetail":[{"number":1,"content":"protein"},{"number":2,"content":"Omega-3"}],
         "protein": "3.4",
         "carbohydrate": "5",
         "fat": "1",
@@ -11,6 +13,7 @@ export const allergyinfo=[
                     {
                         "name": "Soy milk has been the most popular non-dairy substitute for decades because its nutrition profile closely resembles that of co's milk. It's the best high-protein milk alternative. Soy milk offers about 7 grams of protein per cup, compared to cow milk's 8 grams per cup.",
                         "protein": "3.3",
+                        "imgurl":"./assets/allergy/piname.png",
                         "carbohydrate": "6",
                         "fat": "1.8"
                     }
