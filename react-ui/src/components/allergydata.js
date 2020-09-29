@@ -1,6 +1,8 @@
 export const allergyinfo=[
     {
         "allergy_name": "Cow's milk",
+        "note":"If you are allergy to milk, you will probably deficient on:",
+        "notedetail":[{"number":1,"content":"Protein"},{"number":2,"content":"Carbohydrate"},{"number":3,"content":"Calcium"}],
         "protein": "3.4",
         "carbohydrate": "5",
         "fat": "1",
@@ -9,7 +11,7 @@ export const allergyinfo=[
                 "group_name": "Soy Milk",
                 "alternatives": [
                     {
-                        "name": "Soy milk has been the most popular non-dairy substitute for decades because its nutrition profile closely resembles that of co's milk. It's the best high-protein milk alternative. Soy milk offers about 7 grams of protein per cup, compared to cow milk's 8 grams per cup.",
+                        "name": "Soy milk is a good source of protein. 82g soy milk can replace the protein intake from 100g cow milk.",
                         "protein": "3.3",
                         "carbohydrate": "6",
                         "fat": "1.8"
@@ -20,7 +22,7 @@ export const allergyinfo=[
                 "group_name": "Almond Milk",
                 "alternatives": [
                     {
-                        "name": "Almond milk is a great dairy alternative when you are looking to cut calories. This nut milk is made from water and ground almonds. The bad news about almond milk is that it contains very little protein - just 1 gram per cup!",
+                        "name": "Almond milk is a good source of calcium. 72g almond milk can replace the calcium intake from 100g cow milk.",
                         "protein": "1",
                         "carbohydrate": "3.5",
                         "fat": "3"
@@ -31,7 +33,7 @@ export const allergyinfo=[
                 "group_name": "Rice Milk",
                 "alternatives": [
                     {
-                        "name": "Rice milk is a good option when you want something with a neutral flavor and a less creamy texture. When fortified, it usually does contain the same amount of calcium and vitamin D as cow’s milk. This milk substitute also lacks protein, containing only 1 gram per cup.",
+                        "name": "Rice milk is a good source of calcium. 102g rice milk can replace the calcium intake from 100g cow milk.",
                         "protein": "0.3",
                         "carbohydrate": "9",
                         "fat": "1"
@@ -42,7 +44,7 @@ export const allergyinfo=[
                 "group_name": "Coconut Milk",
                 "alternatives": [
                     {
-                        "name": "This is one of the newest non dairy milks out there. Coconut milk is a good choice when you want something creamy and sweet. Though this milk offers 30 percent of your daily value (DV) of vitamin D and 50 percent of your DV of vitamin B-12, it contains little calcium and just 1 gram of protein per cup. If you’re looking to reduce your saturated fat intake, keep in mind that coconut milk is the only milk alternative that contains as much saturated fat as whole cow’s milk.",
+                        "name": "Coconut milk is a good source of protein. 160g coconut milk can replace the protein intake from 100g cow milk.",
                         "protein": "2.3",
                         "carbohydrate": "6",
                         "fat": "24"
@@ -53,7 +55,7 @@ export const allergyinfo=[
                 "group_name": "Hemp Milk",
                 "alternatives": [
                     {
-                        "name": "Hemp milk is made from water and shelled hemp seeds. It contains a slew of healthy nutrients, including calcium, vitamin D and a moderate amount of protein (about 3 grams of protein per cup). As an added bonus, it contains omega-3 fatty acids. Unfortunately, hemp milk may be a difficult taste for some people to get used to.",
+                        "name": "Hemp milk is a good source of calcium. 96g hemp milk can replace the calcium intake from 100g cow milk.",
                         "protein": "4.7",
                         "carbohydrate": "1.3",
                         "fat": "7.3"
@@ -64,7 +66,7 @@ export const allergyinfo=[
                 "group_name": "Cashew Milk",
                 "alternatives": [
                     {
-                        "name": "Cashew milk is made from blending cashews with water, resulting in a creamy liquid. This milk is often fortified with calcium and vitamins A, D and B-12. Different brands will have varying amounts of nutrients, so be sure to look at the nutrition label. Although this milk alternative may be low in calories, it also contains very little protein, just 1 gram per cup.",
+                        "name": "Cashew milk is a good source of protein. 22g cashew milk can replace the protein intake from 100g cow milk.",
                         "protein": "1",
                         "carbohydrate": "7",
                         "fat": "2.5"
@@ -75,6 +77,8 @@ export const allergyinfo=[
     },
     {
         "allergy_name": "Egg",
+        "note":"If you are allergy to egg, you will probably deficient on:",
+        "notedetail":[{"number":1,"content":"Protein"},{"number":2,"content":"Iron"},{"number":3,"content":"Vitamins"}],
         "protein": "13",
         "carbohydrate": "0.7",
         "fat": "10",
@@ -83,7 +87,7 @@ export const allergyinfo=[
                 "group_name": "Potato",
                 "alternatives": [
                     {
-                        "name": "In any of your savory dish you can replace egg with mashed potato for the same texture. ¼ cup of mashed potato is equal to 1 egg.",
+                        "name": "Potato is a good source of Iron. 150g potato can replace the iron intake from 100g egg.",
                         "protein": "2",
                         "carbohydrate": "17",
                         "fat": "0.1"
@@ -94,7 +98,7 @@ export const allergyinfo=[
                 "group_name": "Tofu",
                 "alternatives": [
                     {
-                        "name": "Tofu can replace eggs in your breakfast as high body's absorption of protein. Crumble it, sauté and season with pepper and oregano and your healthy egg replacement is ready.",
+                        "name": "Tofu is a good source of protein. 162g tofu can replace the protein intake from 100g egg.",
                         "protein": "8",
                         "carbohydrate": "1.9",
                         "fat": "4.8"
@@ -105,7 +109,7 @@ export const allergyinfo=[
                 "group_name": "Flax seeds",
                 "alternatives": [
                     {
-                        "name": "1 tbsp of flax seeds is equivalent to 1 egg yolk that you can use for any of the baked dishes. Apart from providing similar nutritional value, it also gives the dish a little crunchy texture.",
+                        "name": "Flax seeds is a good source of protein. 72g flax seeds can replace the protein intake from 100g egg.",
                         "protein": "19",
                         "carbohydrate": "29",
                         "fat": "42"
@@ -116,7 +120,7 @@ export const allergyinfo=[
                 "group_name": "Mashed banana",
                 "alternatives": [
                     {
-                        "name": "Mashed bananas could bind and moisten in any dish that you are baking. That’s the reason food experts suggest that you can use ¼ cup of mashed banana in place of an egg.",
+                        "name": "Mashed banana is a good source of Iron. 400g mashed banana can replace the iron intake from 100g egg.",
                         "protein": "1.3",
                         "carbohydrate": "27",
                         "fat": "0.4"
@@ -127,7 +131,7 @@ export const allergyinfo=[
                 "group_name": "Pumpkin",
                 "alternatives": [
                     {
-                        "name": "Pumpkin can bind and moisten and any dish. You can use 1/3 cup of cooked mashed pumpkin to replace an egg in any of your eggitarian dishes.",
+                        "name": "Pumpkin is a good source of Iron. 150g pumpkin can replace the iron intake from 100g egg.",
                         "protein": "1",
                         "carbohydrate": "7",
                         "fat": "0.1"
@@ -149,6 +153,8 @@ export const allergyinfo=[
     },
     {
         "allergy_name": "Fish",
+        "note":"If you are allergy to fish, you will probably deficient on:",
+        "notedetail":[{"number":1,"content":"Protein"},{"number":2,"content":"Iron"},{"number":3,"content":"Omega-3"}],
         "protein": "22",
         "carbohydrate": "0",
         "fat": "12",
@@ -157,7 +163,7 @@ export const allergyinfo=[
                 "group_name": "Lean Red Meats (Beef, Lamb, Pork or Kangaroo)",
                 "alternatives": [
                     {
-                        "name": "65g lean red meats provides the same amout of calories as 100g fish",
+                        "name": "Lean red meats are good sources of Iron. 10g lean red meats can replace the iron intake from 100g fish.",
                         "protein": "23.2",
                         "carbohydrate": "0",
                         "fat": "2.8"
@@ -168,7 +174,7 @@ export const allergyinfo=[
                 "group_name": "Egg",
                 "alternatives": [
                     {
-                        "name": "2 large eggs (120g) provides the same amout of calories as 100g fish",
+                        "name": "Egg is a good source of protein. 172g egg can replace the protein intake from 100g fish.",
                         "protein": "13",
                         "carbohydrate": "0.7",
                         "fat": "10"
@@ -179,7 +185,7 @@ export const allergyinfo=[
                 "group_name": "Chicken or Turkey",
                 "alternatives": [
                     {
-                        "name": "80g chicken or turkey provides the same amout of calories as 100g fish",
+                        "name": "Chicken or Turkey are good sources of protein. 79g chicken or turkey can replace the protein intake from 100g fish.",
                         "protein": "27",
                         "carbohydrate": "0",
                         "fat": "14"
@@ -190,7 +196,7 @@ export const allergyinfo=[
                 "group_name": "Tofu",
                 "alternatives": [
                     {
-                        "name": "170g tofu provides the same amout of calories as 100g fish",
+                        "name": "Tofu is a good source of protein and iron. 10g tofu can replace the iron intake from 100g fish.",
                         "protein": "8",
                         "carbohydrate": "1.9",
                         "fat": "4.8"
@@ -201,7 +207,7 @@ export const allergyinfo=[
                 "group_name": "Nuts, Peanuts or Other Nuts",
                 "alternatives": [
                     {
-                        "name": "30g nuts, peanuts or other nuts provides the same amout of calories as 100g fish",
+                        "name": "Nuts, Peanuts or Other Nuts is a good source of protein. 120g Nuts, Peanuts or Other Nuts can replace the protein intake from 100g fish.",
                         "protein": "20",
                         "carbohydrate": "21",
                         "fat": "54"
@@ -212,6 +218,8 @@ export const allergyinfo=[
     },
     {
         "allergy_name": "Wheat or Gluten",
+        "note":"If you are allergy to wheat or gluten, you will probably deficient on:",
+        "notedetail":[{"number":1,"content":"Protein"},{"number":2,"content":"Dietary Fiber"}],
         "protein": "75",
         "carbohydrate": "14",
         "fat": "1.9",
@@ -220,7 +228,7 @@ export const allergyinfo=[
                 "group_name": "Grains",
                 "alternatives": [
                     {
-                        "name": "You can try these grains instead: amaranth, arrowroot, barley, buckwheat, corn, millet, oats, rice, quinoa or tapioca.",
+                        "name": "Grains is a good source of protein. 469g grains can replace the protein intake from 100g wheat/gluten.",
                         "protein": "13",
                         "carbohydrate": "43",
                         "fat": "4.2"
@@ -231,7 +239,7 @@ export const allergyinfo=[
                 "group_name": "Wheat Flour",
                 "alternatives": [
                     {
-                        "name": "Use flour made from rice, potato starch, soy, tapioca, or corn instead. If you can't tolerate gluten, look for gluten-free baking powder. When you're baking, remember that wheat-free and gluten-free flour may be drier, may not rise as much, and may have a crumbly texture.",
+                        "name": "Wheat flour is a good source of protein. 106g wheat flour can replace the protein intake from 100g wheat/gluten.",
                         "protein": "10",
                         "carbohydrate": "76",
                         "fat": "1"
@@ -253,7 +261,7 @@ export const allergyinfo=[
                 "group_name": "Breadcrumbs",
                 "alternatives": [
                     {
-                        "name": "In recipes like casseroles, fried chicken, eggplant parmesan, or meat loaf, substitute shredded parmesan, crumbled wheat-free crackers, or cornmeal.",
+                        "name": "Breadcrumbs is a good source of iron and protein. 101g breadcrumbs can replace the iron  intake from 100g wheat/gluten.",
                         "protein": "13",
                         "carbohydrate": "72",
                         "fat": "5"
@@ -264,6 +272,8 @@ export const allergyinfo=[
     },
     {
         "allergy_name": "Peanut",
+        "note":"If you are allergy to peanut, you will probably deficient on:",
+        "notedetail":[{"number":1,"content":"Protein"},{"number":2,"content":"Iron"},{"number":3,"content":"Zinc"}],
         "protein": "75",
         "carbohydrate": "14",
         "fat": "1.9",
@@ -272,7 +282,7 @@ export const allergyinfo=[
                 "group_name": "Beans",
                 "alternatives": [
                     {
-                        "name": "If a recipe calls for whole peanuts, try substituting beans. Roasting them first gives them more of a peanut taste and texture. Roasted soybeans and chickpeas are delicious to eat on their own by the handful or added to a salad.",
+                        "name": "Beans is a good source of Iron. 90g beans can replace the iron intake from 100g peanut.",
                         "protein": "26",
                         "carbohydrate": "16",
                         "fat": "49"
@@ -283,7 +293,7 @@ export const allergyinfo=[
                 "group_name": "Pretzels",
                 "alternatives": [
                     {
-                        "name": "Pretzels are great replacement for peanuts in recipes that need some extra crunch. Crush them into pie crusts or use them for coating chicken breasts. You can substitute them anywhere you’d use chopped nuts.",
+                        "name": "Pretzels is a good source of Iron. 88g Pretzels can replace the iron intake from 100g peanut.",
                         "protein": "10",
                         "carbohydrate": "80",
                         "fat": "2.6"
@@ -294,7 +304,7 @@ export const allergyinfo=[
                 "group_name": "Tahini",
                 "alternatives": [
                     {
-                        "name": "tahini is a nutty, toasty Middle Eastern treat that’s safe for people with peanut allergies. Tahini is a simple spread made with sesame seeds and oil. As a bonus, it doesn’t have any sugar, which makes it delicious when paired with honey or jam on a sandwich.",
+                        "name": "Tahini is a good source of Iron. 52g Tahini can replace the iron intake from 100g peanut.",
                         "protein": "17",
                         "carbohydrate": "21",
                         "fat": "54"
@@ -305,7 +315,7 @@ export const allergyinfo=[
                 "group_name": "Butter (Sunflower Seed Butter or Almond Butter)",
                 "alternatives": [
                     {
-                        "name": "A butter is technically a creamy food spread made by churning fat globules until they are smooth. The result is a tasty treat that’s great on toast or a sandwich. Sunflower seed butter is an excellent substitute for peanut butter because it has a similar texture and a mild, nutty flavor. Try it with jelly or mix a tablespoon into smoothies.",
+                        "name": "Butter is a good source of fat. 50g Butter can replace the fat intake from 100g peanut.",
                         "protein": "0.9",
                         "carbohydrate": "0.1",
                         "fat": "81"
@@ -316,6 +326,8 @@ export const allergyinfo=[
     },
     {
         "allergy_name": "Sesame",
+        "note":"If you are allergy to sesame, you will probably deficient on:",
+        "notedetail":[{"number":1,"content":"Protein"},{"number":2,"content":"Fiber"}],
         "protein": "18",
         "carbohydrate": "23",
         "fat": "50",
@@ -324,7 +336,7 @@ export const allergyinfo=[
                 "group_name": "Perilla Oil",
                 "alternatives": [
                     {
-                        "name": "Perilla oil is a seed oil, with a nutty earthy flavour similar to sesame oil. It can be substituted to replicate the flavour of toasted sesame oil",
+                        "name": "Perilla Oil is a good source of fat. 55g perilla oil can replace the fat intake from 100g sesame.",
                         "protein": "12.5",
                         "carbohydrate": "12.5",
                         "fat": "50"
@@ -335,7 +347,7 @@ export const allergyinfo=[
                 "group_name": "Tahini",
                 "alternatives": [
                     {
-                        "name": "Tahini also known as sesame seed paste is a popular middle eastern ingredient that can be substituted for sesame. It has a mild nutty, savoury flavour and a creamy texture that you can spread on raw foods or add to your recipes.",
+                        "name": "Tahini is a good source of protein. 105g Tahini can replace the protein intake from 100g sesame.",
                         "protein": "17",
                         "carbohydrate": "21",
                         "fat": "54"
@@ -346,7 +358,7 @@ export const allergyinfo=[
                 "group_name": "Olive Oil",
                 "alternatives": [
                     {
-                        "name": "Olive oil is a good substitute for sesame as they are both considered to be healthy fats.",
+                        "name": "Olive oil is a good source of fiber. 400g olive oil can replace the fiber intake from 100g sesame.",
                         "protein": "0",
                         "carbohydrate": "0",
                         "fat": "100"
@@ -357,6 +369,8 @@ export const allergyinfo=[
     },
     {
         "allergy_name": "Shellfish (crustacean)",
+        "note":"If you are allergy to shellfish, you will probably deficient on:",
+        "notedetail":[{"number":1,"content":"Protein"},{"number":2,"content":"CarOmega-3"}],
         "protein": "24",
         "carbohydrate": "0.2",
         "fat": "0.3",
@@ -365,7 +379,7 @@ export const allergyinfo=[
                 "group_name": "Surimi (Substitute for Crab and Lobster)",
                 "alternatives": [
                     {
-                        "name": "A fish-based food product intended to mimic the texture and color of the meat of a lobster, crab, and other shellfish. It is typically made from white-fleshed fish (such as pollock or hake) that has been pulverized to a paste and attains a rubbery texture when cooked.",
+                        "name": "Surimi is a good source of protein. 160g surimi can replace the protein intake from 100g shellfish.",
                         "protein": "15",
                         "carbohydrate": "7",
                         "fat": "0.9"
@@ -376,7 +390,7 @@ export const allergyinfo=[
                 "group_name": "Monkfish (Substitute for Lobster Tail)",
                 "alternatives": [
                     {
-                        "name": "This is the English name of a number of types of fish in the northwest Atlantic, most notably the species of the anglerfish genus Lophius and the angel shark genus Squatina. The term is also occasionally used for a European sea monster more often called a sea monk. In Europe and North America, the texture of the tail meat of fish of the genus Lophius, is sometimes compared to lobster tail and has been alluded to as the poor man’s lobster, although today it commands prices equivalent to, and in some cases exceeding lobster and other marine delicacies.",
+                        "name": "Monkfish is a good source of protein and Omega-3. 171g monkfish can replace the protein intake from 100g shellfish.",
                         "protein": "14",
                         "carbohydrate": "0",
                         "fat": "1.5"
@@ -387,7 +401,7 @@ export const allergyinfo=[
                 "group_name": "Salsify (Substitute for Oyster)",
                 "alternatives": [
                     {
-                        "name": "Tragopogon porrifolius is a plant cultivated for its ornamental flower, edible root, and herbal properties. It also grows wild in many places and is one of the most widely known species of the salsify genus, Tragopogon. It is commonly known as purple or common salsify, oyster plant, vegetable oyster, Jerusalem star, goatsbeard or simply salsify.",
+                        "name": "Shellfish is a good source of dietary fiber, Vitamins and Omega-3. 727g salsify can replace the protein intake from 100g shellfish.",
                         "protein": "3.3",
                         "carbohydrate": "18.6",
                         "fat": "0.2"
@@ -398,6 +412,8 @@ export const allergyinfo=[
     },
     {
         "allergy_name": "Soy",
+        "note":"If you are allergy to soy, you will probably deficient on:",
+        "notedetail":[{"number":1,"content":"Protein"},{"number":2,"content":"Carbohydrate"}],
         "protein": "36",
         "carbohydrate": "30",
         "fat": "20",
@@ -406,7 +422,7 @@ export const allergyinfo=[
                 "group_name": "Soy Sauce Alternatives",
                 "alternatives": [
                     {
-                        "name": "Olive brine, balsamic vinegar, or soy-free miso sauce.",
+                        "name": "Soy Sauce is a good source of carbs. 462g soy sauce can replace the carbs intake from 100g soy.",
                         "protein": "0.8",
                         "carbohydrate": "6.3",
                         "fat": "10.7"
@@ -417,7 +433,7 @@ export const allergyinfo=[
                 "group_name": "Soy Margarines Alternatives",
                 "alternatives": [
                     {
-                        "name": "Real butter is always an option, although you only want to use a little.",
+                        "name": "Soy margarines is a good source of fat. 28g soy margarines can replace the fat intake from 100g soy.",
                         "protein": "0.9",
                         "carbohydrate": "0.1",
                         "fat": "81"
@@ -428,7 +444,7 @@ export const allergyinfo=[
                 "group_name": "Soy Oil Alternatives",
                 "alternatives": [
                     {
-                        "name": "Try other oils, such as canola or olive oil.",
+                        "name": "Soy oil is a good source of fat. 20g soy oil can replace the fat intake from 100g soy.",
                         "protein": "0",
                         "carbohydrate": "0",
                         "fat": "100"
@@ -439,7 +455,7 @@ export const allergyinfo=[
                 "group_name": "Teriyaki Sauce Alternatives",
                 "alternatives": [
                     {
-                        "name": "This has soy sauce in it. Some people use sweet-and-sour sauce instead. But check the ingredients to be sure soybean oil isn't used in making the sweet-and-sour sauce.",
+                        "name": "Teriyaki sauce is a good source of carbs. 178g teriyaki sauce can replace the carbs intake from 100g soy.",
                         "protein": "0.3",
                         "carbohydrate": "38",
                         "fat": "0"
@@ -451,6 +467,8 @@ export const allergyinfo=[
     
     {
         "allergy_name": "Tree nut",
+        "note":"If you are allergy to tree nut, you will probably deficient on:",
+        "notedetail":[{"number":1,"content":"Protein"},{"number":2,"content":"Iron"},{"number":3,"content":"Magnesium"}],
         "protein": "14",
         "carbohydrate": "12",
         "fat": "66",
@@ -459,7 +477,7 @@ export const allergyinfo=[
                 "group_name": "Oatmeal or Rolled Oats",
                 "alternatives": [
                     {
-                        "name": "These will add texture, taste and nutritional value to your recipe. If you want to replace some of that roasted nut flavor, brown the oats in a bit of butter before adding them to your recipe.",
+                        "name": "Oatmeal or rolled oats are good sources of iron. 43g oatmeal or rolled oats can replace the iron intake from 100g tree nut.",
                         "protein": "16.9",
                         "carbohydrate": "66.3",
                         "fat": "6.9"
@@ -470,7 +488,7 @@ export const allergyinfo=[
                 "group_name": "Granola",
                 "alternatives": [
                     {
-                        "name": "Swap in a bit of granola for the nuts that are called for in your recipe. A one-for-one replacement should work fine.",
+                        "name": "Granola is a good source of iron. 86g granola can replace the iron intake from 100g tree nut.",
                         "protein": "10",
                         "carbohydrate": "64",
                         "fat": "20"
@@ -481,7 +499,7 @@ export const allergyinfo=[
                 "group_name": "Raisins",
                 "alternatives": [
                     {
-                        "name": "These are a perfect substitute in cookie recipes because they add extra texture, visual appeal, and nutrition. Replace the nuts called for measure for measure.",
+                        "name": "Raisins is a good source of iron. 136g raisins can replace the iron intake from 100g tree nut.",
                         "protein": "3.1",
                         "carbohydrate": "79",
                         "fat": "0.5"
@@ -492,7 +510,7 @@ export const allergyinfo=[
                 "group_name": "Pumpkin or Sunflower Seeds",
                 "alternatives": [
                     {
-                        "name": "Unsalted seeds are a nice substitute in nut muffin recipes, and they can be roasted for more flavor. Pumpkin and squash seeds also work well and add a seasonal flair to recipes. If you're using small seeds, consider reducing the amount you use.",
+                        "name": "Pumpkin or sunflower seeds are good sources of Iron. 325g pumpkin or sunflower seeds can replace the iron intake from 100g tree nut.",
                         "protein": "21",
                         "carbohydrate": "20",
                         "fat": "51"
