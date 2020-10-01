@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useReducer } from 'react';
 import { motion, useMotionValue, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
 import { useState, useEffect, useRef } from 'react';
@@ -12,7 +12,24 @@ import { login } from '../react/login';
 
 
 
+let initial=0;
 
+const animation = (state=0, action) => {
+    switch (action) {
+    case 'MOVE':
+        if(state===3){
+            state=0;
+            initial=0;
+        }
+        else{state=state+1;
+       
+            initial=state;
+            
+    };
+    default:
+    return state;
+    }
+    };
 
 
 
@@ -21,6 +38,7 @@ function ChallengeCom(props) {
 
 
 
+    const [count, dispatchC] = useReducer(animation,initial);
 
     const componentRef = useRef();
     //const { width, height } = useResize(componentRef)
@@ -75,8 +93,6 @@ function ChallengeCom(props) {
 
 
 
-    //props.verifyUser(username,password);
-    //props.createUser(username,password);
 
     const scrollToAnchor = (anchorName) => {
         if (anchorName) {
@@ -132,10 +148,15 @@ function ChallengeCom(props) {
 
 
 
-    const [animate, cycle] = useCycle({ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
-        , { x: width * 2 / 3, y: -height / 1.2, scale: 1.4 });
+    // const [animate, cycle] = useCycle({ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
+    //     , { x: width * 2 / 3, y: -height / 1.2, scale: 1.4 });
+    const animatePos=[{ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
+        , { x: width * 2 / 3, y: -height / 1.2, scale: 1.4 }]
 
-
+    const animate=animatePos[count];
+    function cycle(){
+        dispatchC('MOVE');
+    }
 
     async function moveCar() {
 
@@ -278,23 +299,32 @@ function ChallengeCom(props) {
         if (props.login) {
             props.postChallenge(props.username.username);
             props.getUserChallenge(props.username.username);
+            cycle();
         }
         else { alert("You Need Log in To Upgrade") }
        
     }
 
     function addP1() {
+        if(!addProgressBtn2 && !addProgressBtn3){
         toggleDis1(!addProgressBtn1);
-        toggleText1();
+        toggleText1();}
+        else alert('you can only finish one challenge at a time')
         
     }
     function addP2() {
+        if(!addProgressBtn1 && !addProgressBtn3){
         toggleDis2(!addProgressBtn2);
-        toggleText2();
+        toggleText2();}
+        else alert('you can only finish one challenge at a time')
+        
     }
     function addP3() {
+        if(!addProgressBtn2 && !addProgressBtn1){
         toggleDis3(!addProgressBtn3);
         toggleText3();
+    }
+    else alert('you can only finish one challenge at a time')
     }
     const [addProgressBtn1, toggleDis1] = useState(false);
     const [addProgressBtn2, toggleDis2] = useState(false);
@@ -304,6 +334,18 @@ function ChallengeCom(props) {
     const [btnText2,toggleText2]=useCycle('Add to Progress','Give up Challenge');
     const [btnText3,toggleText3]=useCycle('Add to Progress','Give up Challenge');
 
+    // addProgressBtn1=props.addProgressBtn1;
+    // addProgressBtn2=props.addProgressBtn2;
+    // addProgressBtn3=props.addProgressBtn3;
+    // toggleDis1=props.toggleDis1;
+    // toggleDis2=props.toggleDis2;
+    // toggleDis3=props.toggleDis3;
+    // btnText1=props.btnText1;
+    // btnText2=props.btnText2;
+    // btnText3=props.btnText3;
+    // toggleText1=props.toggleText1;
+    // toggleText2=props.toggleText2;
+    // toggleText3=props.toggleText3;
   
 
     const Card1 = () => {
