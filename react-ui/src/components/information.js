@@ -162,7 +162,7 @@ function useWindowDimensions() {
             }
         )
         return ( 
-            <div className="col-8 offset-2 allergy-title" style={{ textAlign: "center" }}>
+            <div className="col-6 allergy-title" style={{ textAlign: "left" }}>
             <b>{allergyinfo[count].note}</b>
             {item2}
             </div>
