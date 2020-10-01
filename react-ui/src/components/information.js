@@ -7,6 +7,7 @@ import { allergyinfo } from "./allergydata";
 import { useState, useEffect } from 'react';
 
 import Jumbotron from 'react-bootstrap/Jumbotron'
+import { Card } from 'reactstrap';
 
 
 function getWindowDimensions() {
@@ -131,8 +132,9 @@ function useWindowDimensions() {
 
                     <motion.div className="motionul" layout >
                         <motion.div className="motionli" onClick={() => GroupOpen(eachGroup.group_name)} whileHover={{ scale: 1.2 }}>
+                            <img src={require('./'+eachGroup.url)} style={{maxWidth:50, height:'auto'}}/>
                             <b> {eachGroup.group_name}</b>
-
+                            
                             <AnimatePresence>{isOpen && groupName == eachGroup.group_name && <Content propsname={eachGroup.group_name} />}</AnimatePresence>
                         </motion.div>
                     </motion.div>
@@ -149,6 +151,23 @@ function useWindowDimensions() {
 
         );
 
+    }
+
+    function allergychoose() {
+        const item2 = allergyinfo[count].notedetail.map(
+            eachGroup => {
+                return (
+                <li>{eachGroup.content}</li>
+                );
+            }
+        )
+        return ( 
+            <div className="col-6 allergy-title" style={{ textAlign: "left" }}>
+            <b>{allergyinfo[count].note}</b>
+            {item2}
+            </div>
+            
+        );
     }
 
     function Content(props) {
@@ -419,6 +438,7 @@ function useWindowDimensions() {
             <div className="container allergybg">
                 <div className="row " style={{ margin: 50 }}>
                     <b><i>* Replacements below are only for suggestions, please consult your healthcare professional for more details.</i></b>
+                    {allergychoose()}
                 </div>
                 <div className="row " style={{ margin: 50 }}>
                     <AnimateSharedLayout type="crossfade">
