@@ -13,6 +13,7 @@ export const allergyinfo=[
                 "alternatives": [
                     {
                         "name": "Soy milk is a good source of protein. 82g soy milk can replace the protein intake from 100g cow milk.",
+
                         "protein": "3.3",
                         "carbohydrate": "6",
                         "fat": "1.8"
@@ -25,6 +26,7 @@ export const allergyinfo=[
                 "alternatives": [
                     {
                         "name": "Almond milk is a good source of calcium. 72g almond milk can replace the calcium intake from 100g cow milk.",
+
                         "protein": "1",
                         "carbohydrate": "3.5",
                         "fat": "3"
@@ -37,6 +39,7 @@ export const allergyinfo=[
                 "alternatives": [
                     {
                         "name": "Rice milk is a good source of calcium. 102g rice milk can replace the calcium intake from 100g cow milk.",
+
                         "protein": "0.3",
                         "carbohydrate": "9",
                         "fat": "1"
@@ -49,6 +52,7 @@ export const allergyinfo=[
                 "alternatives": [
                     {
                         "name": "Coconut milk is a good source of protein. 160g coconut milk can replace the protein intake from 100g cow milk.",
+
                         "protein": "2.3",
                         "carbohydrate": "6",
                         "fat": "24"
@@ -61,6 +65,7 @@ export const allergyinfo=[
                 "alternatives": [
                     {
                         "name": "Hemp milk is a good source of calcium. 96g hemp milk can replace the calcium intake from 100g cow milk.",
+
                         "protein": "4.7",
                         "carbohydrate": "1.3",
                         "fat": "7.3"
@@ -73,6 +78,7 @@ export const allergyinfo=[
                 "alternatives": [
                     {
                         "name": "Cashew milk is a good source of protein. 22g cashew milk can replace the protein intake from 100g cow milk.",
+                        
                         "protein": "1",
                         "carbohydrate": "7",
                         "fat": "2.5"
