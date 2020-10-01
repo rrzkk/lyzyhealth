@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom"
 import { Parallax } from 'react-scroll-parallax';
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
-
+import { animateScroll as scroll } from 'react-scroll';
 
 
 
@@ -28,6 +28,9 @@ function Home(props) {
   }
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+  function scrollMoreDown() {
+    scroll.scrollMore(670);
+  }
   return (
     <div>
       <div className="d-none d-lg-block wrapper">
@@ -42,7 +45,7 @@ function Home(props) {
 
 
       <Parallax y={[0, 0]}>
-        <div className="container homeban"></div>
+        <div className="container homeban1"></div>
       </Parallax>
       <Parallax y={[0, 0]}>
         <div className="container homeban">
@@ -80,6 +83,16 @@ function Home(props) {
         <div className="container homeban1"></div>
       </Parallax>
 
+      <Parallax y={[0, 0]}>
+        <div className="container homeban1">
+        <Button className="homebtn" size="lg" onClick={scrollMoreDown}><h style={{ fontSize: 30, fontFamily: 'ak', color:"white"}}>Explore more</h></Button>
+        </div>
+      </Parallax>
+
+      <Parallax y={[0, 0]}>
+        <div className="container homeban1"></div>
+      </Parallax>
+
       <div className="container homeban">
         <div className="row">
           <Parallax y={[31, 0]} x={[-20, 60]} className="col-12 col-md-6 ">
@@ -94,7 +107,7 @@ function Home(props) {
 
       <div className="container homeban">
         <div className="row">
-          <div className="col-12 col-md-3">
+          <div className="col-12 col-md-3" style={{textAlign:"center"}}>
             <div className="container homebanNews">
               <div style={{textAlign:"center"}}><h style={{ fontSize: 25, fontFamily: 'ga', color:"#3D550C" }}>iron deficiency</h></div>
               <div style={{textAlign:"center"}}><h style={{ fontSize: 15 }} className="homefont">Anemia affects approximately 25 percent of people worldwide, and iron deficiency is said to be responsible for 50 percent of all anemias.</h></div>

@@ -371,8 +371,8 @@ cursor: pointer;}
 }
 .homebanNews{
   min-height: 180px;
-  min-width: 270px;
-  background: url('./agedpaper.png');
+  text-align: center;
+  background: url('./square.png');
   background-size: 100% 100%;
 }
 .homepic{
@@ -578,6 +578,15 @@ text-align: center;}
 }
 .cardbtn{
   position: relative;
+  margin-top: 30px;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.homebtn{
+  position: relative;
+  height: 80px;
+  width: 350px;
   margin-top: 30px;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
