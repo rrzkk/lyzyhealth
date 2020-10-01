@@ -29,7 +29,7 @@ function Home(props) {
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
   function scrollMoreDown() {
-    scroll.scrollMore(670);
+    scroll.scrollMore(700);
   }
   return (
     <div>
@@ -89,6 +89,9 @@ function Home(props) {
         </div>
       </Parallax>
 
+      <Parallax y={[0, 0]}>
+        <div className="container homeban1"></div>
+      </Parallax>
       <Parallax y={[0, 0]}>
         <div className="container homeban1"></div>
       </Parallax>
