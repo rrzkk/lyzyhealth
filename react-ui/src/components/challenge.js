@@ -280,7 +280,7 @@ function ChallengeCom(props) {
             props.getUserChallenge(props.username.username);
         }
         else { alert("You Need Log in To Upgrade") }
-        scrollToAnchor("maphead")
+       
     }
 
     function addP1() {
