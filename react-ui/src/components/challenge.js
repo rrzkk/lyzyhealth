@@ -14,7 +14,7 @@ import { login } from '../react/login';
 
 
 
-const animation = (state, action) => {
+const animation = (state=0, action) => {
     switch (action) {
     case 'MOVE':
         if(state===3){
@@ -33,7 +33,7 @@ function ChallengeCom(props) {
 
 
 
-    const [count, dispatchC] = useReducer(animation, 0)
+    const [count, dispatchC] = useReducer(animation)
 
     const componentRef = useRef();
     //const { width, height } = useResize(componentRef)
