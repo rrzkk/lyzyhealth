@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useReducer } from 'react';
 import { motion, useMotionValue, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
 import { useState, useEffect, useRef } from 'react';
@@ -14,6 +14,18 @@ import { login } from '../react/login';
 
 
 
+const animation = (state, action) => {
+    switch (action) {
+    case 'MOVE':
+        if(state===3){
+            state=0;
+        }
+        else{state=state+1};
+    default:
+    return state;
+    }
+    };
+
 
 
 
@@ -21,6 +33,7 @@ function ChallengeCom(props) {
 
 
 
+    const [count, dispatchC] = useReducer(animation, 0)
 
     const componentRef = useRef();
     //const { width, height } = useResize(componentRef)
@@ -130,10 +143,15 @@ function ChallengeCom(props) {
 
 
 
-    const [animate, cycle] = useCycle({ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
-        , { x: width * 2 / 3, y: -height / 1.2, scale: 1.4 });
+    // const [animate, cycle] = useCycle({ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
+    //     , { x: width * 2 / 3, y: -height / 1.2, scale: 1.4 });
+    const animatePos=[{ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
+        , { x: width * 2 / 3, y: -height / 1.2, scale: 1.4 }]
 
-
+    const animate=animatePos[count];
+    function cycle(){
+        dispatchC('MOVE');
+    }
 
     async function moveCar() {
 
@@ -276,6 +294,7 @@ function ChallengeCom(props) {
         if (props.login) {
             props.postChallenge(props.username.username);
             props.getUserChallenge(props.username.username);
+            cycle();
         }
         else { alert("You Need Log in To Upgrade") }
        
