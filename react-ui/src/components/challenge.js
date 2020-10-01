@@ -7,11 +7,13 @@ import Card from 'react-bootstrap/Card';
 import { Button, FormGroup, Label, Input, Popover, PopoverHeader, PopoverBody, Row, Modal, Table } from 'reactstrap';
 import { newchallenges } from './fakechallengedata';
 import { login } from '../react/login';
+import * as Scroll  from 'react-scroll';
 
 
 
-
-
+let Element = Scroll.Element
+let scroll = Scroll.animateScroll
+let scroller = Scroll.scroller
 let initial=0;
 
 const animation = (state=0, action) => {
@@ -235,7 +237,13 @@ function ChallengeCom(props) {
         props.getUserChallenge(username);
     }
 
-
+    function scrollMoreDown(length) {
+        if (length < 1) {
+            scroller.scrollTo('selectprogress',{smooth: true})
+        } else {
+            scroller.scrollTo('progress',{smooth: true})
+        }       
+      }
 
 
     const loginstatus = (username, length) => {
@@ -254,6 +262,7 @@ function ChallengeCom(props) {
                         <li>10 : <img src={require('../challengeassets/car3.png')} width='50px' /> </li>
                         <li>15 : <img src={require('../challengeassets/car4.png')} width='50px' /> </li>
                     </ul>
+                    {scrollMoreDown(length)}
                 </div>);
         }
     }
@@ -544,6 +553,7 @@ function ChallengeCom(props) {
                 </Card>
             </Modal>
             <div className="col-6 offset-3 allergy-title" style={{ textAlign: "center" }}>
+                <Element name="selectprogress"></Element>
                 <b>Pick Your Challenges</b>
             </div>
             <div className="container challengebg">
@@ -562,7 +572,7 @@ function ChallengeCom(props) {
                
             </div>
             <div className="col-6 offset-3 allergy-title" style={{ textAlign: "center" }}>
-
+            <Element name="progress"></Element>
                 <b>Check Your Progress</b>
             </div>
 

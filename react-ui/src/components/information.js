@@ -8,7 +8,15 @@ import { useState, useEffect } from 'react';
 
 import Jumbotron from 'react-bootstrap/Jumbotron'
 import { Card } from 'reactstrap';
+import * as Scroll  from 'react-scroll';
 
+let Element = Scroll.Element
+let scroll = Scroll.animateScroll
+let scroller = Scroll.scroller
+
+function scrollMoreDown() {
+    scroller.scrollTo('screens',{smooth: true})
+  }
 
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
@@ -63,7 +71,7 @@ function useWindowDimensions() {
     function tap1() {
 
         setIsOn(!isOn);
-        scrollToAnchor('screens');
+        scrollMoreDown();
         setCount(6);
 
     }
@@ -71,51 +79,51 @@ function useWindowDimensions() {
     function tap2() {
 
         setIsOn(!isOn);
-        scrollToAnchor('screens');
+        scrollMoreDown();
         setCount(1);
     }
     function tap3() {
 
         setIsOn(!isOn);
-        scrollToAnchor('screens');
+        scrollMoreDown();
         setCount(2);
     }
     function tap10() {
 
         setIsOn(!isOn);
-        scrollToAnchor('screens');
+        scrollMoreDown();
         setCount(3);
     }
 
     function tap5() {
 
         setIsOn(!isOn);
-        scrollToAnchor('screens');
+        scrollMoreDown();
         setCount(0);
     }
     function tap6() {
 
 
         setIsOn(!isOn);
-        scrollToAnchor('screens');
+        scrollMoreDown();
         setCount(4);
     }
     function tap7() {
 
         setIsOn(!isOn);
-        scrollToAnchor('screens');
+        scrollMoreDown();
         setCount(5);
     }
     function tap8() {
 
         setIsOn(!isOn);
-        scrollToAnchor('screens');
+        scrollMoreDown();
         setCount(7);
     }
     function tap9() {
 
         setIsOn(!isOn);
-        scrollToAnchor('screens');
+        scrollMoreDown();
         setCount(8);
     }
 
@@ -428,9 +436,9 @@ function useWindowDimensions() {
 
             <div className="container ">
                 <div className="row">
+                    <Element name="screens"></Element>
                     <div className="col-4 offset-4 allergy-title" style={{ textAlign: "center" }}>
                         <b>Here is Your Replacement</b>
-                        <a id="screens"></a>
                     </div>
                 </div>
             </div>

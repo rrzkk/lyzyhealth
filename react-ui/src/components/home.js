@@ -6,13 +6,16 @@ import { useHistory } from "react-router-dom"
 import { Parallax } from 'react-scroll-parallax';
 import { motion, useViewportScroll, useTransform } from "framer-motion";
 
-import { animateScroll as scroll } from 'react-scroll';
+import * as Scroll  from 'react-scroll';
 
 
 
 
 const { Page } = require('canvas')
 
+let Element = Scroll.Element
+let scroll = Scroll.animateScroll
+let scroller = Scroll.scroller
 
 function Home(props) {
   let history = useHistory();
@@ -28,9 +31,11 @@ function Home(props) {
   }
   const { scrollYProgress } = useViewportScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
+  
   function scrollMoreDown() {
-    scroll.scrollMore(700);
+    scroller.scrollTo('doyouknow',{smooth: true})
   }
+  
   return (
     <div>
       <div className="d-none d-lg-block wrapper">
@@ -98,6 +103,7 @@ function Home(props) {
 
       <div className="container homeban">
         <div className="row">
+        <Element name="doyouknow"></Element>
           <Parallax y={[31, 0]} x={[-20, 60]} className="col-12 col-md-6 ">
             <div className="homeban1">
             <div style={{textAlign:"center"}}><h style={{ fontSize: 40, fontFamily: 'ak', color:"#B8390E"}}>Do you know</h></div>
@@ -177,7 +183,6 @@ function Home(props) {
 
       <Parallax y={[0, 0]}>
         <div className="container homeban">
-
           <Parallax y={[0, 0]}>
             
               <div className="row">
