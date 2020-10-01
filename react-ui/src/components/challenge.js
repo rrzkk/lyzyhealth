@@ -19,9 +19,13 @@ const animation = (state=0, action) => {
     case 'MOVE':
         if(state===3){
             state=0;
+            initial=0;
         }
         else{state=state+1;
-        initial=state;};
+       
+            initial=state;
+            
+    };
     default:
     return state;
     }
