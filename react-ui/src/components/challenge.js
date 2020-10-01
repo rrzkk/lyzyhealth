@@ -75,8 +75,6 @@ function ChallengeCom(props) {
 
 
 
-    //props.verifyUser(username,password);
-    //props.createUser(username,password);
 
     const scrollToAnchor = (anchorName) => {
         if (anchorName) {
@@ -284,17 +282,25 @@ function ChallengeCom(props) {
     }
 
     function addP1() {
+        if(!addProgressBtn2 && !addProgressBtn3){
         toggleDis1(!addProgressBtn1);
-        toggleText1();
+        toggleText1();}
+        else alert('you can only finish one challenge at a time')
         
     }
     function addP2() {
+        if(!addProgressBtn1 && !addProgressBtn3){
         toggleDis2(!addProgressBtn2);
-        toggleText2();
+        toggleText2();}
+        else alert('you can only finish one challenge at a time')
+        
     }
     function addP3() {
+        if(!addProgressBtn2 && !addProgressBtn1){
         toggleDis3(!addProgressBtn3);
         toggleText3();
+    }
+    else alert('you can only finish one challenge at a time')
     }
     const [addProgressBtn1, toggleDis1] = useState(false);
     const [addProgressBtn2, toggleDis2] = useState(false);
@@ -304,6 +310,18 @@ function ChallengeCom(props) {
     const [btnText2,toggleText2]=useCycle('Add to Progress','Give up Challenge');
     const [btnText3,toggleText3]=useCycle('Add to Progress','Give up Challenge');
 
+    // addProgressBtn1=props.addProgressBtn1;
+    // addProgressBtn2=props.addProgressBtn2;
+    // addProgressBtn3=props.addProgressBtn3;
+    // toggleDis1=props.toggleDis1;
+    // toggleDis2=props.toggleDis2;
+    // toggleDis3=props.toggleDis3;
+    // btnText1=props.btnText1;
+    // btnText2=props.btnText2;
+    // btnText3=props.btnText3;
+    // toggleText1=props.toggleText1;
+    // toggleText2=props.toggleText2;
+    // toggleText3=props.toggleText3;
   
 
     const Card1 = () => {
