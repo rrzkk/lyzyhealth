@@ -253,8 +253,8 @@ function ChallengeCom(props) {
         else {
             return (
                 <div><b>Hi, {props.username.username}</b><br />
-                    <b>You have finished {length} challenges</b><br /><br />
-                    <b>Unlock New Car by Finish Challenges</b><br /><br />
+                    <b>You have earned {length} challenge points</b><br /><br />
+                    <b>Unlock new car by finishing more challenges</b><br /><br />
                     <ul style={{ listStyle: "none" }}>
                         <li><img src={require('../challengeassets/bike.png')} width='50px' /><a>: Finish 0-3 challenges, unlock a bike</a> </li>
                         <li><img src={require('../challengeassets/car1.png')} width='50px' /><a>: Finish 3-5 challenges, unlock a mini</a> </li>
@@ -520,10 +520,11 @@ function ChallengeCom(props) {
                 <div className="row">
                     <div className="col-12 col-md-6 ">
                         <i>Log in to play this game is recommonded</i><br /><br />
-                        <b>1. Pick a challenge you want to finish and add to progress today!</b><br /><br />
-                        <b>2. Finish the cahllenge</b><br /><br />
-                        <b>3. Go to the map to see your progress (your car would upgrade when you have finished enough challenges)</b><br /><br />
-                        <b>4. Compare your progress with all other players</b><br /><br />
+                        <b>1. Pick a challenge below, change it if you want a different one</b><br /><br />
+                        <b>2. Adjust categories and difficulty levels to suit yourself</b><br /><br />
+                        <b>3. Add it to your progress! You can add 1 challenge at a time</b><br /><br />
+                        <b>4. Click FINISH after you completed the challenge! You will receive one challenge point!</b><br /><br />
+                        <b>5. Click Give Up Challenge to change another challenge if you want to</b><br /><br />
 
                         {loginstatus(username, props.userchallenge.userchallenge.length)}
                     </div>
