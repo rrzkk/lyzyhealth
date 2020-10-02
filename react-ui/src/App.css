@@ -494,7 +494,8 @@ text-align: center;}
   align-self: flex-end;
 }
 .allergytitle{
-  text-align: center;
+  /* text-align: center; */
+  left: 50% !important;
 }
 .hometitle{
   width: 70%;

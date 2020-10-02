@@ -256,12 +256,11 @@ function ChallengeCom(props) {
                     <b>You have finished {length} challenges</b><br /><br />
                     <b>Unlock New Car by Finish Challenges</b><br /><br />
                     <ul style={{ listStyle: "none" }}>
-                        <li><img src={require('../challengeassets/bike.png')} width='50px' /><a>: You only have a bike when you have finished less than 3 challenges</a> </li>
-
-                        <li><img src={require('../challengeassets/car1.png')} width='50px' />: 123 </li>
-                        <li><img src={require('../challengeassets/car2.png')} width='50px' />: 2345 </li>
-                        <li><img src={require('../challengeassets/car3.png')} width='50px' />: 235235 </li>
-                        <li><img src={require('../challengeassets/car4.png')} width='50px' />: 2353126 </li>
+                        <li><img src={require('../challengeassets/bike.png')} width='50px' /><a>: Finish 0-3 challenges, unlock a bike</a> </li>
+                        <li><img src={require('../challengeassets/car1.png')} width='50px' /><a>: Finish 3-5 challenges, unlock a mini</a> </li>
+                        <li><img src={require('../challengeassets/car2.png')} width='50px' /><a>: Finish 5-10 challenges, unlock a sedan</a> </li>
+                        <li><img src={require('../challengeassets/car3.png')} width='50px' /><a>: Finish 10-15 challenges, unlock a coupe</a> </li>
+                        <li><img src={require('../challengeassets/car4.png')} width='50px' /><a>: Finish 15+ challenges, unlock a rocket</a> </li>
                     </ul>
                     {scrollMoreDown(length)}
                 </div>);
@@ -521,8 +520,8 @@ function ChallengeCom(props) {
                 <div className="row">
                     <div className="col-12 col-md-6 ">
                         <i>Log in to play this game is recommonded</i><br /><br />
-                        <b>1. Choose all three challenges you want to finish today!</b><br /><br />
-                        <b>2. Finish the cahllenges</b><br /><br />
+                        <b>1. Pick a challenge you want to finish and add to progress today!</b><br /><br />
+                        <b>2. Finish the cahllenge</b><br /><br />
                         <b>3. Go to the map to see your progress (your car would upgrade when you have finished enough challenges)</b><br /><br />
                         <b>4. Compare your progress with all other players</b><br /><br />
 
