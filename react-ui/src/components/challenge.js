@@ -520,11 +520,11 @@ function ChallengeCom(props) {
                 <div className="row">
                     <div className="col-12 col-md-6 ">
                         <i>Log in to play this game is recommonded</i><br /><br />
-                        <b>1. Pick a challenge below, change it if you want a different one</b><br /><br />
-                        <b>2. Adjust categories and difficulty levels to suit yourself</b><br /><br />
-                        <b>3. Add it to your progress! You can add 1 challenge at a time</b><br /><br />
+                        <b>1. Pick a challenge below, change it if you want a different one.</b><br /><br />
+                        <b>2. Adjust categories and difficulty levels to suit yourself.</b><br /><br />
+                        <b>3. Add it to your progress! You can add 1 challenge at a time.</b><br /><br />
                         <b>4. Click FINISH after you completed the challenge! You will receive one challenge point!</b><br /><br />
-                        <b>5. Click Give Up Challenge to change another challenge if you want to</b><br /><br />
+                        <b>5. Click Give Up Challenge to change another challenge if you want.</b><br /><br />
 
                         {loginstatus(username, props.userchallenge.userchallenge.length)}
                     </div>
