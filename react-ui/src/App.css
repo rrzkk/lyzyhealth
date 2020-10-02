@@ -301,6 +301,7 @@ address a{
     background: white;
     padding: 20px;
     border-radius: 25px;
+    left: 50% !important;
    
   }
 
@@ -494,8 +495,8 @@ text-align: center;}
   align-self: flex-end;
 }
 .allergytitle{
-  /* text-align: center; */
-  left: 50% !important;
+  text-align: center;
+  /* left: 50% !important; */
 }
 .hometitle{
   width: 70%;
