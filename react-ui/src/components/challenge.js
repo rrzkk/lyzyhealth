@@ -256,11 +256,12 @@ function ChallengeCom(props) {
                     <b>You have finished {length} challenges</b><br /><br />
                     <b>Unlock New Car by Finish Challenges</b><br /><br />
                     <ul style={{ listStyle: "none" }}>
-                        <li>0  : <img src={require('../challengeassets/bike.png')} width='50px' /> </li>
-                        <li>3  : <img src={require('../challengeassets/car1.png')} width='50px' /> </li>
-                        <li>5  : <img src={require('../challengeassets/car2.png')} width='50px' /> </li>
-                        <li>10 : <img src={require('../challengeassets/car3.png')} width='50px' /> </li>
-                        <li>15 : <img src={require('../challengeassets/car4.png')} width='50px' /> </li>
+                        <li><img src={require('../challengeassets/bike.png')} width='50px' /><a>: You only have a bike when you have finished less than 3 challenges</a> </li>
+
+                        <li><img src={require('../challengeassets/car1.png')} width='50px' />: 123 </li>
+                        <li><img src={require('../challengeassets/car2.png')} width='50px' />: 2345 </li>
+                        <li><img src={require('../challengeassets/car3.png')} width='50px' />: 235235 </li>
+                        <li><img src={require('../challengeassets/car4.png')} width='50px' />: 2353126 </li>
                     </ul>
                     {scrollMoreDown(length)}
                 </div>);
