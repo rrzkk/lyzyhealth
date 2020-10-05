@@ -232,19 +232,17 @@ function ChallengeCom(props) {
     }
 
 
-    function verifyLogin(username, passowrd) {
-        props.verifyUser(username, passowrd);
-        props.getUserChallenge(username);
+    async function verifyLogin(username, passowrd) {
+        await props.verifyUser(username, passowrd);
+        await props.getUserChallenge(username);
+        scrollMoreDown() ;
     }
 
-    function scrollMoreDown(length) {
-        if (length < 1) {
+    function scrollMoreDown() {
+     
             scroller.scrollTo('selectprogress',{smooth: true})
-        } else {
-            scroller.scrollTo('progress',{smooth: true})
-        }       
-      }
-
+    }
+    
 
     const loginstatus = (username, length) => {
         if (!props.login) {
@@ -262,7 +260,7 @@ function ChallengeCom(props) {
                         <li><img src={require('../challengeassets/car3.png')} width='50px' /><a>: Finish 10-15 challenges, unlock a coupe</a> </li>
                         <li><img src={require('../challengeassets/car4.png')} width='50px' /><a>: Finish 15+ challenges, unlock a rocket</a> </li>
                     </ul>
-                    {scrollMoreDown(length)}
+                   
                 </div>);
         }
     }
