@@ -236,7 +236,8 @@ function ChallengeCom(props) {
     async function verifyLogin(username, passowrd) {
         await props.verifyUser(username, passowrd);
         await props.getUserChallenge(username);
-        scrollMoreDown() ;
+        scrollProgress();
+        //scrollMoreDown() ;
     }
 
     function scrollMoreDown() { 
@@ -320,7 +321,7 @@ function ChallengeCom(props) {
         toggleDis1(!addProgressBtn1);
         toggleText1();}
         else alert('you can only finish one challenge at a time');
-        scrollProgress();
+        scrollMoreDown() ;
         
     }
     function addP2() {
@@ -328,14 +329,14 @@ function ChallengeCom(props) {
         toggleDis2(!addProgressBtn2);
         toggleText2();}
         else alert('you can only finish one challenge at a time');
-        scrollProgress();
+        scrollMoreDown() ;
         
     }
     function addP3() {
         if(!addProgressBtn2 && !addProgressBtn1){
         toggleDis3(!addProgressBtn3);
         toggleText3();
-        scrollProgress();
+        scrollMoreDown() ;
     }
     else alert('you can only finish one challenge at a time')
     }
@@ -479,7 +480,9 @@ function ChallengeCom(props) {
 
 
     useEffect(()=>{
+        if(!props.login){
         window.scrollTo(0, 0);
+        }
     },[]);
 
     return (
