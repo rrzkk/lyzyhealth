@@ -220,7 +220,7 @@ function useWindowDimensions() {
                     </Jumbotron>
                 </div>
                 <div className="row">
-                    <div className="col-4 offset-4 allergy-title" style={{ textAlign: "center" }}>
+                    <div className="col-6  allergy-title" style={{ textAlign: "center" }}>
                         <b>Choose Your Allergy First</b>
                     </div>
                 </div>
@@ -437,7 +437,7 @@ function useWindowDimensions() {
             <div className="container ">
                 <div className="row">
                     <Element name="screens"></Element>
-                    <div className="col-4 offset-4 allergy-title" style={{ textAlign: "center" }}>
+                    <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
                         <b>Here is Your Replacement</b>
                     </div>
                 </div>
