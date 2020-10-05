@@ -238,8 +238,7 @@ function ChallengeCom(props) {
         scrollMoreDown() ;
     }
 
-    function scrollMoreDown() {
-     
+    function scrollMoreDown() { 
             scroller.scrollTo('selectprogress',{smooth: true})
     }
     
