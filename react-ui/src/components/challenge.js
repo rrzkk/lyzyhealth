@@ -319,20 +319,23 @@ function ChallengeCom(props) {
         if(!addProgressBtn2 && !addProgressBtn3){
         toggleDis1(!addProgressBtn1);
         toggleText1();}
-        else alert('you can only finish one challenge at a time')
+        else alert('you can only finish one challenge at a time');
+        scrollProgress();
         
     }
     function addP2() {
         if(!addProgressBtn1 && !addProgressBtn3){
         toggleDis2(!addProgressBtn2);
         toggleText2();}
-        else alert('you can only finish one challenge at a time')
+        else alert('you can only finish one challenge at a time');
+        scrollProgress();
         
     }
     function addP3() {
         if(!addProgressBtn2 && !addProgressBtn1){
         toggleDis3(!addProgressBtn3);
         toggleText3();
+        scrollProgress();
     }
     else alert('you can only finish one challenge at a time')
     }
