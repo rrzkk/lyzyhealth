@@ -491,7 +491,7 @@ function ChallengeCom(props) {
                     </div>
                 </div>
                 <div className="row ">
-                    <div className="col-6 offset-3 allergy-title" style={{ textAlign: "center" }}>
+                    <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
                         <b>Why play this game?</b>
                     </div>
                 </div>
@@ -513,7 +513,7 @@ function ChallengeCom(props) {
                     </div>
                 </div>
             </div>
-            <div className="col-6 offset-3 allergy-title" style={{ textAlign: "center" }}>
+            <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
                 <b>How to Play this game?</b>
             </div>
             <div className="container challengebg">
@@ -553,7 +553,7 @@ function ChallengeCom(props) {
                     </Card.Body>
                 </Card>
             </Modal>
-            <div className="col-6 offset-3 allergy-title" style={{ textAlign: "center" }}>
+            <div className="col-6  allergy-title" style={{ textAlign: "center" }}>
                 <Element name="selectprogress"></Element>
                 <b>Pick Your Challenges</b>
             </div>
@@ -572,7 +572,7 @@ function ChallengeCom(props) {
                 </div>
                
             </div>
-            <div className="col-6 offset-3 allergy-title" style={{ textAlign: "center" }}>
+            <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
             <Element name="progress"></Element>
                 <b>Check Your Progress</b>
             </div>
@@ -617,7 +617,7 @@ function ChallengeCom(props) {
 
 
             </div>
-            <div className="col-6 offset-3 allergy-title" style={{ textAlign: "center" }}>
+            <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
                 <b>Rankings Board</b>
             </div>
             <div className="container challengebg">

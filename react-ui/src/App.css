@@ -296,13 +296,13 @@ address a{
 }
 .allergy-title
   {
-    margin: 40px;
-   
+ 
+    margin-top: 40px;
     background: white;
     padding: 20px;
     border-radius: 25px;
-    width: 50%;
-    left: 25%;
+    position: relative;
+    left: 25% !important;
 
   }
 
