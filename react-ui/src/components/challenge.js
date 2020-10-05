@@ -43,6 +43,7 @@ function ChallengeCom(props) {
     const [count, dispatchC] = useReducer(animation,initial);
 
     const componentRef = useRef();
+
     //const { width, height } = useResize(componentRef)
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
@@ -239,9 +240,12 @@ function ChallengeCom(props) {
     }
 
     function scrollMoreDown() { 
-            scroller.scrollTo('selectprogress',{smooth: true})
+            scroller.scrollTo('progressE',{smooth: true})
     }
     
+    function scrollProgress(){
+        scroller.scrollTo('selectprogress',{smooth:true});
+    }
 
     const loginstatus = (username, length) => {
         if (!props.login) {
@@ -471,7 +475,9 @@ function ChallengeCom(props) {
     }
 
 
-
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+    },[]);
 
     return (
         <div className="container ">
@@ -576,7 +582,7 @@ function ChallengeCom(props) {
 
 
             <div className="container challengebg">
-                <div className="row">
+                <div className="row" name='progressE'>
                     <div className="col-12 col-md-4">
                         { addProgressBtn1 && Card1()}
                     </div>
