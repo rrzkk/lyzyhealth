@@ -304,11 +304,11 @@ function ChallengeCom(props) {
             return (<img className="racecar" src={require('../challengeassets/bike.png')}></img>)
         }
     }
-    function finishBtn() {
+    async function finishBtn() {
         if (props.login) {
-            props.postChallenge(props.username.username);
-            props.getUserChallenge(props.username.username);
-            cycle();
+            await props.postChallenge(props.username.username);
+            await props.getUserChallenge(props.username.username);
+             cycle();
         }
         else { alert("You Need Log in To Upgrade") }
        
