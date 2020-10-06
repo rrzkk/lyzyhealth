@@ -57,7 +57,7 @@ function useWindowDimensions() {
         function handleResize() {
             setWindowDimensions(getWindowDimensions());
         }
-        scrollToAnchor('allergyhead');
+        window.scrollTo(0, 0);
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);

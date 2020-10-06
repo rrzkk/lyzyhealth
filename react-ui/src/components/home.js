@@ -98,12 +98,13 @@ function Home(props) {
         <div className="container homeban1"></div>
       </Parallax>
       <Parallax y={[0, 0]}>
+        <Element name="doyouknow"></Element>
         <div className="container homeban1"></div>
       </Parallax>
 
       <div className="container homeban">
         <div className="row">
-        <Element name="doyouknow"></Element>
+        
           <Parallax y={[31, 0]} x={[-20, 60]} className="col-12 col-md-6 ">
             <div className="homeban1">
             <div style={{textAlign:"center"}}><h style={{ fontSize: 40, fontFamily: 'ak', color:"#B8390E"}}>Do you know</h></div>
