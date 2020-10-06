@@ -27,7 +27,7 @@ class Header extends Component {
     render() {
       return(
       <React.Fragment>
-        <Navbar id="navbar-dark" expand="md">
+        <Navbar id="navbar-dark" expand="md" sticky="top">
           <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
                         <NavbarBrand className="mr-auto" href="/" id="navlink"><img alt="First slide" src={baseUrl+"assets/teamlogo.png" } height="50" width="60"/></NavbarBrand>
