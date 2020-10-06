@@ -202,7 +202,7 @@ export const verifyRepeat=(username,password) => (dispatch) => {
       else{alert('repeated user');throw Error('repeated user')}
     })
     .then(() => {
-      dispatch(verifyPassword([password, password]))}
+      dispatch(verifyPassword([password, hash(password)]))}
     )
     .then(()=>{dispatch(addUser(username))})
     .catch(error => { console.log('verifyrepeat', error.message); alert('User repeated failed\nError: ' + error.message); });
