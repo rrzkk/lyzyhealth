@@ -199,8 +199,9 @@ export const verifyRepeat=(username,password) => (dispatch) => {
       if(res.length===0){
         dispatch(createUser(username,password))
       }
-      else{alert('repeated user')}
+      else{alert('repeated user');throw Error('repeated user')}
     })
+    .then(dispatch(verifyUser(username,password)))
     .catch(error => { console.log('verifyrepeat', error.message); alert('User repeated failed\nError: ' + error.message); });
 };
 export const addRepeat=(res)=>({
