@@ -225,9 +225,20 @@ function ChallengeCom(props) {
         }
         setExerciseLength(exerciseChallengelist[exerciselvl - 1].length);
     }
+    function checkval(t) {
+        var re = /^[A-Za-z0-9]+$/;//只能输入汉字和英文字母
+       if (re.test(t)) {
+          return true;
+        } else {
+          return false;
+        }
+      }
     function changeUsername(evt) {
-
-        setUsername(evt.target.value);
+        if (checkval(evt.target.value)) {
+            setUsername(evt.target.value);
+        } else {
+            
+        }       
     }
 
     async function verifycreate(username, password) {
@@ -499,7 +510,7 @@ function ChallengeCom(props) {
                             ></Card.Img>
                         </div>
                         <Popover placement="down" isOpen={popover6} target="ques3">
-                            <PopoverHeader>Why we take exercise challenge?</PopoverHeader>
+                            <PopoverHeader>Why we take exercising challenge?</PopoverHeader>
                             <PopoverBody>This exercise challenge is designed for burning fat and increase appetite. Exercise can helps boost your metabolism, meaning you burn more calories all day long. You will have the stomach to eat more nutritious food.</PopoverBody>
                         </Popover>
                     </div>
