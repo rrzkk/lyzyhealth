@@ -226,7 +226,7 @@ function ChallengeCom(props) {
         setExerciseLength(exerciseChallengelist[exerciselvl - 1].length);
     }
     function checkval(t) {
-        var re = /^[A-Za-z0-9]+$/;//only character and number
+        var re = /[A-Za-z0-9]+/;//only character and number
        if (re.test(t)) {
           return true;
         } else {
