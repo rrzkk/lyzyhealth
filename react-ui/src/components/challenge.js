@@ -98,7 +98,7 @@ function ChallengeCom(props) {
 
     const [loginmodel, togglemodel] = useState(false);
 
-    const [validation, regcheck] = useState(false);
+    // const [validation, regcheck] = useState(false);
 
 
     const scrollToAnchor = (anchorName) => {
@@ -225,25 +225,27 @@ function ChallengeCom(props) {
         }
         setExerciseLength(exerciseChallengelist[exerciselvl - 1].length);
     }
-    function checkval(t) {
-        var re = /[A-Za-z0-9]+/;//only character and number
-       if (re.test(t)) {
-            regcheck(true);
-        } else {
-            regcheck(false);
-        }
-      }
+    // function checkval(t) {
+    //     var re = /[A-Za-z0-9]+/;//only character and number
+    //    if (re.test(t)) {
+    //         regcheck(true);
+    //     } else {
+    //         regcheck(false);
+    //     }
+    //   }
     function changeUsername(evt) {
-        checkval(evt.target.value);
-        if (validation) {
+        var re = /[A-Za-z0-9]+/;//only character and number
+        // checkval(evt.target.value);
+        if (re.test(evt.target.value)) {
             setUsername(evt.target.value);
         } else {
             alert.show("you can only enter number and letters");
         }       
     }
     function changePassword(evt) {
-        checkval(evt.target.value);
-        if (validation) {
+        var re = /[A-Za-z0-9]+/;//only character and number
+        // checkval(evt.target.value);
+        if (re.test(evt.target.value)) {
             setPassword(evt.target.value);
         } else {
             alert.show("you can only enter number and letters");
