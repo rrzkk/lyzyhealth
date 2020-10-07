@@ -142,6 +142,7 @@ class Maincomp extends Component {
                             postChallenge={(username) => this.props.postChallenge(username)}
                             getUserChallenge={(username) => this.props.getUserChallenge(username)}
                             verifyPassWord={(passhash,pass)=>this.props.verifyPassWord(passhash,pass)}
+                        
                         />
                         } />
                         <Route exact path='/doctors' component={() => <Doctors />} />
