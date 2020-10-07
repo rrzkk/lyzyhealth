@@ -239,6 +239,9 @@ function ChallengeCom(props) {
         scrollProgress();
         //scrollMoreDown() ;
     }
+    function logOff(){
+        props.verifyUser('jkghre./.,?', 'ghtrey5897');
+    }
 
     function scrollMoreDown() { 
             scroller.scrollTo('progressE',{smooth: true})
@@ -264,6 +267,7 @@ function ChallengeCom(props) {
                         <li><img src={require('../challengeassets/car3.png')} width='50px' /><a>: Finish 10-15 challenges, unlock a coupe</a> </li>
                         <li><img src={require('../challengeassets/car4.png')} width='50px' /><a>: Finish 15+ challenges, unlock a rocket</a> </li>
                     </ul>
+                    <Button color='warning' onClick={()=>logOff()}>Log off</Button>
                    
                 </div>);
         }
