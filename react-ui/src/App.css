@@ -470,9 +470,10 @@ text-align: center;}
   border-radius: 30px;
 }
 .questionmark{
-  width: 10px;
-  height: 50px;
-  
+  margin: auto;
+  /* change width isn't working. */
+  width: 20px; 
+  height: 20px;
 }
 .racemap{
  
