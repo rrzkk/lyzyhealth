@@ -8,7 +8,7 @@ import { Button, FormGroup, Label, Input, Popover, PopoverHeader, PopoverBody, R
 import { newchallenges } from './fakechallengedata';
 import { login } from '../react/login';
 import * as Scroll from 'react-scroll';
-
+import { useAlert } from "react-alert";
 
 
 let Element = Scroll.Element
@@ -226,7 +226,7 @@ function ChallengeCom(props) {
         setExerciseLength(exerciseChallengelist[exerciselvl - 1].length);
     }
     function checkval(t) {
-        var re = /^[A-Za-z0-9]+$/;//只能输入汉字和英文字母
+        var re = /^[A-Za-z0-9]+$/;//only character and number
        if (re.test(t)) {
           return true;
         } else {
@@ -237,7 +237,14 @@ function ChallengeCom(props) {
         if (checkval(evt.target.value)) {
             setUsername(evt.target.value);
         } else {
-            
+            alert.show("you can only enter number and letters");
+        }       
+    }
+    function changePassword(evt) {
+        if (checkval(evt.target.value)) {
+            setPassword(evt.target.value);
+        } else {
+            alert.show("you can only enter number and letters");
         }       
     }
 
@@ -624,7 +631,7 @@ function ChallengeCom(props) {
                         </FormGroup>
                         <FormGroup >
                             <Label for="passowrd"><b>Enter Your Passcode</b></Label>
-                            <Input type="input" id="password" value={password} onChange={(evt) => setPassword(evt.target.value)} style={{ width: 200 }}>
+                            <Input type="input" id="password" value={password} onChange={(evt) => changePassword(evt)} style={{ width: 200 }}>
                             </Input>
                         </FormGroup>
 
