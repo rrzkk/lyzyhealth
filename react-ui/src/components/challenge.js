@@ -98,7 +98,7 @@ function ChallengeCom(props) {
 
     const [loginmodel, togglemodel] = useState(false);
 
-
+    const [regcheck, checkval] = useState(false);
 
 
     const scrollToAnchor = (anchorName) => {
@@ -228,20 +228,22 @@ function ChallengeCom(props) {
     function checkval(t) {
         var re = /[A-Za-z0-9]+/;//only character and number
        if (re.test(t)) {
-          return true;
+            regcheck(true);
         } else {
-          return false;
+            regcheck(false);
         }
       }
     function changeUsername(evt) {
-        if (checkval(evt.target.value)) {
+        checkval(evt.target.value);
+        if (regcheck) {
             setUsername(evt.target.value);
         } else {
             alert.show("you can only enter number and letters");
         }       
     }
     function changePassword(evt) {
-        if (checkval(evt.target.value)) {
+        checkval(evt.target.value);
+        if (regcheck) {
             setPassword(evt.target.value);
         } else {
             alert.show("you can only enter number and letters");
