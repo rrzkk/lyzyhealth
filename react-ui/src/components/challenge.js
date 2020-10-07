@@ -240,7 +240,7 @@ function ChallengeCom(props) {
         //scrollMoreDown() ;
     }
     function logOff(){
-        props.verifyUser('jkghre./.,?', 'ghtrey5897');
+        props.verifyPassword('24332','23435');
     }
 
     function scrollMoreDown() { 
