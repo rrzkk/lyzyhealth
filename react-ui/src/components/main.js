@@ -10,7 +10,7 @@ import About from './about.js';
 import ChallengeCom from './challenge.js';
 
 import { connect } from 'react-redux';
-import { fetchInformation, fetchAllChallenges, fetchNewChallenges, createUser, verifyUser, verifyRepeat, postChallenge, getUserChallenge, getAllUC } from '../react/ActionCreators';
+import { fetchInformation, fetchAllChallenges, fetchNewChallenges, createUser, verifyUser, verifyRepeat, postChallenge, getUserChallenge, getAllUC, verifyPassword } from '../react/ActionCreators';
 
 
 
@@ -42,7 +42,8 @@ const mapDispatchToProps = dispatch => ({
     verifyRepeat: (username, password) => dispatch(verifyRepeat(username, password)),
     postChallenge: (username) => dispatch(postChallenge(username)),
     getUserChallenge: (username) => dispatch(getUserChallenge(username)),
-    getAllUC: () => dispatch(getAllUC())
+    getAllUC: () => dispatch(getAllUC()),
+    verifyPassWord: (passwordhash,password)=>dispatch(verifyPassword(passwordhash,password))
 })
 
 
@@ -140,6 +141,8 @@ class Maincomp extends Component {
                             verifyRepeat={(username, password) => this.props.verifyRepeat(username, password)}
                             postChallenge={(username) => this.props.postChallenge(username)}
                             getUserChallenge={(username) => this.props.getUserChallenge(username)}
+                            verifyPassWord={(passhash,pass)=>this.props.verifyPassWord(passhash,pass)}
+                        
                         />
                         } />
                         <Route exact path='/doctors' component={() => <Doctors />} />
