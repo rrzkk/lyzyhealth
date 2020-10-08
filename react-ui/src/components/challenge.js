@@ -236,7 +236,7 @@ function ChallengeCom(props) {
     function changeUsername(evt) {
         var re = /[A-Za-z0-9]+/;//only character and number
         // checkval(evt.target.value);
-        if (re.test(evt.target.value)) {
+        if (re.test(evt.target.value) == true) {
             setUsername(evt.target.value);
         } else {
             alert.show("you can only enter number and letters");
@@ -245,7 +245,7 @@ function ChallengeCom(props) {
     function changePassword(evt) {
         var re = /[A-Za-z0-9]+/;//only character and number
         // checkval(evt.target.value);
-        if (re.test(evt.target.value)) {
+        if (re.test(evt.target.value) == true) {
             setPassword(evt.target.value);
         } else {
             alert.show("you can only enter number and letters");
