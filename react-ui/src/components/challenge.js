@@ -8,7 +8,6 @@ import { Button, FormGroup, Label, Input, Popover, PopoverHeader, PopoverBody, R
 import { newchallenges } from './fakechallengedata';
 import { login } from '../react/login';
 import * as Scroll from 'react-scroll';
-import { useAlert } from "react-alert";
 
 
 let Element = Scroll.Element
@@ -225,30 +224,25 @@ function ChallengeCom(props) {
         }
         setExerciseLength(exerciseChallengelist[exerciselvl - 1].length);
     }
-    // function checkval(t) {
-    //     var re = /[A-Za-z0-9]+/;//only character and number
-    //    if (re.test(t)) {
-    //         regcheck(true);
-    //     } else {
-    //         regcheck(false);
-    //     }
-    //   }
+    // check input validation
     function changeUsername(evt) {
-        var re = /[A-Za-z0-9]+/;//only character and number
-        // checkval(evt.target.value);
+        var re = /^[A-Za-z0-9]+$/;//only character and number
         if (re.test(evt.target.value) == true) {
             setUsername(evt.target.value);
-        } else {
-            alert.show("you can only enter number and letters");
-        }       
+        } else if(evt.target.value == ''){
+            setUsername('');
+        } else if(re.test(evt.target.value) == false){
+            alert("you can only enter numbers and letters");
+        }      
     }
     function changePassword(evt) {
-        var re = /[A-Za-z0-9]+/;//only character and number
-        // checkval(evt.target.value);
+        var re = /^[A-Za-z0-9]+$/;//only character and number
         if (re.test(evt.target.value) == true) {
             setPassword(evt.target.value);
-        } else {
-            alert.show("you can only enter number and letters");
+        } else if(evt.target.value == ''){
+            setPassword('');
+        } else if (re.test(evt.target.value) == false){
+            alert("you can only enter numbers and letters");
         }       
     }
 
