@@ -251,7 +251,14 @@ function ChallengeCom(props) {
 
 
     }
-
+    // check the input isn't empty
+    function checkBeforeCreate(username, password){
+        if (username=='' || password=='') {
+            alert("you cannot enter empty content");
+        } else {
+            verifycreate(username, password)
+        }
+    }
 
     async function verifyLogin(username, passowrd) {
         await props.verifyUser(username, passowrd);
@@ -633,7 +640,7 @@ function ChallengeCom(props) {
                             </Input>
                         </FormGroup>
 
-                        <Button className="float-left" onClick={() => verifycreate(username, password)} color="warning">Sign Up</Button>
+                        <Button className="float-left" onClick={() => checkBeforeCreate(username, password)} color="warning">Sign Up</Button>
                         <Button className="float-right" color="danger" onClick={() => verifyLogin(username, password)} >Log In</Button>
 
                     </Card.Body>
