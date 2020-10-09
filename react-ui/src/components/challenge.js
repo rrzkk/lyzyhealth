@@ -61,7 +61,8 @@ function ChallengeCom(props) {
     const [popover4, togglepopover4] = useState(false);
     const [popover5, togglepopover5] = useState(false);
     const [popover6, togglepopover6] = useState(false);
-
+    
+    console.log(props.newchallenges)
     const eatingChallenge = newchallenges.filter(el => el.type === 'eating');
     const eatingChallengelist = [eatingChallenge.filter(el => el.level === 1),
     eatingChallenge.filter(el => el.level === 2),

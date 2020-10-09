@@ -80,7 +80,7 @@ class Maincomp extends Component {
 
     componentDidMount() {
 
-        // this.props.fetchNewChallenges();
+        this.props.fetchNewChallenges();
         this.props.fetchInformation();
         this.props.fetchAllChallenges();
         this.props.getAllUC();

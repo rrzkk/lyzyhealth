@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 const mapStateToProps = state => {
   return {
     
-
+    newchallenges:state.newchallenges,
     allchallenges:state.allchallenges
     
   }
@@ -50,7 +50,7 @@ class Diagnose extends Component {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-8">
-              <RenderChallenge challenge={this.props.allchallenges} thisthis={this} challengeid={this.state.challengeid}/>
+              <RenderChallenge challenge={this.props.newchallenges} thisthis={this} challengeid={this.state.challengeid}/>
 
             </div>
             <div className="col-12 col-md-3 offset-md-1">
@@ -81,13 +81,13 @@ function RenderChallenge(props) {
   if(props.challenge.isLoading !== true){
 
 
-  const challengelength=props.challenge.allchallenges.length;
+  const challengelength=props.challenge.newchallenges.length;
   return (
     <Card >
-      <Card.Img variant="top" src={baseUrl+props.challenge.allchallenges[props.challengeid].picurl} />
+      <Card.Img variant="top" src={baseUrl+props.challenge.newchallenges[props.challengeid].picurl} />
       <Card.Body>
-      <Card.Title>{props.challenge.allchallenges[props.challengeid].title}</Card.Title>
-        <Card.Text>{props.challenge.allchallenges[props.challengeid].description}</Card.Text>
+      <Card.Title>{props.challenge.newchallenges[props.challengeid].title}</Card.Title>
+        <Card.Text>{props.challenge.newchallenges[props.challengeid].description}</Card.Text>
         <Button variant="primary" 
         onClick={()=>fetchnew(props.thisthis,props.challengeid,challengelength)}>Change a Challenge</Button>
         <Button variant="primary" className="ml-2">Done</Button>
