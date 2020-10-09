@@ -130,7 +130,8 @@ class Maincomp extends Component {
 
                     <Switch>
                         <Route exact path='/home' component={HomePage} />
-                        <Route exact path='/diagnose' component={() => <ChallengeCom newchallenges={this.props.newchallenges}
+                        <Route exact path='/diagnose' component={() => <ChallengeCom 
+                            newchallenges={this.props.newchallenges}
                             userchallenge={this.props.userchallenge}
                             login={this.props.login.verified}
                             repeatuser={this.props.repeatuser.verified}
