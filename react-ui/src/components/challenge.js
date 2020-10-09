@@ -1,4 +1,4 @@
-import React,{ useReducer } from 'react';
+import React, { useReducer } from 'react';
 import { motion, useMotionValue, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
 import { useState, useEffect, useRef } from 'react';
@@ -7,31 +7,31 @@ import Card from 'react-bootstrap/Card';
 import { Button, FormGroup, Label, Input, Popover, PopoverHeader, PopoverBody, Row, Modal, Table } from 'reactstrap';
 import { newchallenges } from './fakechallengedata';
 import { login } from '../react/login';
-import * as Scroll  from 'react-scroll';
-
+import * as Scroll from 'react-scroll';
 
 
 let Element = Scroll.Element
 let scroll = Scroll.animateScroll
 let scroller = Scroll.scroller
-let initial=0;
+let initial = 0;
 
-const animation = (state=0, action) => {
+const animation = (state = 0, action) => {
     switch (action) {
-    case 'MOVE':
-        if(state===3){
-            state=0;
-            initial=0;
-        }
-        else{state=state+1;
-       
-            initial=state;
-            
-    };
-    default:
-    return state;
+        case 'MOVE':
+            if (state === 3) {
+                state = 0;
+                initial = 0;
+            }
+            else {
+                state = state + 1;
+
+                initial = state;
+
+            };
+        default:
+            return state;
     }
-    };
+};
 
 
 
@@ -40,7 +40,7 @@ function ChallengeCom(props) {
 
 
 
-    const [count, dispatchC] = useReducer(animation,initial);
+    const [count, dispatchC] = useReducer(animation, initial);
 
     const componentRef = useRef();
 
@@ -58,6 +58,9 @@ function ChallengeCom(props) {
     const [popover1, togglepopover1] = useState(false);
     const [popover2, togglepopover2] = useState(false);
     const [popover3, togglepopover3] = useState(false);
+    const [popover4, togglepopover4] = useState(false);
+    const [popover5, togglepopover5] = useState(false);
+    const [popover6, togglepopover6] = useState(false);
 
     const eatingChallenge = newchallenges.filter(el => el.type === 'eating');
     const eatingChallengelist = [eatingChallenge.filter(el => el.level === 1),
@@ -94,7 +97,7 @@ function ChallengeCom(props) {
 
     const [loginmodel, togglemodel] = useState(false);
 
-
+    // const [validation, regcheck] = useState(false);
 
 
     const scrollToAnchor = (anchorName) => {
@@ -153,11 +156,11 @@ function ChallengeCom(props) {
 
     // const [animate, cycle] = useCycle({ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
     //     , { x: width * 2 / 3, y: -height / 1.2, scale: 1.4 });
-    const animatePos=[{ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
+    const animatePos = [{ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
         , { x: width * 2 / 3, y: -height / 1.2, scale: 1.4 }]
 
-    const animate=animatePos[count];
-    function cycle(){
+    const animate = animatePos[count];
+    function cycle() {
         dispatchC('MOVE');
     }
 
@@ -221,9 +224,26 @@ function ChallengeCom(props) {
         }
         setExerciseLength(exerciseChallengelist[exerciselvl - 1].length);
     }
+    // check input validation
     function changeUsername(evt) {
-
-        setUsername(evt.target.value);
+        var re = /^[A-Za-z0-9]+$/;//only character and number
+        if (re.test(evt.target.value) == true) {
+            setUsername(evt.target.value);
+        } else if(evt.target.value == ''){
+            setUsername('');
+        } else if(re.test(evt.target.value) == false){
+            alert("you can only enter numbers and letters");
+        }      
+    }
+    function changePassword(evt) {
+        var re = /^[A-Za-z0-9]+$/;//only character and number
+        if (re.test(evt.target.value) == true) {
+            setPassword(evt.target.value);
+        } else if(evt.target.value == ''){
+            setPassword('');
+        } else if (re.test(evt.target.value) == false){
+            alert("you can only enter numbers and letters");
+        }       
     }
 
     async function verifycreate(username, password) {
@@ -231,7 +251,14 @@ function ChallengeCom(props) {
 
 
     }
-
+    // check the input isn't empty
+    function checkBeforeCreate(username, password){
+        if (username=='' || password=='') {
+            alert("you cannot enter empty content");
+        } else {
+            verifycreate(username, password)
+        }
+    }
 
     async function verifyLogin(username, passowrd) {
         await props.verifyUser(username, passowrd);
@@ -243,12 +270,12 @@ function ChallengeCom(props) {
         props.verifyPassWord('24332','23435');
     }
 
-    function scrollMoreDown() { 
-            scroller.scrollTo('progressE',{smooth: true})
+    function scrollMoreDown() {
+        scroller.scrollTo('progressE', { smooth: true })
     }
-    
-    function scrollProgress(){
-        scroller.scrollTo('selectprogress',{smooth:true});
+
+    function scrollProgress() {
+        scroller.scrollTo('selectprogress', { smooth: true });
     }
 
     const loginstatus = (username, length) => {
@@ -314,49 +341,54 @@ function ChallengeCom(props) {
         if (props.login) {
             props.postChallenge(props.username.username);
             props.getUserChallenge(props.username.username);
-             cycle();
+            cycle();
         }
         else { alert("You Need Log in To Upgrade") }
-       
+
     }
 
     function addP1() {
-        if(!addProgressBtn2 && !addProgressBtn3){
-        toggleDis1(!addProgressBtn1);
-        toggleText1();}
+        if (!addProgressBtn2 && !addProgressBtn3) {
+            toggleDis1(!addProgressBtn1);
+            toggleText1();
+        }
         else alert('you can only finish one challenge at a time');
-        if(!addProgressBtn1){
-        scrollMoreDown() ;}
+        if (!addProgressBtn1) {
+            scrollMoreDown();
+        }
         else scrollProgress();
-        
+
     }
     function addP2() {
-        if(!addProgressBtn1 && !addProgressBtn3){
-        toggleDis2(!addProgressBtn2);
-        toggleText2();}
+        if (!addProgressBtn1 && !addProgressBtn3) {
+            toggleDis2(!addProgressBtn2);
+            toggleText2();
+        }
         else alert('you can only finish one challenge at a time');
-        if(!addProgressBtn2){
-            scrollMoreDown() ;}
-            else scrollProgress();
-        
+        if (!addProgressBtn2) {
+            scrollMoreDown();
+        }
+        else scrollProgress();
+
     }
     function addP3() {
-        if(!addProgressBtn2 && !addProgressBtn1){
-        toggleDis3(!addProgressBtn3);
-        toggleText3();
-        if(!addProgressBtn3){
-            scrollMoreDown() ;}
+        if (!addProgressBtn2 && !addProgressBtn1) {
+            toggleDis3(!addProgressBtn3);
+            toggleText3();
+            if (!addProgressBtn3) {
+                scrollMoreDown();
+            }
             else scrollProgress();
-    }
-    else alert('you can only finish one challenge at a time')
+        }
+        else alert('you can only finish one challenge at a time')
     }
     const [addProgressBtn1, toggleDis1] = useState(false);
     const [addProgressBtn2, toggleDis2] = useState(false);
     const [addProgressBtn3, toggleDis3] = useState(false);
 
-    const [btnText1,toggleText1]=useCycle('Add to Progress','Give up Challenge');
-    const [btnText2,toggleText2]=useCycle('Add to Progress','Give up Challenge');
-    const [btnText3,toggleText3]=useCycle('Add to Progress','Give up Challenge');
+    const [btnText1, toggleText1] = useCycle('Add to Progress', 'Give up Challenge');
+    const [btnText2, toggleText2] = useCycle('Add to Progress', 'Give up Challenge');
+    const [btnText3, toggleText3] = useCycle('Add to Progress', 'Give up Challenge');
 
     // addProgressBtn1=props.addProgressBtn1;
     // addProgressBtn2=props.addProgressBtn2;
@@ -370,13 +402,27 @@ function ChallengeCom(props) {
     // toggleText1=props.toggleText1;
     // toggleText2=props.toggleText2;
     // toggleText3=props.toggleText3;
-  
+
 
     const Card1 = () => {
         return (<Card className="challengecard" >
             <Card.Body>
                 <FormGroup >
-                    <Label for="exampleSelect"><b>Select Food Categories</b></Label>
+                    <div className='row'>
+                        <div className="col-12 col-md-10">
+                            <Label for="exampleSelect"><b>Select Food Categories</b></Label></div>
+                        <div className="col-12 col-md-2">
+                            <Card.Img src={require('../challengeassets/questionmark.png')} className='questionmark'
+                                onMouseOver={() => togglepopover4(!popover4)}
+                                onMouseOut={() => togglepopover4(!popover4)}
+                                id='ques1'
+                            ></Card.Img>
+                        </div>
+                        <Popover placement="down" isOpen={popover4} target="ques1">
+                            <PopoverHeader>Why we take eating challenge?</PopoverHeader>
+                            <PopoverBody>Our food category is designed following the guide of healthy eating pyramid. The Healthy Eating Pyramid is a simple visual guide to the types and proportion of foods that we should eat every day for good health.</PopoverBody>
+                        </Popover>
+                    </div>
                     <Input type="select" name="select" id="exampleSelect" value={eatlvl2} onChange={(evt) => changelvl1(evt)} onPointerLeave={() => setEatingLength(eatingChallengelist[eatlvl - 1].length)} style={{ width: 150 }}>
                         <option>vegetables</option>
                         <option>fruits</option>
@@ -401,9 +447,9 @@ function ChallengeCom(props) {
                 </Popover>
                 <br />
                 {!addProgressBtn1 &&
-                <Button className="cardbtn" onClick={() => changeEat()} color="warning">Change a Challenge</Button>}
+                    <Button className="cardbtn" onClick={() => changeEat()} color="warning">Change a Challenge</Button>}
                 {addProgressBtn1 &&
-                 <Button className="cardbtn" color="danger" onClick={() => { finishBtn() }}>FINISH</Button>}
+                    <Button className="cardbtn" color="danger" onClick={() => { finishBtn() }}>FINISH</Button>}
                 <br />
                 <Button className="cardbtn" color="danger" onClick={() => addP1()} >{btnText1}</Button>
 
@@ -414,7 +460,21 @@ function ChallengeCom(props) {
         return (<Card className="challengecard" >
             <Card.Body>
                 <FormGroup>
-                    <Label for="exampleSelect"><b>Select Difficulty Level</b></Label>
+                    <div className='row'>
+                        <div className="col-12 col-md-10">
+                            <Label for="exampleSelect"><b>Select Difficulty Level</b></Label></div>
+                        <div className="col-12 col-md-2">
+                            <Card.Img src={require('../challengeassets/questionmark.png')} className='questionmark'
+                                onMouseOver={() => togglepopover5(!popover5)}
+                                onMouseOut={() => togglepopover5(!popover5)}
+                                id='ques2'
+                            ></Card.Img>
+                        </div>
+                        <Popover placement="down" isOpen={popover5} target="ques2">
+                            <PopoverHeader>Why we take not eating challenge?</PopoverHeader>
+                            <PopoverBody>This “no eating challenge” is designed to lower the frequency of eating junk food. Eating junk food on a regular basis can lead to an increased risk of obesity and chronic diseases. 41% of teenagers’ daily energy intake (kilojoules) comes from junk food. This means junk food is taking the place of other more nutritious foods in our diets. You will have stomach to eat more nutritious food if you eat less junk food.</PopoverBody>
+                        </Popover>
+                    </div>
                     <Input type="select" name="select" id="exampleSelect" value={noeatlvl2} onChange={(evt) => changelvl3(evt)} style={{ width: 150 }}>
                         <option>easy</option>
                         <option>medium</option>
@@ -442,9 +502,9 @@ function ChallengeCom(props) {
                 </Popover>
                 <br />
                 {!addProgressBtn2 &&
-                <Button className="cardbtn" onClick={() => changeNo()} color="warning">Change a Challenge</Button>}
+                    <Button className="cardbtn" onClick={() => changeNo()} color="warning">Change a Challenge</Button>}
                 {addProgressBtn2 &&
-                 <Button className="cardbtn" color="danger" onClick={() => { finishBtn() }}>FINISH</Button>}
+                    <Button className="cardbtn" color="danger" onClick={() => { finishBtn() }}>FINISH</Button>}
                 <br />
                 <Button className="cardbtn" color="danger" onClick={() => addP2()} >{btnText2}</Button>
 
@@ -455,7 +515,21 @@ function ChallengeCom(props) {
         return (<Card className="challengecard" >
             <Card.Body>
                 <FormGroup>
-                    <Label for="exampleSelect"><b>Select Difficulty Level</b></Label>
+                    <div className='row'>
+                        <div className="col-12 col-md-10">
+                            <Label for="exampleSelect"><b>Select Difficulty Level</b></Label></div>
+                        <div className="col-12 col-md-2">
+                            <Card.Img src={require('../challengeassets/questionmark.png')} className='questionmark'
+                                onMouseOver={() => togglepopover6(!popover6)}
+                                onMouseOut={() => togglepopover6(!popover6)}
+                                id='ques3'
+                            ></Card.Img>
+                        </div>
+                        <Popover placement="down" isOpen={popover6} target="ques3">
+                            <PopoverHeader>Why we take exercising challenge?</PopoverHeader>
+                            <PopoverBody>This exercise challenge is designed for burning fat and increase appetite. Exercise can helps boost your metabolism, meaning you burn more calories all day long. You will have the stomach to eat more nutritious food.</PopoverBody>
+                        </Popover>
+                    </div>
                     <Input type="select" name="select" id="exampleSelect" value={exerciselvl2} onChange={(evt) => changelvl2(evt)} onPointerLeave={() => setNoEatingLength(noEatingChallengelist[noeatlvl - 1].length)} style={{ width: 150 }} >
                         <option>easy</option>
                         <option>medium</option>
@@ -479,9 +553,9 @@ function ChallengeCom(props) {
                 </Popover>
                 <br />
                 {!addProgressBtn3 &&
-                <Button className="cardbtn" onClick={() => changeEx()} color="warning">Change a Challenge</Button>}
+                    <Button className="cardbtn" onClick={() => changeEx()} color="warning">Change a Challenge</Button>}
                 {addProgressBtn3 &&
-                 <Button className="cardbtn" color="danger" onClick={() => { finishBtn() }}>FINISH</Button>}
+                    <Button className="cardbtn" color="danger" onClick={() => { finishBtn() }}>FINISH</Button>}
                 <br />
                 <Button className="cardbtn" color="danger" onClick={() => addP3()} >{btnText3}</Button>
             </Card.Body>
@@ -489,11 +563,11 @@ function ChallengeCom(props) {
     }
 
 
-    useEffect(()=>{
-        if(!props.login){
-        window.scrollTo(0, 0);
+    useEffect(() => {
+        if (!props.login) {
+            window.scrollTo(0, 0);
         }
-    },[]);
+    }, []);
 
     return (
         <div className="container ">
@@ -562,11 +636,11 @@ function ChallengeCom(props) {
                         </FormGroup>
                         <FormGroup >
                             <Label for="passowrd"><b>Enter Your Passcode</b></Label>
-                            <Input type="input" id="password" value={password} onChange={(evt) => setPassword(evt.target.value)} style={{ width: 200 }}>
+                            <Input type="input" id="password" value={password} onChange={(evt) => changePassword(evt)} style={{ width: 200 }}>
                             </Input>
                         </FormGroup>
 
-                        <Button className="float-left" onClick={() => verifycreate(username, password)} color="warning">Sign Up</Button>
+                        <Button className="float-left" onClick={() => checkBeforeCreate(username, password)} color="warning">Sign Up</Button>
                         <Button className="float-right" color="danger" onClick={() => verifyLogin(username, password)} >Log In</Button>
 
                     </Card.Body>
@@ -589,18 +663,18 @@ function ChallengeCom(props) {
                         {!addProgressBtn3 && Card3()}
                     </div>
                 </div>
-               
+
             </div>
             <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
-            <Element name="progress"></Element>
+                <Element name="progressE"></Element>
                 <b>Check Your Progress</b>
             </div>
 
 
             <div className="container challengebg">
-                <div className="row" name='progressE'>
+                <div className="row">
                     <div className="col-12 col-md-4">
-                        { addProgressBtn1 && Card1()}
+                        {addProgressBtn1 && Card1()}
                     </div>
                     <div className="col-12 col-md-4">
                         {addProgressBtn2 && Card2()}

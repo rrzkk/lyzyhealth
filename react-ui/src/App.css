@@ -469,7 +469,12 @@ text-align: center;}
   padding: 30px;
   border-radius: 30px;
 }
-
+.questionmark{
+  margin: auto;
+  /* change width isn't working. */
+  width: 20px; 
+  height: 20px;
+}
 .racemap{
  
   width: 100%;
