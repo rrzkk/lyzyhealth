@@ -11,7 +11,7 @@ import * as Scroll  from 'react-scroll';
 
 
 
-const { Page } = require('canvas')
+
 
 let Element = Scroll.Element
 let scroll = Scroll.animateScroll
