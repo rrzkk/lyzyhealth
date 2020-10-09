@@ -63,7 +63,7 @@ function ChallengeCom(props) {
     const [popover6, togglepopover6] = useState(false);
     
 
-    const eatingChallenge = props.newchallenges.filter(el => {return(el.type === 'eating')});
+    const eatingChallenge = props.newchallenges.newchallenges.filter(el => {return(el.type === 'eating')});
     const eatingChallengelist = [eatingChallenge.filter(el => el.level === 1),
     eatingChallenge.filter(el => el.level === 2),
     eatingChallenge.filter(el => el.level === 3),
@@ -71,14 +71,14 @@ function ChallengeCom(props) {
     eatingChallenge.filter(el => el.level === 5)];
 
 
-    const noEatingChallenge = props.newchallenges.filter(el => el.type === 'not eating');
+    const noEatingChallenge = props.newchallenges.newchallenges.filter(el => el.type === 'not eating');
     const noEatingChallengelist = [
         noEatingChallenge.filter(el => el.level === 1),
         noEatingChallenge.filter(el => el.level === 2),
         noEatingChallenge.filter(el => el.level === 3)
     ];
 
-    const exerciseChallenge = props.newchallenges.filter(el => el.type === 'exercising');
+    const exerciseChallenge = props.newchallenges.newchallenges.filter(el => el.type === 'exercising');
     const exerciseChallengelist = [
         exerciseChallenge.filter(el => el.level === 1),
         exerciseChallenge.filter(el => el.level === 2),
