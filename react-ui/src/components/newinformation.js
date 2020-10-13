@@ -14,29 +14,73 @@ import infoContent from './infoContentJson.json';
 
 
 
-const infoCards = infoJson.map((el,index) => {
-   
-    return (
-        <div className="col-6 col-md-4">
-            <h>{index}</h><br/>
-            <h>{el.figure}</h>
-            <p>{el.text}</p>
-        </div>
-    );
-});
+//This is the TOP of the page shows the FIGURE
+function infoCards() {
+    return (infoJson.map((el, index) => {
+        const [counter, setCounter] = useState(0);
+        //slice the figure
+        let figure;
+        let symbol = '';
+        if (el.figure.endsWith('%')) {
+            figure = el.figure.slice(0, -1);
+            symbol = '%';
+        }
+        else { figure = el.figure }
 
-function symtoms(symptoms){
-    return symptoms.map(el=>{
-        return(
-        <div>
-            {el.text}    
-        </div>
+        //set the parameters of animation
+        let duration = 1000;
+        let parseFigure = parseInt(figure);
+        let stepTime = duration/parseFigure ;
+
+        useEffect(()=>{
+            if(counter!==parseFigure){
+                if(parseFigure>1000){
+                    setTimeout(()=>{setCounter(counter+5000);},stepTime);
+                }
+                else setTimeout(()=>{setCounter(counter+1);},stepTime);
+            }
+        },[counter]);
+
+        return (
+            <div className="col-6 col-md-4">
+                <h>{index}</h><br />
+                <h>{counter}{symbol}</h>
+                <p>{el.text}</p>
+            </div>
+        );
+    }))
+}
+
+//This is the counting number effect of the infoCards 
+// function animateValue(start, end, duration) {
+
+//     var range = end - start;
+//     var current = start;
+//     var stepTime = Math.abs(Math.floor(duration / range));
+
+//     var timer = setInterval(function() {
+//         current += increment;
+//         obj.innerHTML = current;
+//         if (current == end) {
+//             clearInterval(timer);
+//         }
+//     }, stepTime);
+// }
+
+//a subfunction from infoContentCard
+function symtoms(symptoms) {
+    return symptoms.map(el => {
+        return (
+            <div>
+                {el.text}
+            </div>
         );
     });
 }
-function solution(solutions){
-    return solutions.map(el=>{
-        return(
+//a subfunction from infoContentCard
+function solution(solutions) {
+    return solutions.map(el => {
+        return (
             <div>
                 <b>
                     {el.title}
@@ -49,8 +93,9 @@ function solution(solutions){
     });
 }
 
-const infoContentCards=infoContent.map(el=>{
-    return(
+//This is the second part of the page showing the content of the page
+const infoContentCards = infoContent.map(el => {
+    return (
         <div className="row">
             <div className="col-12">
                 <b>{el.title}</b>
@@ -68,13 +113,13 @@ const infoContentCards=infoContent.map(el=>{
     );
 });
 
-
+//main function
 function NewInfo() {
- 
+
     return (
         <div className="container infobackground">
             <div className="row">
-                {infoCards}
+                {infoCards()}
             </div>
             {infoContentCards}
         </div>
