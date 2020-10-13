@@ -8,6 +8,7 @@ import Doctors from './doctors.js';
 import Information from './information.js';
 import About from './about.js';
 import ChallengeCom from './challenge.js';
+import NewInfo from './newinformation.js';
 
 import { connect } from 'react-redux';
 import { fetchInformation, fetchAllChallenges, fetchNewChallenges, createUser, verifyUser, verifyRepeat, postChallenge, getUserChallenge, getAllUC, verifyPassword } from '../react/ActionCreators';
@@ -149,7 +150,7 @@ class Maincomp extends Component {
                         <Route exact path='/information' component={() => <Information />} />
                         <Route exact path='/information/:name' />
 
-                        <Route exact path='/about' component={About} />
+                        <Route exact path='/about' component={NewInfo} />
                         <Redirect to="/home" />
                     </Switch>
 
