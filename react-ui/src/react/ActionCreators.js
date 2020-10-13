@@ -62,12 +62,12 @@ export const fetchNewChallenges = () => (dispatch) => {
         throw errmess;
       })
     .then(response => response.json())
-    .then(challenge => dispatch(fetchNewChallenges(challenge)))
+    .then(challenge2 => dispatch(addNewChallenges(challenge2)))
     .catch(error => dispatch(challengeFailed(error.message)));
 };
-export const addNewChallenges = (challenge) => ({
+export const addNewChallenges = (challenge2) => ({
   type: ActionTypes.FETCH_NEW_CHALLENGES,
-  payload: challenge
+  payload: challenge2
 });
 
 
