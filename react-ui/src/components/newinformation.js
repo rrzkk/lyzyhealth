@@ -28,14 +28,17 @@ function infoCards() {
         else { figure = el.figure }
 
         //set the parameters of animation
-        let duration = 1000;
+        let duration = 2000;
         let parseFigure = parseInt(figure);
         let stepTime = duration/parseFigure ;
 
         useEffect(()=>{
-            if(counter!==parseFigure){
-                if(parseFigure>1000){
-                    setTimeout(()=>{setCounter(counter+5000);},stepTime);
+            if(counter<parseFigure){
+                if(parseFigure/duration>16){
+                    if(counter+Math.ceil(parseFigure*16/duration)<parseFigure){
+                    setTimeout(()=>{setCounter(counter+Math.ceil(parseFigure*16/duration));},16);
+                    }
+                    else{setCounter(parseFigure)}
                 }
                 else setTimeout(()=>{setCounter(counter+1);},stepTime);
             }
@@ -51,21 +54,6 @@ function infoCards() {
     }))
 }
 
-//This is the counting number effect of the infoCards 
-// function animateValue(start, end, duration) {
-
-//     var range = end - start;
-//     var current = start;
-//     var stepTime = Math.abs(Math.floor(duration / range));
-
-//     var timer = setInterval(function() {
-//         current += increment;
-//         obj.innerHTML = current;
-//         if (current == end) {
-//             clearInterval(timer);
-//         }
-//     }, stepTime);
-// }
 
 //a subfunction from infoContentCard
 function symtoms(symptoms) {
