@@ -694,7 +694,7 @@ function ChallengeCom(props) {
                     <div className="mapbtn">
                     <b>your current car type is :</b><img className="carsmall" src={require('../challengeassets/'+carImg)} width='10px'/>
                     
-                        {/* <Button className="mapbtn" color="danger" onMouseEnter={() => window.dispatchEvent(new Event('resize'))} onClick={() => moveCar()} onPointerLeave={() => setExerciseLength(exerciseChallengelist[exerciselvl - 1].length)} >Click to Drive</Button> */}
+                        <Button className="mapbtn" color="danger" onMouseEnter={() => window.dispatchEvent(new Event('resize'))} onClick={() => moveCar()} onPointerLeave={() => setExerciseLength(exerciseChallengelist[exerciselvl - 1].length)} >Click to Drive</Button>
                     </div></div>
                     <div className="col-12 col-md-6 cMap" >
                         <div className="col-12 col-md-8 offset-md-2">
