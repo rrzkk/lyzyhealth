@@ -12,27 +12,21 @@ import * as Scroll from 'react-scroll';
 import infoJson from './infoJson.json';
 import infoContent from './infoContentJson.json';
 
-
 //This is a scroll element
 const moveToElement = (elementId) => {
     let element = document.getElementById(elementId);
-
     if (element) {
         let offsetTop = 0;
-
         do {
             offsetTop += element.offsetTop;
             element = element?.offsetParent;
         } while (element);
-
-        window.scrollTo({ behavior: "smooth", top: offsetTop-120 });
+        window.scrollTo({ behavior: "smooth", top: offsetTop - 78 });
     }
 };
-
 function changingDiv(evt, currentDiv, setDiv) {
     console.log("evt is " + evt);
     if (typeof evt !== 'undefined') {
-
         if (currentDiv === 1) {
             if (evt.nativeEvent.wheelDelta < 0) {
                 setDiv(2);
@@ -57,7 +51,6 @@ function changingDiv(evt, currentDiv, setDiv) {
         }
     }
 }
-
 //This is the TOP of the page shows the FIGURE
 function infoCards() {
     return (infoJson.map((el, index) => {
@@ -70,12 +63,10 @@ function infoCards() {
             symbol = '%';
         }
         else { figure = el.figure }
-
         //set the parameters of animation
         let duration = 2000;
         let parseFigure = parseInt(figure);
         let stepTime = duration / parseFigure;
-
         useEffect(() => {
             if (counter < parseFigure) {
                 if (parseFigure / duration > 16) {
@@ -87,18 +78,16 @@ function infoCards() {
                 else setTimeout(() => { setCounter(counter + 1); }, stepTime);
             }
         }, [counter]);
-
+        
         return (
-            <div className="col-6 col-md-4">
-                <h>{index}</h><br />
-                <h>{counter}{symbol}</h>
-                <p>{el.text}</p>
+            <div className="col-6 col-md-4 infotopcard" style={{}}>
+                <h className="infoNum">{counter}{symbol}</h>
+                <p className="infoDes">{el.text}</p>
             </div>
         );
+       
     }))
 }
-
-
 //a subfunction from infoContentCard
 function symtoms(symptoms) {
     return symptoms.map(el => {
@@ -124,17 +113,15 @@ function solution(solutions) {
         );
     });
 }
-
 //This is the second part of the page showing the content of the page
-function infoContentCards( currentDiv, setDiv) {
+function infoContentCards(currentDiv, setDiv) {
     return infoContent.map((el, index) => {
         return (
             <div>
                 <div
-                    className="row fullscreendiv"
+                    className="row fullscreendiv infoContent"
                     id={`fullscreendiv${index + 2}`}
-                    onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}
-                >
+                    onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
                     <div className="col-12 ">
                         <b>{el.title}</b>
                         <p>{el.text}</p>
@@ -152,12 +139,11 @@ function infoContentCards( currentDiv, setDiv) {
         );
     });
 }
-
 //main function
 function NewInfo() {
     const [currentDiv, setDiv] = useState(1);
     return (
-        <div className="container infobackground">
+        <div className=" infobackground fullscreenwid">
             <div className="row fullscreendiv" id="fullscreendiv1" onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
                 {infoCards()}
             </div>
