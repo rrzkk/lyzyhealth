@@ -98,7 +98,7 @@ function ChallengeCom(props) {
 
     const [loginmodel, togglemodel] = useState(false);
 
-    // const [validation, regcheck] = useState(false);
+    const [carImg, carImgChange] = useState('bike.png');
 
 
     const scrollToAnchor = (anchorName) => {
@@ -289,10 +289,10 @@ function ChallengeCom(props) {
                     <b>You have earned {length} challenge points</b><br /><br />
                     <b>Unlock new car by finishing more challenges</b><br /><br />
                     <ul style={{ listStyle: "none" }}>
-                        <li><img src={require('../challengeassets/bike.png')} width='50px' /><a>: Finish 0-3 challenges, unlock a bike</a> </li>
-                        <li><img src={require('../challengeassets/car1.png')} width='50px' /><a>: Finish 3-5 challenges, unlock a mini</a> </li>
-                        <li><img src={require('../challengeassets/car2.png')} width='50px' /><a>: Finish 5-10 challenges, unlock a sedan</a> </li>
-                        <li><img src={require('../challengeassets/car3.png')} width='50px' /><a>: Finish 10-15 challenges, unlock a coupe</a> </li>
+                        <li><img src={require('../challengeassets/bike.png')} width='50px' /><a>: Finish 0-2 challenges, unlock a bike</a> </li>
+                        <li><img src={require('../challengeassets/car1.png')} width='50px' /><a>: Finish 3-4 challenges, unlock a mini</a> </li>
+                        <li><img src={require('../challengeassets/car2.png')} width='50px' /><a>: Finish 5-9 challenges, unlock a sedan</a> </li>
+                        <li><img src={require('../challengeassets/car3.png')} width='50px' /><a>: Finish 10-14 challenges, unlock a coupe</a> </li>
                         <li><img src={require('../challengeassets/car4.png')} width='50px' /><a>: Finish 15+ challenges, unlock a rocket</a> </li>
                     </ul>
                     <Button color='warning' onClick={()=>logOff()}>Log off</Button>
@@ -323,18 +323,23 @@ function ChallengeCom(props) {
 
     const carchange = (length) => {
         if (length > 14) {
+            // carImgChange('car4.png');
             return (<img className="racecar" src={require('../challengeassets/car4.png')}></img>);
         }
         else if (length > 9) {
+            // carImgChange('car3.png');
             return (<img className="racecar" src={require('../challengeassets/car3.png')}></img>);
         }
         else if (length > 4) {
+            // carImgChange('car2.png');
             return (<img className="racecar" src={require('../challengeassets/car2.png')}></img>);
         }
         else if (length > 2) {
+            // carImgChange('car1.png');
             return (<img className="racecar" src={require('../challengeassets/car1.png')}></img>);
         }
         else {
+            // carImgChange('../challengeassets/bike.png');
             return (<img className="racecar" src={require('../challengeassets/bike.png')}></img>)
         }
     }
@@ -686,8 +691,11 @@ function ChallengeCom(props) {
                 </div>
                 <div className="row" >
                     <div className="col-12 col-md-3 " >
+                    <div className="mapbtn">
+                    {/* <b>your current car type is :</b><img className="carsmall" src={require('../challengeassets/'+carImg)} width='10px'/> */}
+                    
                         <Button className="mapbtn" color="danger" onMouseEnter={() => window.dispatchEvent(new Event('resize'))} onClick={() => moveCar()} onPointerLeave={() => setExerciseLength(exerciseChallengelist[exerciselvl - 1].length)} >Click to Drive</Button>
-                    </div>
+                    </div></div>
                     <div className="col-12 col-md-6 cMap" >
                         <div className="col-12 col-md-8 offset-md-2">
                         </div>

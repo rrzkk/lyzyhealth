@@ -605,6 +605,11 @@ text-align: center;}
 .infobackground{
   background-color: #eeeeee;
 }
+
 .fullscreendiv{
   height: 100vh !important;
+}
+.carsmall{
+  height: 50px;
+  width: 50px;
 }
