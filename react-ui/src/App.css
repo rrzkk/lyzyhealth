@@ -605,3 +605,8 @@ text-align: center;}
 .infobackground{
   background-color: #eeeeee;
 }
+.carsmall{
+  height: 50px;
+  width: 50px;
+
+}
