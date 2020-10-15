@@ -13,6 +13,50 @@ import infoJson from './infoJson.json';
 import infoContent from './infoContentJson.json';
 
 
+//This is a scroll element
+const moveToElement = (elementId) => {
+    let element = document.getElementById(elementId);
+
+    if (element) {
+        let offsetTop = 0;
+
+        do {
+            offsetTop += element.offsetTop;
+            element = element?.offsetParent;
+        } while (element);
+
+        window.scrollTo({ behavior: "smooth", top: offsetTop-120 });
+    }
+};
+
+function changingDiv(evt, currentDiv, setDiv) {
+    console.log("evt is " + evt);
+    if (typeof evt !== 'undefined') {
+
+        if (currentDiv === 1) {
+            if (evt.nativeEvent.wheelDelta < 0) {
+                setDiv(2);
+                moveToElement("fullscreendiv2");
+            }
+        }
+        else if (currentDiv === 2) {
+            if (evt.nativeEvent.wheelDelta > 0) {
+                setDiv(1);
+                moveToElement("fullscreendiv1");
+            }
+            else {
+                setDiv(3);
+                moveToElement("fullscreendiv3");
+            }
+        }
+        else {
+            if (evt.nativeEvent.wheelDelta > 0) {
+                setDiv(2);
+                moveToElement("fullscreendiv2");
+            }
+        }
+    }
+}
 
 //This is the TOP of the page shows the FIGURE
 function infoCards() {
@@ -30,19 +74,19 @@ function infoCards() {
         //set the parameters of animation
         let duration = 2000;
         let parseFigure = parseInt(figure);
-        let stepTime = duration/parseFigure ;
+        let stepTime = duration / parseFigure;
 
-        useEffect(()=>{
-            if(counter<parseFigure){
-                if(parseFigure/duration>16){
-                    if(counter+Math.ceil(parseFigure*16/duration)<parseFigure){
-                    setTimeout(()=>{setCounter(counter+Math.ceil(parseFigure*16/duration));},16);
+        useEffect(() => {
+            if (counter < parseFigure) {
+                if (parseFigure / duration > 16) {
+                    if (counter + Math.ceil(parseFigure * 16 / duration) < parseFigure) {
+                        setTimeout(() => { setCounter(counter + Math.ceil(parseFigure * 16 / duration)); }, 16);
                     }
-                    else{setCounter(parseFigure)}
+                    else { setCounter(parseFigure) }
                 }
-                else setTimeout(()=>{setCounter(counter+1);},stepTime);
+                else setTimeout(() => { setCounter(counter + 1); }, stepTime);
             }
-        },[counter]);
+        }, [counter]);
 
         return (
             <div className="col-6 col-md-4">
@@ -67,7 +111,7 @@ function symtoms(symptoms) {
 }
 //a subfunction from infoContentCard
 function solution(solutions) {
-    return solutions.map(el => {
+    return solutions.map((el, index) => {
         return (
             <div>
                 <b>
@@ -82,36 +126,45 @@ function solution(solutions) {
 }
 
 //This is the second part of the page showing the content of the page
-const infoContentCards = infoContent.map(el => {
-    return (
-        <div className="row">
-            <div className="col-12">
-                <b>{el.title}</b>
-                <p>{el.text}</p>
+function infoContentCards( currentDiv, setDiv) {
+    return infoContent.map((el, index) => {
+        return (
+            <div>
+                <div
+                    className="row fullscreendiv"
+                    id={`fullscreendiv${index + 2}`}
+                    onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}
+                >
+                    <div className="col-12 ">
+                        <b>{el.title}</b>
+                        <p>{el.text}</p>
+                    </div>
+                    <div className="col-12 col-md-3 ">
+                        <b>Symptoms</b>
+                        {symtoms(el.symptoms)}
+                    </div>
+                    <div className="col-12 col-md-9 ">
+                        <b>Prevention</b>
+                        {solution(el.prevent)}
+                    </div>
+                </div>
             </div>
-            <div className="col-12 col-md-3">
-                <b>Symptoms</b>
-                {symtoms(el.symptoms)}
-            </div>
-            <div className="col-12 col-md-9">
-                <b>Prevention</b>
-                {solution(el.prevent)}
-            </div>
-        </div>
-    );
-});
+        );
+    });
+}
 
 //main function
 function NewInfo() {
-
+    const [currentDiv, setDiv] = useState(1);
     return (
         <div className="container infobackground">
-            <div className="row">
+            <div className="row fullscreendiv" id="fullscreendiv1" onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
                 {infoCards()}
             </div>
-            {infoContentCards}
+            {infoContentCards(currentDiv, setDiv)}
         </div>
     );
 }
+
 export default NewInfo
 

@@ -605,3 +605,6 @@ text-align: center;}
 .infobackground{
   background-color: #eeeeee;
 }
+.fullscreendiv{
+  height: 100vh !important;
+}
