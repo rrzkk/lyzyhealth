@@ -323,19 +323,19 @@ function ChallengeCom(props) {
 
     const carchange = (length) => {
         if (length > 14) {
-            // carImgChange('car4.png');
+            carImgChange('car4.png');
             return (<img className="racecar" src={require('../challengeassets/car4.png')}></img>);
         }
         else if (length > 9) {
-            // carImgChange('car3.png');
+            carImgChange('car3.png');
             return (<img className="racecar" src={require('../challengeassets/car3.png')}></img>);
         }
         else if (length > 4) {
-            // carImgChange('car2.png');
+            carImgChange('car2.png');
             return (<img className="racecar" src={require('../challengeassets/car2.png')}></img>);
         }
         else if (length > 2) {
-            // carImgChange('car1.png');
+            carImgChange('car1.png');
             return (<img className="racecar" src={require('../challengeassets/car1.png')}></img>);
         }
         else {
@@ -692,7 +692,7 @@ function ChallengeCom(props) {
                 <div className="row" >
                     <div className="col-12 col-md-3 " >
                     <div className="mapbtn">
-                    {/* <b>your current car type is :</b><img className="carsmall" src={require('../challengeassets/'+carImg)} width='10px'/> */}
+                    <b>your current car type is :</b><img className="carsmall" src={require('../challengeassets/'+carImg)} width='10px'/>
                     
                         {/* <Button className="mapbtn" color="danger" onMouseEnter={() => window.dispatchEvent(new Event('resize'))} onClick={() => moveCar()} onPointerLeave={() => setExerciseLength(exerciseChallengelist[exerciselvl - 1].length)} >Click to Drive</Button> */}
                     </div></div>
