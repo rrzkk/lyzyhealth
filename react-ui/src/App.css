@@ -691,7 +691,9 @@ text-align: center;}
 }
 @keyframes fade1 {
   0% { opacity: 0 }
-  50% { opacity: 1 }
+}
+@keyframes fade2 {
+  0% { opacity: 1 }
 }
 .infoBtn1{
   z-index: 999;
@@ -701,6 +703,14 @@ text-align: center;}
   opacity: 1;
   animation: fade1 2s linear;
 }
+.infoBtn1f{
+  z-index: 999;
+  right: 11vw;
+  top: 29vh;
+  position: fixed;
+  opacity: 0;
+  animation: fade2 0.1s linear;
+}
 .infoBtn2{
   z-index: 999;
   right: 13vw;
@@ -708,6 +718,14 @@ text-align: center;}
   position: fixed;
   opacity: 1;
   animation: fade1 2s linear;
+}
+.infoBtn2f{
+  z-index: 999;
+  right: 13vw;
+  top: 45vh;
+  position: fixed;
+  opacity: 0;
+  animation: fade2 0.1s linear;
 }
 .infoBtn3{
   z-index: 999;
@@ -717,6 +735,14 @@ text-align: center;}
   opacity: 1;
   animation: fade1 2s linear;
 }
+.infoBtn3f{
+  z-index: 999;
+  right: 14vw;
+  top: 59vh;
+  position: fixed;
+  opacity: 0;
+  animation: fade2 0.1s linear;
+}
 .infoBtn4{
   z-index: 999;
   right: 13vw;
@@ -725,6 +751,14 @@ text-align: center;}
   opacity: 1;
   animation: fade1 3s linear;
 }
+.infoBtn4f{
+  z-index: 999;
+  right: 13vw;
+  top: 74vh;
+  position: fixed;
+  opacity: 0;
+  animation: fade2 0.1s linear;
+}
 .infoBtn5{
   z-index: 999;
   right: 13vw;
@@ -732,4 +766,12 @@ text-align: center;}
   position: fixed;
   opacity: 1;
   animation: fade1 2s linear;
+}
+.infoBtn5f{
+  z-index: 999;
+  right: 13vw;
+  top: 84vh;
+  position: fixed;
+  opacity: 0;
+  animation: fade2 0.1s linear;
 }

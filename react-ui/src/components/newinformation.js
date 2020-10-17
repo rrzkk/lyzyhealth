@@ -24,6 +24,26 @@ const moveToElement = (elementId) => {
         window.scrollTo({ behavior: "smooth", top: offsetTop - 76 });
     }
 };
+function leadTo1(setDiv){
+    setDiv(2);
+    moveToElement("fullscreendiv2");
+};
+function leadTo2(setDiv){
+    setDiv(3);
+    moveToElement("fullscreendiv3");
+};
+function leadTo3(setDiv){
+    setDiv(4);
+    moveToElement("fullscreendiv4");
+};
+function leadTo4(setDiv){
+    setDiv(5);
+    moveToElement("fullscreendiv5");
+};
+function leadTo5(setDiv){
+    setDiv(6);
+    moveToElement("fullscreendiv6");
+};
 function changingDiv(evt, currentDiv, setDiv) {
     console.log("evt is " + evt);
     if (typeof evt !== 'undefined') {
@@ -242,11 +262,16 @@ function NewInfo() {
     const [prevention, setPrevention] = useState(false);
     return (
         <div className=" infobackground fullscreenwid">
-            {(currentDiv===2)&&<img src={require("../infoassets/infobutton.png")} className="infoBtn1"/>}
-            {(currentDiv===3)&&<img src={require("../infoassets/infobutton.png")} className="infoBtn2"/>}
-            {(currentDiv===4)&&<img src={require("../infoassets/infobutton.png")} className="infoBtn3"/>}
-            {(currentDiv===5)&&<img src={require("../infoassets/infobutton.png")} className="infoBtn4"/>}
-            {(currentDiv===6)&&<img src={require("../infoassets/infobutton.png")} className="infoBtn5"/>}
+            {(currentDiv===2)?<img src={require("../infoassets/infobutton.png")} className="infoBtn1"/>:
+            <img src={require("../infoassets/infobutton.png")} className="infoBtn1f" onClick={()=>{leadTo1(setDiv)}}/>}
+            {(currentDiv===3)?<img src={require("../infoassets/infobutton.png")} className="infoBtn2"/>:
+            <img src={require("../infoassets/infobutton.png")} className="infoBtn2f" onClick={()=>{leadTo2(setDiv)}}/>}
+            {(currentDiv===4)?<img src={require("../infoassets/infobutton.png")} className="infoBtn3"/>:
+            <img src={require("../infoassets/infobutton.png")} className="infoBtn3f" onClick={()=>{leadTo3(setDiv)}}/>}
+            {(currentDiv===5)?<img src={require("../infoassets/infobutton.png")} className="infoBtn4"/>:
+            <img src={require("../infoassets/infobutton.png")} className="infoBtn4f" onClick={()=>{leadTo4(setDiv)}}/>}
+            {(currentDiv===6)?<img src={require("../infoassets/infobutton.png")} className="infoBtn5"/>:
+            <img src={require("../infoassets/infobutton.png")} className="infoBtn5f" onClick={()=>{leadTo5(setDiv)}}/>}
             <div className="row fullscreendiv" id="fullscreendiv1" onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
                 {infoCards()}
             </div>
