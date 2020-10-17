@@ -43,10 +43,40 @@ function changingDiv(evt, currentDiv, setDiv) {
                 moveToElement("fullscreendiv3");
             }
         }
-        else {
+        else if (currentDiv === 3) {
             if (evt.nativeEvent.wheelDelta > 0) {
                 setDiv(2);
                 moveToElement("fullscreendiv2");
+            }
+            else {
+                setDiv(4);
+                moveToElement("fullscreendiv4");
+            }
+        }
+        else if (currentDiv === 4) {
+            if (evt.nativeEvent.wheelDelta > 0) {
+                setDiv(3);
+                moveToElement("fullscreendiv3");
+            }
+            else {
+                setDiv(5);
+                moveToElement("fullscreendiv5");
+            }
+        }
+        else if (currentDiv === 5) {
+            if (evt.nativeEvent.wheelDelta > 0) {
+                setDiv(4);
+                moveToElement("fullscreendiv4");
+            }
+            else {
+                setDiv(6);
+                moveToElement("fullscreendiv6");
+            }
+        }
+        else {
+            if (evt.nativeEvent.wheelDelta > 0) {
+                setDiv(5);
+                moveToElement("fullscreendiv5");
             }
         }
     }
