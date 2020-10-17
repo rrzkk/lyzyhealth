@@ -165,6 +165,7 @@ function infoContentCards(currentDiv, setDiv, setTitle, setSymptom, setPreventio
                 className=" fullscreendiv infoContent"
                 id={`fullscreendiv${index + 2}`}
                 onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
+                
                 <img src={require(`../infoassets/infobackground${index + 1}.png`)}
                     className=' infosubbg'
 
@@ -241,10 +242,16 @@ function NewInfo() {
     const [prevention, setPrevention] = useState(false);
     return (
         <div className=" infobackground fullscreenwid">
+            {(currentDiv===2)&&<img src={require("../infoassets/infobutton.png")} className="infoBtn1"/>}
+            {(currentDiv===3)&&<img src={require("../infoassets/infobutton.png")} className="infoBtn2"/>}
+            {(currentDiv===4)&&<img src={require("../infoassets/infobutton.png")} className="infoBtn3"/>}
+            {(currentDiv===5)&&<img src={require("../infoassets/infobutton.png")} className="infoBtn4"/>}
+            {(currentDiv===6)&&<img src={require("../infoassets/infobutton.png")} className="infoBtn5"/>}
             <div className="row fullscreendiv" id="fullscreendiv1" onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
                 {infoCards()}
             </div>
             {infoContentCards(currentDiv, setDiv, setTitle, setSymptom, setPrevention)}
+           
 
             {renderModalTitle(currentDiv, title, setTitle)}
             {renderModalSymptoms(currentDiv, symptom, setSymptom)}
