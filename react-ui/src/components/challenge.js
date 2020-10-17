@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useCycle } from 'framer';
 import Card from 'react-bootstrap/Card';
 import { Button, FormGroup, Label, Input, Popover, PopoverHeader, PopoverBody, Row, Modal, Table } from 'reactstrap';
-// import { newchallenges } from './fakechallengedata';
+import { newchallenges } from './fakechallengedata';
 import { login } from '../react/login';
 import * as Scroll from 'react-scroll';
 
@@ -63,7 +63,7 @@ function ChallengeCom(props) {
     const [popover6, togglepopover6] = useState(false);
     
 
-    const eatingChallenge = props.newchallenges.newchallenges.filter(el => {return(el.type === 'eating')});
+    const eatingChallenge = newchallenges.filter(el => {return(el.type === 'eating')});
     const eatingChallengelist = [eatingChallenge.filter(el => el.level === 1),
     eatingChallenge.filter(el => el.level === 2),
     eatingChallenge.filter(el => el.level === 3),
@@ -71,14 +71,14 @@ function ChallengeCom(props) {
     eatingChallenge.filter(el => el.level === 5)];
 
 
-    const noEatingChallenge = props.newchallenges.newchallenges.filter(el => el.type === 'not eating');
+    const noEatingChallenge = newchallenges.filter(el => el.type === 'not eating');
     const noEatingChallengelist = [
         noEatingChallenge.filter(el => el.level === 1),
         noEatingChallenge.filter(el => el.level === 2),
         noEatingChallenge.filter(el => el.level === 3)
     ];
 
-    const exerciseChallenge = props.newchallenges.newchallenges.filter(el => el.type === 'exercising');
+    const exerciseChallenge = newchallenges.filter(el => el.type === 'exercising');
     const exerciseChallengelist = [
         exerciseChallenge.filter(el => el.level === 1),
         exerciseChallenge.filter(el => el.level === 2),
@@ -676,8 +676,9 @@ function ChallengeCom(props) {
                 <b>Check Your Progress</b>
             </div>
 
-
-            <div className="container challengebg">
+            
+            
+            <motion.div className="container challengebg" layout >               
                 <div className="row">
                     <div className="col-12 col-md-4">
                         {addProgressBtn1 && Card1()}
@@ -713,8 +714,10 @@ function ChallengeCom(props) {
                         </div>
                     </div>
                 </div>
-
-            </div>
+            </motion.div>
+            
+            
+            
             <div className="container">
 
 
