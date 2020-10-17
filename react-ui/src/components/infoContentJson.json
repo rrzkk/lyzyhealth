@@ -25,7 +25,7 @@
         ]
     },
     {
-        "title":"What is Nutritional Deficiency?",
+        "title":"Iron Deficiency:",
         "text":"Iron deficiency is the most common nutritional deficiency in Australia, especially among children and women of childbearing age where it can lead to iron-deficiency anemia, a serious condition where red blood cell production falls. If dietary iron requirements are not met, the body's iron stores gradually run down. Iron is an important dietary mineral involved in various bodily functions. Iron is part of hemoglobin, the red pigment in the blood that carries oxygen from the lungs throughout the body, and myoglobin that transports oxygen in the muscles. Iron deficiency meansless oxygen is delivered to the cells leading to fatigue, tiredness and decreased immunity. High-risk groups include menstruating women, pregnant women, babies and toddlers, teenage girls and female athletes. Indigenous Australians, refugees and recent immigrants from developing countries, vegans and vegetarians, people who repeatedly crash diet, and hospitalized or institutionalized patients are also at risk.",
         "symptoms":[
             {"text":"fatigue"},
@@ -48,21 +48,47 @@
         ]
     },
     {
-        "title":"What is Nutritional Deficiency?",
-        "text":"Iron deficiency is the most common nutritional deficiency in Australia, especially among children and women of childbearing age where it can lead to iron-deficiency anemia, a serious condition where red blood cell production falls. If dietary iron requirements are not met, the body's iron stores gradually run down. Iron is an important dietary mineral involved in various bodily functions. Iron is part of hemoglobin, the red pigment in the blood that carries oxygen from the lungs throughout the body, and myoglobin that transports oxygen in the muscles. Iron deficiency meansless oxygen is delivered to the cells leading to fatigue, tiredness and decreased immunity. High-risk groups include menstruating women, pregnant women, babies and toddlers, teenage girls and female athletes. Indigenous Australians, refugees and recent immigrants from developing countries, vegans and vegetarians, people who repeatedly crash diet, and hospitalized or institutionalized patients are also at risk.",
+        "title":"Vitamin D Deficiency",
+        "text":"Vitamin D deficiency means that you do not have enough vitamin D in your body. It is common in Australia with over 30% of adults having this deficiency.Vitamin D has many functions and it is important for bone health because it helps absorb calcium. It also plays a role in supporting growth and maintenance of the skeleton and regulating calcium levels in the blood. Getting enough vitamin D may also play a role in helping to keep you healthy by protecting against heart disease and high blood pressure, diabetes and cancers.",
         "symptoms":[
-            {"text":"fatigue"},
-            {"text":"Dizziness"},
-            {"text":"Pallor"},
+            {"text":"Getting Sick or Infected Often"},
+            {"text":"Fatigue and Tiredness."},
+            {"text":"Bone and Back Pain"},
+            {"text":"Depression"},
+            {"text":"Bone Loss"},
             {"text":"Hair Loss"},
-            {"text":"Irritability"},
-            {"text":"Weakness"},
-            {"text":"Abnormal rapid breathing"}
+            {"text":"Muscle Pain"}
+        ],
+        "prevent":[
+            {
+                "title":"1. A hug to sun:",
+                "content":"Vitamin D is produced when skin is exposed to ultraviolet B light from the sun. So being exposed to the sun about 15-20 minutes three days per week is usually sufficient."
+            },
+            {
+                "title":"2. Dietary Changes",
+                "content":"Food cannot provide an adequate amount of vitamin D and most people are reliant on sun exposure to reach recommended levels.A limited number of foods contain small amounts of vitamin D such as oily fish like salmon, tuna, mackerel and herring, liver, egg yolks and some fortified products."
+            },
+            {
+                "title":"3. Supplements",
+                "content":"We recommend that you get most of the nutrients from food. In some cases, you may need to take supplements or multivitamins. Please consult your doctor before taking any nutritional supplements."
+            }
+        ]
+    },
+    {
+        "title":"Vitamin B Deficiency",
+        "text":"Vitamin B deficiency affects up to 15 percent of people in Australia. Vitamin B is needed to help blood form, and for the brain and nervous system to function properly. Vitamin B deficiency can be caused by not eating enough of the right foods, especially meat and animal products. More often it is caused by the body not being able to absorb the B12 properly.",
+        "symptoms":[
+            {"text":"Tiredness"},
+            {"text":"Light-headedness"},
+            {"text":"Rapid heart rate"},
+            {"text":"Easy bruising and bleeding"},
+            {"text":"Weight loss"},
+            {"text":"Sore tongue"}
         ],
         "prevent":[
             {
                 "title":"1. Dietary Changes:",
-                "content":"Changing your eating habits in the case of a minor deficiency. Here are some tips: 1. Eat lean red meat. This is the best source of easily absorbed heme iron. Eating it several times per week can help if you are deficient; 2. Eat chicken and fish. These are good sources of heme iron. Eat a variety of them; 3. Eat vitamin C-rich foods (citrus fruits, dark green leafy vegetables, bell peppers, melons and strawberries). Eat vitamin C-rich foods during meals to increase the absorption of non-heme iron. For example, some lemon juice drizzled over leafy greens will increase the amount you absorb; 4. Choose foods rich in non-heme iron. If you don't eat meat and fish, include plenty of iron-rich plant foods in your diet."
+                "content":"Vitamin B is found primarily in meat and dairy products, so people on a vegan diet are at risk for deficiency. However, there are foods options to meet their B dietary needs. Vegetarian sources include dairy and eggs. Vegan sources of B include fortified foods and nutritional yeast.The best sources of vitamin B include: 1. beef liver, 2. Clams, 3. meat, including fish and poultry, 4. Eggs, 5. Milk, 6. Cheese, 7. fortified breakfast cereals"
             },
             {
                 "title":"2. Supplements",
@@ -71,44 +97,22 @@
         ]
     },
     {
-        "title":"What is Nutritional Deficiency?",
-        "text":"Iron deficiency is the most common nutritional deficiency in Australia, especially among children and women of childbearing age where it can lead to iron-deficiency anemia, a serious condition where red blood cell production falls. If dietary iron requirements are not met, the body's iron stores gradually run down. Iron is an important dietary mineral involved in various bodily functions. Iron is part of hemoglobin, the red pigment in the blood that carries oxygen from the lungs throughout the body, and myoglobin that transports oxygen in the muscles. Iron deficiency meansless oxygen is delivered to the cells leading to fatigue, tiredness and decreased immunity. High-risk groups include menstruating women, pregnant women, babies and toddlers, teenage girls and female athletes. Indigenous Australians, refugees and recent immigrants from developing countries, vegans and vegetarians, people who repeatedly crash diet, and hospitalized or institutionalized patients are also at risk.",
+        "title":"Calcium Deficiency",
+        "text":"Over half of all Australians aged two years and over consume inadequate levels of calcium from food sources. Calcium is important for strong bones, as well as for the healthy functioning of nerves, muscles and heart. You need calcium to build and maintain healthy bones. Calcium combines with other minerals, such as phosphate, in your bones to give them structure and strength. Calcium also circulates in your blood to be used by your heart, muscles and nerves. To absorb calcium, your body needs vitamin D. Regardless of your calcium intake, if you don’t get enough vitamin D, you will have trouble absorbing calcium and keeping your bones healthy.",
         "symptoms":[
-            {"text":"fatigue"},
-            {"text":"Dizziness"},
-            {"text":"Pallor"},
-            {"text":"Hair Loss"},
-            {"text":"Irritability"},
-            {"text":"Weakness"},
-            {"text":"Abnormal rapid breathing"}
+            {"text":"Confusion or memory loss"},
+            {"text":"Muscle spasms"},
+            {"text":"Numbness and tingling in the hands, feet and face"},
+            {"text":"Depression"},
+            {"text":"Hallucination"},
+            {"text":"Muscle cramps"},
+            {"text":"Weak and brittle nails"},
+            {"text":"Easy fracturing of the bones"}
         ],
         "prevent":[
             {
                 "title":"1. Dietary Changes:",
-                "content":"Changing your eating habits in the case of a minor deficiency. Here are some tips: 1. Eat lean red meat. This is the best source of easily absorbed heme iron. Eating it several times per week can help if you are deficient; 2. Eat chicken and fish. These are good sources of heme iron. Eat a variety of them; 3. Eat vitamin C-rich foods (citrus fruits, dark green leafy vegetables, bell peppers, melons and strawberries). Eat vitamin C-rich foods during meals to increase the absorption of non-heme iron. For example, some lemon juice drizzled over leafy greens will increase the amount you absorb; 4. Choose foods rich in non-heme iron. If you don't eat meat and fish, include plenty of iron-rich plant foods in your diet."
-            },
-            {
-                "title":"2. Supplements",
-                "content":"We recommend that you get most of the nutrients from food. In some cases, you may need to take supplements or multivitamins. Please consult your doctor before taking any nutritional supplements."
-            }
-        ]
-    },
-    {
-        "title":"What is Nutritional Deficiency?",
-        "text":"Iron deficiency is the most common nutritional deficiency in Australia, especially among children and women of childbearing age where it can lead to iron-deficiency anemia, a serious condition where red blood cell production falls. If dietary iron requirements are not met, the body's iron stores gradually run down. Iron is an important dietary mineral involved in various bodily functions. Iron is part of hemoglobin, the red pigment in the blood that carries oxygen from the lungs throughout the body, and myoglobin that transports oxygen in the muscles. Iron deficiency meansless oxygen is delivered to the cells leading to fatigue, tiredness and decreased immunity. High-risk groups include menstruating women, pregnant women, babies and toddlers, teenage girls and female athletes. Indigenous Australians, refugees and recent immigrants from developing countries, vegans and vegetarians, people who repeatedly crash diet, and hospitalized or institutionalized patients are also at risk.",
-        "symptoms":[
-            {"text":"fatigue"},
-            {"text":"Dizziness"},
-            {"text":"Pallor"},
-            {"text":"Hair Loss"},
-            {"text":"Irritability"},
-            {"text":"Weakness"},
-            {"text":"Abnormal rapid breathing"}
-        ],
-        "prevent":[
-            {
-                "title":"1. Dietary Changes:",
-                "content":"Changing your eating habits in the case of a minor deficiency. Here are some tips: 1. Eat lean red meat. This is the best source of easily absorbed heme iron. Eating it several times per week can help if you are deficient; 2. Eat chicken and fish. These are good sources of heme iron. Eat a variety of them; 3. Eat vitamin C-rich foods (citrus fruits, dark green leafy vegetables, bell peppers, melons and strawberries). Eat vitamin C-rich foods during meals to increase the absorption of non-heme iron. For example, some lemon juice drizzled over leafy greens will increase the amount you absorb; 4. Choose foods rich in non-heme iron. If you don't eat meat and fish, include plenty of iron-rich plant foods in your diet."
+                "content":"The best way to get enough calcium is to make sure you include high-calcium foods in your diet such as dairy foods. Dairy foods include milk, yoghurt and cheese. Green leafy vegetables, nuts, cereals and legumes also contain calcium."
             },
             {
                 "title":"2. Supplements",

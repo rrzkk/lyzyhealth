@@ -64,7 +64,7 @@ function About(props) {
       </Modal>
 
       <Modal isOpen={modelndnext} className="aboutmodel" toggle={() => togglemodelenext(!modelndnext)}>
-        <ModalHeader toggle={() => togglemodelndnext(!modelndnext)} close={closeBtn7}>Exercise</ModalHeader>
+        <ModalHeader closeButton>Exercise</ModalHeader>
         <ModalBody>
           
         <b>Tips</b><br /><br />

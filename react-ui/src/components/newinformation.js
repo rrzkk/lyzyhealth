@@ -7,7 +7,7 @@ import { allergyinfo } from "./allergydata";
 import { useState, useEffect } from 'react';
 
 import Jumbotron from 'react-bootstrap/Jumbotron'
-import { Card } from 'reactstrap';
+import { Button, Card, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import * as Scroll from 'react-scroll';
 import infoJson from './infoJson.json';
 import infoContent from './infoContentJson.json';
@@ -157,7 +157,7 @@ function solution(solutions) {
                             <b>Prevention</b>
                             {solution(el.prevent)}
                         </div>*/
-function infoContentCards(currentDiv, setDiv) {
+function infoContentCards(currentDiv, setDiv, setTitle, setSymptom, setPrevention) {
     return infoContent.map((el, index) => {
         return (
 
@@ -167,19 +167,25 @@ function infoContentCards(currentDiv, setDiv) {
                 onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
                 <img src={require(`../infoassets/infobackground${index + 1}.png`)}
                     className=' infosubbg'
+
                 >
                 </img>
                 <div className="row infosubCont">
                     <img src={require(`../infoassets/infotitle.png`)} className="infotitleimg"></img>
-                    <img src={require(`../infoassets/infosub${index + 1}.png`)} className="infotitlesub"></img>
+                    <img src={require(`../infoassets/infosub${index + 1}.png`)} className="infotitlesub"
+                        onClick={() => { setTitle(true) }}></img>
                     <div className="infoflex1">
-                        <img src={require(`../infoassets/prevention${index + 1}.png`)}></img>
-                        <img src={require(`../infoassets/preventiontitle.png`)}></img>
+                        <img src={require(`../infoassets/prevention${index + 1}.png`)}
+                            onClick={() => { setSymptom(true) }}></img>
+                        <img src={require(`../infoassets/preventiontitle.png`)}
+                            onClick={() => { setSymptom(true) }}></img>
                     </div>
 
                     <div className="infoflex2">
-                        <img width="50%"  src={require(`../infoassets/symptoms${index + 1}.png`)}></img>
-                        <img src={require(`../infoassets/symptomtitle.png`)}></img>
+                        <img width="50%" src={require(`../infoassets/symptoms${index + 1}.png`)}
+                            onClick={() => { setPrevention(true) }}></img>
+                        <img src={require(`../infoassets/symptomtitle.png`)}
+                            onClick={() => { setPrevention(true) }}></img>
                     </div>
 
                 </div>
@@ -189,15 +195,60 @@ function infoContentCards(currentDiv, setDiv) {
         );
     });
 }
+//modal
+function renderModalTitle(key, state, setState) {
+    if (key !== 1)
+        return (
+            <Modal isOpen={state} toggle={() => setState(false)}>
+                <ModalHeader>{infoContent[key - 2].title}</ModalHeader>
+                <ModalBody>{infoContent[key - 2].text}</ModalBody>
+                <ModalFooter>
+                    <Button onClick={() => { setState(false) }} color="danger">close</Button>
+                </ModalFooter>
+            </Modal>
+        );
+}
+function renderModalSymptoms(key, state, setState) {
+    if (key !== 1)
+        return (
+            <Modal isOpen={state} toggle={() => setState(false)}>
+                <ModalHeader>Symptoms</ModalHeader>
+                <ModalBody>{symtoms(infoContent[key - 2].symptoms)}</ModalBody>
+                <ModalFooter>
+                    <Button onClick={() => { setState(false) }} color="danger">close</Button>
+                </ModalFooter>
+            </Modal>
+        );
+}
+function renderModalPrevention(key, state, setState) {
+    if (key !== 1)
+        return (
+            <Modal isOpen={state} toggle={() => setState(false)}>
+                <ModalHeader>{infoContent[key - 2].title}</ModalHeader>
+                <ModalBody>{solution(infoContent[key - 2].prevent)}</ModalBody>
+                <ModalFooter>
+                    <Button onClick={() => { setState(false) }} color="danger">close</Button>
+                </ModalFooter>
+            </Modal>
+        );
+}
 //main function
 function NewInfo() {
     const [currentDiv, setDiv] = useState(1);
+
+    const [title, setTitle] = useState(false);
+    const [symptom, setSymptom] = useState(false);
+    const [prevention, setPrevention] = useState(false);
     return (
         <div className=" infobackground fullscreenwid">
             <div className="row fullscreendiv" id="fullscreendiv1" onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
                 {infoCards()}
             </div>
-            {infoContentCards(currentDiv, setDiv)}
+            {infoContentCards(currentDiv, setDiv, setTitle, setSymptom, setPrevention)}
+
+            {renderModalTitle(currentDiv, title, setTitle)}
+            {renderModalSymptoms(currentDiv, symptom, setSymptom)}
+            {renderModalPrevention(currentDiv, prevention, setPrevention)}
         </div>
     );
 }
