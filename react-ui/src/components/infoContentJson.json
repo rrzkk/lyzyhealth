@@ -46,5 +46,74 @@
                 "content":"We recommend that you get most of the nutrients from food. In some cases, you may need to take supplements or multivitamins. Please consult your doctor before taking any nutritional supplements."
             }
         ]
+    },
+    {
+        "title":"What is Nutritional Deficiency?",
+        "text":"Iron deficiency is the most common nutritional deficiency in Australia, especially among children and women of childbearing age where it can lead to iron-deficiency anemia, a serious condition where red blood cell production falls. If dietary iron requirements are not met, the body's iron stores gradually run down. Iron is an important dietary mineral involved in various bodily functions. Iron is part of hemoglobin, the red pigment in the blood that carries oxygen from the lungs throughout the body, and myoglobin that transports oxygen in the muscles. Iron deficiency meansless oxygen is delivered to the cells leading to fatigue, tiredness and decreased immunity. High-risk groups include menstruating women, pregnant women, babies and toddlers, teenage girls and female athletes. Indigenous Australians, refugees and recent immigrants from developing countries, vegans and vegetarians, people who repeatedly crash diet, and hospitalized or institutionalized patients are also at risk.",
+        "symptoms":[
+            {"text":"fatigue"},
+            {"text":"Dizziness"},
+            {"text":"Pallor"},
+            {"text":"Hair Loss"},
+            {"text":"Irritability"},
+            {"text":"Weakness"},
+            {"text":"Abnormal rapid breathing"}
+        ],
+        "prevent":[
+            {
+                "title":"1. Dietary Changes:",
+                "content":"Changing your eating habits in the case of a minor deficiency. Here are some tips: 1. Eat lean red meat. This is the best source of easily absorbed heme iron. Eating it several times per week can help if you are deficient; 2. Eat chicken and fish. These are good sources of heme iron. Eat a variety of them; 3. Eat vitamin C-rich foods (citrus fruits, dark green leafy vegetables, bell peppers, melons and strawberries). Eat vitamin C-rich foods during meals to increase the absorption of non-heme iron. For example, some lemon juice drizzled over leafy greens will increase the amount you absorb; 4. Choose foods rich in non-heme iron. If you don't eat meat and fish, include plenty of iron-rich plant foods in your diet."
+            },
+            {
+                "title":"2. Supplements",
+                "content":"We recommend that you get most of the nutrients from food. In some cases, you may need to take supplements or multivitamins. Please consult your doctor before taking any nutritional supplements."
+            }
+        ]
+    },
+    {
+        "title":"What is Nutritional Deficiency?",
+        "text":"Iron deficiency is the most common nutritional deficiency in Australia, especially among children and women of childbearing age where it can lead to iron-deficiency anemia, a serious condition where red blood cell production falls. If dietary iron requirements are not met, the body's iron stores gradually run down. Iron is an important dietary mineral involved in various bodily functions. Iron is part of hemoglobin, the red pigment in the blood that carries oxygen from the lungs throughout the body, and myoglobin that transports oxygen in the muscles. Iron deficiency meansless oxygen is delivered to the cells leading to fatigue, tiredness and decreased immunity. High-risk groups include menstruating women, pregnant women, babies and toddlers, teenage girls and female athletes. Indigenous Australians, refugees and recent immigrants from developing countries, vegans and vegetarians, people who repeatedly crash diet, and hospitalized or institutionalized patients are also at risk.",
+        "symptoms":[
+            {"text":"fatigue"},
+            {"text":"Dizziness"},
+            {"text":"Pallor"},
+            {"text":"Hair Loss"},
+            {"text":"Irritability"},
+            {"text":"Weakness"},
+            {"text":"Abnormal rapid breathing"}
+        ],
+        "prevent":[
+            {
+                "title":"1. Dietary Changes:",
+                "content":"Changing your eating habits in the case of a minor deficiency. Here are some tips: 1. Eat lean red meat. This is the best source of easily absorbed heme iron. Eating it several times per week can help if you are deficient; 2. Eat chicken and fish. These are good sources of heme iron. Eat a variety of them; 3. Eat vitamin C-rich foods (citrus fruits, dark green leafy vegetables, bell peppers, melons and strawberries). Eat vitamin C-rich foods during meals to increase the absorption of non-heme iron. For example, some lemon juice drizzled over leafy greens will increase the amount you absorb; 4. Choose foods rich in non-heme iron. If you don't eat meat and fish, include plenty of iron-rich plant foods in your diet."
+            },
+            {
+                "title":"2. Supplements",
+                "content":"We recommend that you get most of the nutrients from food. In some cases, you may need to take supplements or multivitamins. Please consult your doctor before taking any nutritional supplements."
+            }
+        ]
+    },
+    {
+        "title":"What is Nutritional Deficiency?",
+        "text":"Iron deficiency is the most common nutritional deficiency in Australia, especially among children and women of childbearing age where it can lead to iron-deficiency anemia, a serious condition where red blood cell production falls. If dietary iron requirements are not met, the body's iron stores gradually run down. Iron is an important dietary mineral involved in various bodily functions. Iron is part of hemoglobin, the red pigment in the blood that carries oxygen from the lungs throughout the body, and myoglobin that transports oxygen in the muscles. Iron deficiency meansless oxygen is delivered to the cells leading to fatigue, tiredness and decreased immunity. High-risk groups include menstruating women, pregnant women, babies and toddlers, teenage girls and female athletes. Indigenous Australians, refugees and recent immigrants from developing countries, vegans and vegetarians, people who repeatedly crash diet, and hospitalized or institutionalized patients are also at risk.",
+        "symptoms":[
+            {"text":"fatigue"},
+            {"text":"Dizziness"},
+            {"text":"Pallor"},
+            {"text":"Hair Loss"},
+            {"text":"Irritability"},
+            {"text":"Weakness"},
+            {"text":"Abnormal rapid breathing"}
+        ],
+        "prevent":[
+            {
+                "title":"1. Dietary Changes:",
+                "content":"Changing your eating habits in the case of a minor deficiency. Here are some tips: 1. Eat lean red meat. This is the best source of easily absorbed heme iron. Eating it several times per week can help if you are deficient; 2. Eat chicken and fish. These are good sources of heme iron. Eat a variety of them; 3. Eat vitamin C-rich foods (citrus fruits, dark green leafy vegetables, bell peppers, melons and strawberries). Eat vitamin C-rich foods during meals to increase the absorption of non-heme iron. For example, some lemon juice drizzled over leafy greens will increase the amount you absorb; 4. Choose foods rich in non-heme iron. If you don't eat meat and fish, include plenty of iron-rich plant foods in your diet."
+            },
+            {
+                "title":"2. Supplements",
+                "content":"We recommend that you get most of the nutrients from food. In some cases, you may need to take supplements or multivitamins. Please consult your doctor before taking any nutritional supplements."
+            }
+        ]
     }
 ]

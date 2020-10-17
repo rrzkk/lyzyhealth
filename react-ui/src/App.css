@@ -613,7 +613,7 @@ text-align: center;}
   width: 100vw !important;
   margin-right: 0 !important;
   margin-left: 0!important;
-  padding-left: 20px;
+ 
   padding-right: 35px;
 }
 .carsmall{
@@ -642,5 +642,50 @@ text-align: center;}
   text-align: center;
 }
 .infoContent{
-  padding-top: 20px;
+  padding-top: 0px;
+}
+.infosubbg{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  pointer-events: none;
+}
+.infosubCont{
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+
+}
+
+.infotitleimg{
+  position: absolute;
+  z-index: 3;
+}
+.infotitlesub{
+
+  position: absolute;
+  z-index: 4;
+  align-self: center;
+  justify-self: center;
+  top: 20px;
+  left: 20px;
+}
+.infoflex1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top:30vh;
+  right: 30vw;
+}
+.infoflex2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50vh;
+  left: 5vw;
+  width: 400px;
 }

@@ -21,7 +21,7 @@ const moveToElement = (elementId) => {
             offsetTop += element.offsetTop;
             element = element?.offsetParent;
         } while (element);
-        window.scrollTo({ behavior: "smooth", top: offsetTop - 78 });
+        window.scrollTo({ behavior: "smooth", top: offsetTop - 76 });
     }
 };
 function changingDiv(evt, currentDiv, setDiv) {
@@ -78,14 +78,14 @@ function infoCards() {
                 else setTimeout(() => { setCounter(counter + 1); }, stepTime);
             }
         }, [counter]);
-        
+
         return (
             <div className="col-6 col-md-4 infotopcard" style={{}}>
                 <h className="infoNum">{counter}{symbol}</h>
                 <p className="infoDes">{el.text}</p>
             </div>
         );
-       
+
     }))
 }
 //a subfunction from infoContentCard
@@ -114,28 +114,48 @@ function solution(solutions) {
     });
 }
 //This is the second part of the page showing the content of the page
+/*
+<div className="col-12 ">
+                            <b>{el.title}</b>
+                            <p>{el.text}</p>
+                        </div>
+                        <div className="col-12 col-md-3 ">
+                            <b>Symptoms</b>
+                            {symtoms(el.symptoms)}
+                        </div>
+                        <div className="col-12 col-md-9 ">
+                            <b>Prevention</b>
+                            {solution(el.prevent)}
+                        </div>*/
 function infoContentCards(currentDiv, setDiv) {
     return infoContent.map((el, index) => {
         return (
-            <div>
-                <div
-                    className="row fullscreendiv infoContent"
-                    id={`fullscreendiv${index + 2}`}
-                    onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
-                    <div className="col-12 ">
-                        <b>{el.title}</b>
-                        <p>{el.text}</p>
+
+            <div
+                className=" fullscreendiv infoContent"
+                id={`fullscreendiv${index + 2}`}
+                onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
+                <img src={require(`../infoassets/infobackground${index + 1}.png`)}
+                    className=' infosubbg'
+                >
+                </img>
+                <div className="row infosubCont">
+                    <img src={require(`../infoassets/infotitle.png`)} className="infotitleimg"></img>
+                    <img src={require(`../infoassets/infosub${index + 1}.png`)} className="infotitlesub"></img>
+                    <div className="infoflex1">
+                        <img src={require(`../infoassets/prevention${index + 1}.png`)}></img>
+                        <img src={require(`../infoassets/preventiontitle.png`)}></img>
                     </div>
-                    <div className="col-12 col-md-3 ">
-                        <b>Symptoms</b>
-                        {symtoms(el.symptoms)}
+
+                    <div className="infoflex2">
+                        <img width="50%"  src={require(`../infoassets/symptoms${index + 1}.png`)}></img>
+                        <img src={require(`../infoassets/symptomtitle.png`)}></img>
                     </div>
-                    <div className="col-12 col-md-9 ">
-                        <b>Prevention</b>
-                        {solution(el.prevent)}
-                    </div>
+
                 </div>
+
             </div>
+
         );
     });
 }
