@@ -373,10 +373,23 @@ cursor: pointer;}
   padding: 20px;
 
 }
+.homeban4{
+
+  min-height: 100px;
+  background: rgba(225, 225, 225, 0.9);
+  padding: 20px;
+
+}
 .homebanNews{
   min-height: 180px;
   text-align: center;
   background: url('./square.png');
+  background-size: 100% 100%;
+}
+.homebanRound{
+  min-height: 180px;
+  text-align: center;
+  background: url('./homepage/roundSquare1.png');
   background-size: 100% 100%;
 }
 .homepic{
@@ -749,7 +762,7 @@ text-align: center;}
   top: 74vh;
   position: fixed;
   opacity: 1;
-  animation: fade1 3s linear;
+  animation: fade1 2s linear;
 }
 .infoBtn4f{
   z-index: 999;

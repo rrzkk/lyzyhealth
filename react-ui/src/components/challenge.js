@@ -657,6 +657,9 @@ function ChallengeCom(props) {
                 <b>Pick Your Challenges</b>
             </div>
             <div className="container challengebg">
+            <div className="row" style={{ margin: 50 }}>
+                    <b><i>* If you are allergic to some food on the list, you can refer to allergy page.</i></b>
+                </div>
                 <div className="row">
                     <div className="col-12 col-md-4">
                         {!addProgressBtn1 && Card1()}

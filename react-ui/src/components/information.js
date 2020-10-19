@@ -170,7 +170,7 @@ function useWindowDimensions() {
             }
         )
         return ( 
-            <div className="allergy-title" style={{ textAlign: "left" }}>
+            <div>
             <b>{allergyinfo[count].note}</b>
             {item2}
             </div>
