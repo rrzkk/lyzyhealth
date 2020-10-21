@@ -80,9 +80,9 @@ function Home(props) {
           {/* add the facts here */}
           <div className="container homebanblank"></div>
           <div className='row'>
-            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie99.png')} width='100px' /><h style={{ fontSize: 20 }} className="homefont">99% of Australian aged 12-18 do not eat enough vegetables.</h></div>
-            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie2.png')} width='100px' /><h style={{ fontSize: 20 }} className="homefont">41% of teenager's energy intake are from discretionary foods.</h></div>
-            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie3.png')} width='100px' /><h style={{ fontSize: 20 }} className="homefont">7.1% of Australians aged 12-17 consumes sugary drinks daily.</h></div>
+            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie1.png')} width='300px' /></div>
+            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie2.png')} width='300px' /></div>
+            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie3.png')} width='300px' /></div>
           </div>
           <Parallax y={[20, 0]} x={[40, -40]} >
             <div className="row homebannew">
@@ -198,7 +198,8 @@ function Home(props) {
               <div className="row">
                 <div className="col-12 col-md-4">
                   <div className="homebanblank"></div>
-                  <img src={require('../homepage/bar10.png')} width='100px' /><div className="homebanblank"></div><h style={{ fontSize: 18 }} className="homefont">11% of young people aged under 18 in Australia are suffered from food allergy.</h>
+                  <div className="homebanblank"></div>
+                  <img src={require('../homepage/bar10.png')} width='350px' />
                 </div>
                 <div className="col-12 col-md-4">
                   <div className="homebanblank"></div>

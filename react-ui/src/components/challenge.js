@@ -617,7 +617,7 @@ function ChallengeCom(props) {
             </div>
             <div className="container challengebg">
                 <div className="row">
-                    <div className="col-12 col-md-6 ">
+                    {/* <div className="col-12 col-md-6 ">
                         <i>Log in to play this game is recommonded</i><br /><br />
                         <b>1. Pick a challenge below, change it if you want a different one.</b><br /><br />
                         <b>2. Adjust categories and difficulty levels to suit yourself.</b><br /><br />
@@ -629,6 +629,13 @@ function ChallengeCom(props) {
                     </div>
                     <div className="col-12 col-md-3 offset-md-2">
                         <img src={require('../challengeassets/note.png')} className="racemap"></img>
+                    </div> */}
+                    <div className="col-12 col-md-4 " style={{ textAlign: "center" }}>
+                    {loginstatus(username, props.userchallenge.userchallenge.length)}
+                    </div>
+                    <div className="col-12 col-md-8 ">
+                    <img src={require('../challengeassets/challengeintro.png')} className="racemap"></img>
+                    
                     </div>
                 </div>
             </div>
