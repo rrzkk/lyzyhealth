@@ -1,22 +1,22 @@
 import React from 'react';
 
-
+import { useHistory } from "react-router-dom"
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { allergyinfo } from "./allergydata";
 
 import { useState, useEffect } from 'react';
 
 import Jumbotron from 'react-bootstrap/Jumbotron'
-import { Card } from 'reactstrap';
-import * as Scroll  from 'react-scroll';
+import { Card, Button } from 'reactstrap';
+import * as Scroll from 'react-scroll';
 
 let Element = Scroll.Element
 let scroll = Scroll.animateScroll
 let scroller = Scroll.scroller
 
 function scrollMoreDown() {
-    scroller.scrollTo('screens',{smooth: true})
-  }
+    scroller.scrollTo('screens', { smooth: true })
+}
 
 function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
@@ -50,22 +50,28 @@ function Information(props) {
         }
     }
 
-function useWindowDimensions() {
-    const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
+    function useWindowDimensions() {
+        const [windowDimensions, setWindowDimensions] = useState(getWindowDimensions());
 
-    useEffect(() => {
-        function handleResize() {
-            setWindowDimensions(getWindowDimensions());
-        }
-        window.scrollTo(0, 0);
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+        useEffect(() => {
+            function handleResize() {
+                setWindowDimensions(getWindowDimensions());
+            }
+            window.scrollTo(0, 0);
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }, []);
 
-    return windowDimensions;
-}
+        return windowDimensions;
+    }
 
-
+    // let history = useHistory();
+    // function gotoChallenge() {
+    //     history.push("/diagnose");
+    // }
+    // function gotoHome() {
+    //     history.push("/home");
+    // }
 
 
     function tap1() {
@@ -140,9 +146,9 @@ function useWindowDimensions() {
 
                     <motion.div className="motionul" layout >
                         <motion.div className="motionli" onClick={() => GroupOpen(eachGroup.group_name)} whileHover={{ scale: 1.2 }}>
-                            <img src={require('./'+eachGroup.url)} style={{maxWidth:50, height:'auto'}}/>
+                            <img src={require('./' + eachGroup.url)} style={{ maxWidth: 50, height: 'auto' }} />
                             <b> {eachGroup.group_name}</b>
-                            
+
                             <AnimatePresence>{isOpen && groupName == eachGroup.group_name && <Content propsname={eachGroup.group_name} />}</AnimatePresence>
                         </motion.div>
                     </motion.div>
@@ -165,16 +171,16 @@ function useWindowDimensions() {
         const item2 = allergyinfo[count].notedetail.map(
             eachGroup => {
                 return (
-                <li>{eachGroup.content}</li>
+                    <li>{eachGroup.content}</li>
                 );
             }
         )
-        return ( 
+        return (
             <div>
-            <b>{allergyinfo[count].note}</b>
-            {item2}
+                <b>{allergyinfo[count].note}</b>
+                {item2}
             </div>
-            
+
         );
     }
 
@@ -209,12 +215,12 @@ function useWindowDimensions() {
         <React.Fragment>
             <div className="container allergytitle">
                 <div className="row">
-                <a id="allergyhead"></a>
+                    <a id="allergyhead"></a>
                     <Jumbotron>
-                    <h1>Allergen Replacement</h1>
+                        <h1>Allergen Replacement</h1>
                         <b><p>
-                        Do you know which allergen you are allergy to? If you cannot take that food, how can you get the nutrition of them? 
-                        Now start to find your own allergen replacement and take similar nutrition with that food to prevent nutritional deficiency.
+                            Do you know which allergen you are allergy to? If you cannot take that food, how can you get the nutrition of them?
+                            Now start to find your own allergen replacement and take similar nutrition with that food to prevent nutritional deficiency.
                     </p></b>
 
                     </Jumbotron>
@@ -454,8 +460,14 @@ function useWindowDimensions() {
 
                     </AnimateSharedLayout>
                 </div>
-                
+
             </div>
+            {/* <div className="homebanblank"></div>
+            <div className="row">
+                <div className="col-12 col-md-2" style={{ textAlign: "center" }}></div>
+                <div className="col-12 col-md-4" style={{ textAlign: "center" }}><Button className="btn-lg" onClick={gotoHome}>Back to home page</Button></div>
+                <div className="col-12 col-md-4" style={{ textAlign: "center" }}><Button className="btn-lg" onClick={gotoChallenge}>Start your challenge</Button></div>
+            </div> */}
 
 
 

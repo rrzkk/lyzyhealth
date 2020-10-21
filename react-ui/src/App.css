@@ -349,12 +349,32 @@ cursor: pointer;}
   background: rgba(245, 245, 245, 0.6);
   padding: 10px;
 }
+.homebannew{
+  min-height: 220px;
+  background: rgba(245, 245, 245, 0.6);
+  padding: 10px;
+  width: 70vw;
+}
 .homeban1{
   min-height:60px;
   background: rgba(245, 245, 245, 0.6);
   padding: 10px;
-
- 
+}
+.homebanblank{
+  min-height:30px;
+  padding: 10px;
+}
+.homebaninfo{
+  min-height:300px;
+  padding: 10px;
+  background: url('./homepage/nutrition.jpg');
+  background-size: 100% 100%;
+}
+.homebanhurdle{
+  min-height:300px;
+  padding: 10px;
+  background: url('./homepage/hurdle.jpg');
+  background-size: 100% 100%;
 }
 .homeban2{
 
@@ -386,12 +406,7 @@ cursor: pointer;}
   background: url('./square.png');
   background-size: 100% 100%;
 }
-.homebanRound{
-  min-height: 180px;
-  text-align: center;
-  background: url('./homepage/roundSquare1.png');
-  background-size: 100% 100%;
-}
+
 .homepic{
   max-width: 100%;
 
@@ -559,7 +574,11 @@ text-align: center;}
   background-color: #ffaa00 !important;
   border: none !important;
 }
-
+.scrollTop{
+  background: url(./homepage/scrollTop3.png);
+  width: 100%;
+  height: 100%;
+}
 .challengetitle{
   background: rgba(245, 245, 245, 0.9);
 }

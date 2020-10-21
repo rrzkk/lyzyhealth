@@ -35,10 +35,13 @@ function Home(props) {
   function scrollMoreDown() {
     scroller.scrollTo('doyouknow', { smooth: true })
   }
+  function toTop(){
+    window.scrollTo(0, 0);
+  }
 
   return (
     <div>
-      <div className="d-none d-lg-block wrapper">
+      {/* <div className="d-none d-lg-block wrapper">
 
         <motion.div className="progressbartc" >
           <Parallax y={[100, 0]}><span className="fa fa-arrows-v fa-lg"></span>
@@ -46,7 +49,17 @@ function Home(props) {
 
         </motion.div>
 
+      </div> */}
+      <div className="d-none d-lg-block wrapper">
+
+        <motion.div className="progressbartc" >
+        <Button className="scrollTop" onClick={toTop}></Button>
+
+        </motion.div>
+
       </div>
+      
+      
 
 
       <Parallax y={[0, 0]}>
@@ -59,42 +72,36 @@ function Home(props) {
               <div className="row">
                 <div className="col-12 col-md-6 homeban1">
                   <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Do you know that:</h></div>
-                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">99% of Australian aged 2-18 do not eat enough vegetables.</h></div>
-                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">41% of teenager's energy intake are from discretionary foods.</h></div>
-                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">7.1% of Australians aged 2-17 consumes sugary drinks daily.</h></div>
-
-
                 </div>
               </div>
-
-              {/* <div className="row">
-              <div className="col-12 col-md-3">
-              <img src={require('../homepage/fact1.png')} width='200px' /></div>
-              <div className="col-12 col-md-3">
-              <img src={require('../homepage/fact2.png')} width='200px' /></div>
-              <div className="col-12 col-md-3">
-              <img src={require('../homepage/fact3.png')} width='200px' /></div>
-              </div> */}
-              <Parallax y={[20, 0]} x={[40, -40]} >
-                <div className="row  homeban">
-                  <div className="col-12 col-md-6 offset-md-5">
-
-                    <div className="container">
-                      <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>If you are in one of groups above</h></div>
-                    </div>
-                    <div style={{ textAlign: "start" }}>
-                      <br />
-
-                      <h style={{ fontSize: 20 }} className="homefont">You are probably at the risk of Nutritional Deficiency!</h></div>
-
-                  </div>
-
-                </div>
-              </Parallax>
             </div>
 
           </Parallax>
+          {/* add the facts here */}
+          <div className="container homebanblank"></div>
+          <div className='row'>
+            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie99.png')} width='100px' /><h style={{ fontSize: 20 }} className="homefont">99% of Australian aged 12-18 do not eat enough vegetables.</h></div>
+            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie2.png')} width='100px' /><h style={{ fontSize: 20 }} className="homefont">41% of teenager's energy intake are from discretionary foods.</h></div>
+            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie3.png')} width='100px' /><h style={{ fontSize: 20 }} className="homefont">7.1% of Australians aged 12-17 consumes sugary drinks daily.</h></div>
+          </div>
+          <Parallax y={[20, 0]} x={[40, -40]} >
+            <div className="row homebannew">
+              <div className="col-12 col-md-6 offset-md-6" >
+
+                <div className="container">
+                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>If you are in one of groups above</h></div>
+                </div>
+                <div style={{ textAlign: "start" }}>
+                  <br />
+
+                  <h style={{ fontSize: 20 }} className="homefont">You are probably at the risk of Nutritional Deficiency!</h></div>
+
+              </div>
+
+            </div>
+          </Parallax>
         </div>
+
       </Parallax>
 
       <Parallax y={[0, 0]}>
@@ -103,7 +110,7 @@ function Home(props) {
 
       <Parallax y={[0, 0]}>
         <div className="container homeban1">
-          <Button className="homebtn" size="lg" onClick={scrollMoreDown}><h style={{ fontSize: 30, fontFamily: 'ak', color: "white" }}>Want to know more?</h></Button>
+          <Button className="homebtn" size="lg" onClick={scrollMoreDown}><h style={{ fontSize: 30, fontFamily: 'ak', color: "white" }}>Explore more</h></Button>
         </div>
       </Parallax>
 
@@ -116,203 +123,33 @@ function Home(props) {
       </Parallax>
 
       <div className="container homeban">
+      <div className="homebanblank"></div>
         <div className="row">
-
           <Parallax y={[31, 0]} x={[-20, 60]} className="col-12 col-md-6 ">
             <div className="homeban1">
               <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Nutritional Deficiency</h></div>
-              <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">Understand it before we fight it! Let's give you some knowledge.</h></div>
+              <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">Understand it before fighting it! Let's give some knowledge.</h></div>
             </div>
-
           </Parallax>
         </div>
       </div>
 
       <div className="container homeban">
-        <div className="row">
-          {/* <div className="col-12 col-md-3" style={{textAlign:"center"}}>
-            <div className="container homebanNews">
-              <div style={{textAlign:"center"}}><h style={{ fontSize: 25, fontFamily: 'ga', color:"#3D550C" }}>iron deficiency</h></div>
-              <div style={{textAlign:"center"}}><h style={{ fontSize: 15 }} className="homefont">Anemia affects approximately 25 percent of people worldwide, and iron deficiency is said to be responsible for 50 percent of all anemias.</h></div>
-            </div>
-          </div>
-          <div className="col-12 col-md-3">
-            <div className="container homebanNews">
-              <div style={{textAlign:"center"}}><h style={{ fontSize: 25, fontFamily: 'ga', color:"#3D550C" }}>vitamin D deficiency</h></div>
-                <div style={{textAlign:"center"}}><h style={{ fontSize: 15 }} className="homefont">Nearly one third of Australian adults are suffering vitamin D deficiency. Without enough taken, you might have hormonal imbalance, low bone mineral density and High blood pressure</h></div>
-            </div>
-          </div>
-          <div className="col-12 col-md-3">
-            <div className="container homebanNews">
-            <div style={{textAlign:"center"}}><h style={{ fontSize: 25, fontFamily: 'ga', color:"#3D550C" }}>vitamin B deficiency</h></div>
-                <div style={{textAlign:"center"}}><h style={{ fontSize: 15 }} className="homefont">Vitamin B12 deficiency affects up to 15 percent of people, and without enough vitamin B12, pale skin, constipation and diarrhea become common.</h></div>
-            </div>
-          </div>
-          <div className="col-12 col-md-3">
-            <div className="container homebanNews">
-            <div style={{textAlign:"center"}}><h style={{ fontSize: 25, fontFamily: 'ga', color:"#3D550C" }}>calcium deficiency</h></div>
-                <div style={{textAlign:"center"}}><h style={{ fontSize: 15 }} className="homefont">Over half of all Australians consume inadequate levels of calcium from food sources. Lack of calcium will cause muscle cramping, osteoporosis and dental problems.</h></div>
-            </div>
-          </div> */}
-          <div className="col-12 col-md-2" style={{ textAlign: "center" }}></div>
-          <div className="col-12 col-md-8" style={{ textAlign: "center" }}>
-            <div className="container homeban3">
-              <motion.div
-                animate={{
-                  scale: [1, 1, 0.8, 0.8, 1],
-                  rotate: [0, 0, 0, 0, 0],
-                  borderRadius: ["20%", "20%", "50%", "50%", "20%"]
-                }}
-                transition={{
-                  duration: 2,
-                  ease: "easeInOut",
-                  times: [0, 0.2, 0.5, 0.8, 1],
-                  loop: Infinity,
-                  repeatDelay: 1
-                }}
-                className="inficon"
-              >
-
-              </motion.div>
-              <div style={{ textAlign: "center" }}><h style={{ fontSize: 50, fontFamily: 'ak', color: "#B8390E" }}>Knowledge</h></div>
-              <h style={{ fontSize: 18 }} className="homefont">Nutritional Deficiency can cause tiredness, short of breath, loss of weight, obesity, and many more negative effects on you body. Having a light symptom can indicate that you are at the risk of Nutritional Deficiency.</h><br /><br />
-              <Button className="btn-lg" onClick={gotoAbout} style={{ alignSelf: 'center' }}>FIND MORE</Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="container homeban">
-        <div className="row">
-
-          <Parallax y={[31, 0]} x={[-20, 60]} className="col-12 col-md-6 ">
-            <div className="homeban1">
-              <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Change it now!</h></div>
-              <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">Finding pages below and start your health plan.</h></div>
-            </div>
-
-          </Parallax>
-        </div>
-      </div>
-
-      <div className="container homeban">
+        <div className="homebanblank"></div>
         <div className="row">
           <div className="col-12 col-md-2" style={{ textAlign: "center" }}></div>
-          <div className="col-12 col-md-4" style={{ textAlign: "center" }}>
+          <div className="col-12 col-md-12" style={{ textAlign: "center" }}>
             <div className="container homeban3">
-              <motion.div
-                animate={{
-                  scale: [1, 1, 1, 1, 1],
-                  rotate: [0, 5, 360, 360, 0],
-                  borderRadius: ["20%", "20%", "50%", "50%", "20%"]
-                }}
-                transition={{
-                  duration: 2,
-                  ease: "easeInOut",
-                  times: [0, 0.2, 0.5, 0.9, 1],
-                  loop: Infinity,
-                  repeatDelay: 1
-                }}
-                className="repicon"
-              >
-
-              </motion.div>
-              <div style={{ textAlign: "center" }}><h style={{ fontSize: 50, fontFamily: 'ak', color: "#B8390E" }}>Replacement</h></div>
-              <h style={{ fontSize: 18 }} className="homefont">If you are allergic to some food, you need to find a replacement for it. Otherwise you will lack of the nutrition and get weak.</h><br /><br />
-              <Button className="btn-lg" onClick={gotoAllergy}>DISCOVER</Button>
-            </div>
-          </div>
-          <div className="col-12 col-md-4" style={{ textAlign: "center" }}>
-            <div className="container homeban3">
-              <motion.div
-                animate={{
-                  scale: [1, 1, 1, 1, 1],
-                  rotate: [-15, -15, 15, 15, -15],
-
-                }}
-                transition={{
-                  duration: 2,
-                  ease: "easeInOut",
-                  times: [0, 0.2, 0.6, 0.8, 1],
-                  loop: Infinity,
-                  repeatDelay: 1
-                }}
-                className="chaicon"
-              >
-
-              </motion.div>
-              <div style={{ textAlign: "center" }}><h style={{ fontSize: 50, fontFamily: 'ak', color: "#B8390E" }}>Challenge</h></div>
-              <h style={{ fontSize: 18 }} className="homefont">If you can finish the challenge everyday,
-                  you would get a healthier lifestyle, the nutritional deficiency would never bother you again.</h><br /><br />
-
-              <Button className="btn-lg" onClick={gotoChallenge}>LET'S GO</Button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <Parallax y={[0, 0]}>
-        <div className="container homeban1"></div>
-      </Parallax>
-
-
-      {/* <Parallax y={[0, 0]}>
-        <div className="container homeban">
-          <Parallax y={[0, 0]}>
-
-            <div className="row">
-              <div className="col-12 col-md-4" style={{ textAlign: "center" }}>
-                <div className="container homeban3">
-                  <motion.div
-                    animate={{
-                      scale: [1, 1, 1, 1, 1],
-                      rotate: [-15, -15, 15, 15, -15],
-
-                    }}
-                    transition={{
-                      duration: 2,
-                      ease: "easeInOut",
-                      times: [0, 0.2, 0.6, 0.8, 1],
-                      loop: Infinity,
-                      repeatDelay: 1
-                    }}
-                    className="chaicon"
-                  >
-
-                  </motion.div>
-                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 50, fontFamily: 'ak', color: "#B8390E" }}>Challenge</h></div>
-                  <h style={{ fontSize: 18 }} className="homefont">If you can finish the challenge everyday,
-                  you would get a healthier lifestyle, the nutritional deficiency would never bother you again.</h><br /><br />
-
-                  <Button className="btn-lg" onClick={gotoChallenge}>LET'S GO</Button>
+              <div className="row">
+                <div className="col-12 col-md-4">
+                  <div className="homebaninfo"></div>
                 </div>
-              </div>
-              <div className="col-12 col-md-4" style={{ textAlign: "center" }}>
-                <div className="container homeban3">
-                  <motion.div
-                    animate={{
-                      scale: [1, 1, 1, 1, 1],
-                      rotate: [0, 5, 360, 360, 0],
-                      borderRadius: ["20%", "20%", "50%", "50%", "20%"]
-                    }}
-                    transition={{
-                      duration: 2,
-                      ease: "easeInOut",
-                      times: [0, 0.2, 0.5, 0.9, 1],
-                      loop: Infinity,
-                      repeatDelay: 1
-                    }}
-                    className="repicon"
-                  >
-
-                  </motion.div>
-                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 50, fontFamily: 'ak', color: "#B8390E" }}>Replacement</h></div>
-                  <h style={{ fontSize: 18 }} className="homefont">If you are allergic to some food, you need to find a replacement for it. Otherwise you will lack of the nutrition and get weak.</h><br /><br />
-                  <Button className="btn-lg" onClick={gotoAllergy}>DISCOVER</Button>
-                </div>
-              </div>
-              <div className="col-12 col-md-4" style={{ textAlign: "center" }}>
-                <div className="container homeban3">
+                <div className="col-12 col-md-4">
+                  <div className="homebanblank"></div>
+                  <h style={{ fontSize: 18 }} className="homefont">Nutritional Deficiency can cause tiredness, short of breath, loss of weight, obesity, and many more negative effects on you body. Having a light symptom can indicate that you are at the risk of Nutritional Deficiency.</h>
+                  <div className="homebanblank"></div>
+                  <Button className="btn-lg" onClick={gotoAbout} style={{ alignSelf: 'center' }}>FIND MORE KNOWLEDGE</Button></div>
+                <div className="col-12 col-md-4">
                   <motion.div
                     animate={{
                       scale: [1, 1, 0.8, 0.8, 1],
@@ -330,18 +167,130 @@ function Home(props) {
                   >
 
                   </motion.div>
-                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 50, fontFamily: 'ak', color: "#B8390E" }}>Knowledge</h></div>
-                  <h style={{ fontSize: 18 }} className="homefont">Finding more knowledge about different nutritional deficiencies and it will helps you know how to prevent them.</h><br /><br />
-                  <Button className="btn-lg" onClick={gotoAbout}>FIND MORE</Button>
-                </div>
-              </div>
+                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 50, fontFamily: 'ak', color: "#B8390E" }}>Knowledge</h></div></div>
+
+              </div></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="container homeban">
+        <div className="homebanblank"></div>
+        <div className="homebanblank"></div>
+        <div className="row">
+
+          <Parallax y={[20, 0]} x={[100, 40]} className="col-12 col-md-6 ">
+            <div className="homeban1">
+              <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Are you allergic?</h></div>
+              <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">Finding your allergen replacement ahead of starting a health challenge.</h></div>
             </div>
-
-
 
           </Parallax>
         </div>
+      </div>
+
+      <div className="container homeban">
+        <div className="homebanblank"></div>
+        <div className="row">
+          <div className="col-12 col-md-2" style={{ textAlign: "center" }}></div>
+          <div className="col-12 col-md-12" style={{ textAlign: "center" }}>
+            <div className="container homeban3">
+              <div className="row">
+                <div className="col-12 col-md-4">
+                  <div className="homebanblank"></div>
+                  <img src={require('../homepage/bar10.png')} width='100px' /><div className="homebanblank"></div><h style={{ fontSize: 18 }} className="homefont">11% of young people aged under 18 in Australia are suffered from food allergy.</h>
+                </div>
+                <div className="col-12 col-md-4">
+                  <div className="homebanblank"></div>
+                  <h style={{ fontSize: 18 }} className="homefont">If you are allergic to some food, you need to find a replacement for it. Otherwise you might lack of the nutrition and get weak. Don't let it be a stumbling block when starting a health plan of diet.</h><br /><br />
+                  <Button className="btn-lg" onClick={gotoAllergy}>DISCOVER</Button>
+                </div>
+                <div className="col-12 col-md-4">
+                  <motion.div
+                    animate={{
+                      scale: [1, 1, 1, 1, 1],
+                      rotate: [0, 5, 360, 360, 0],
+                      borderRadius: ["20%", "20%", "50%", "50%", "20%"]
+                    }}
+                    transition={{
+                      duration: 2,
+                      ease: "easeInOut",
+                      times: [0, 0.2, 0.5, 0.9, 1],
+                      loop: Infinity,
+                      repeatDelay: 1
+                    }}
+                    className="repicon"
+                  >
+
+                  </motion.div>
+                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 50, fontFamily: 'ak', color: "#B8390E" }}>Allergy</h></div>
+                </div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div className="container homeban">
+      <div className="homebanblank"></div>
+        <div className="homebanblank"></div>
+        <div className="row">
+
+          <Parallax y={[31, 0]} x={[-20, 60]} className="col-12 col-md-6 ">
+            <div className="homeban1">
+              <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Start challenge now!</h></div>
+              <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">Choosing a challenge and sticking at it. You will get a health body.</h></div>
+            </div>
+
+          </Parallax>
+        </div>
+      </div>
+
+      <div className="container homeban">
+      <div className="homebanblank"></div>
+        <div className="row">
+          <div className="col-12 col-md-2" style={{ textAlign: "center" }}></div>
+          <div className="col-12 col-md-12" style={{ textAlign: "center" }}>
+            <div className="container homeban3">
+              <div className="row">
+                <div className="col-12 col-md-4">
+                  <div className="homebanhurdle"></div>
+                </div>
+                <div className="col-12 col-md-4">
+                  <div className="homebanblank"></div>
+                  <h style={{ fontSize: 18 }} className="homefont">We provide you eating challenge, not eating challenge and exercising challenge. They are designed by health guidence and can bring you a health body. You can also see your friends in the rankings board. Now join the game and race with friends.</h><br /><br />
+                  <Button className="btn-lg" onClick={gotoChallenge}>Let's go</Button>
+                </div>
+                <div className="col-12 col-md-4">
+                  <motion.div
+                    animate={{
+                      scale: [1, 1, 1, 1, 1],
+                      rotate: [-15, -15, 15, 15, -15],
+
+                    }}
+                    transition={{
+                      duration: 2,
+                      ease: "easeInOut",
+                      times: [0, 0.2, 0.6, 0.8, 1],
+                      loop: Infinity,
+                      repeatDelay: 1
+                    }}
+                    className="chaicon"
+                  >
+                  </motion.div>
+                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 50, fontFamily: 'ak', color: "#B8390E" }}>Challenge</h></div>
+                </div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      {/* <Parallax y={[0, 0]}>
+        <div className="container homeban1"></div>
       </Parallax> */}
+
+
+
 
 
 
