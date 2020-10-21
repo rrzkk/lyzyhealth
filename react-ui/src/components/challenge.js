@@ -630,10 +630,10 @@ function ChallengeCom(props) {
                     <div className="col-12 col-md-3 offset-md-2">
                         <img src={require('../challengeassets/note.png')} className="racemap"></img>
                     </div> */}
-                    <div className="col-12 col-md-4 " style={{ textAlign: "center" }}>
+                    <div className="col-12 col-md-5 " style={{ textAlign: "center" }}>
                     {loginstatus(username, props.userchallenge.userchallenge.length)}
                     </div>
-                    <div className="col-12 col-md-8 ">
+                    <div className="col-12 col-md-7 ">
                     <img src={require('../challengeassets/challengeintro.png')} className="racemap"></img>
                     
                     </div>
