@@ -712,7 +712,7 @@ function ChallengeCom(props) {
                         </div>
                         <img src={require('../challengeassets/map.png')} className="racemap" ref={componentRef}></img>
                         <div className="col-4 col-md-4 ">
-                <h>{count}</h>
+                <h>{height}</h>
                             <motion.div animate={animate}>
                                 {carchange(props.userchallenge.userchallenge.length)}
 
