@@ -157,10 +157,10 @@ function ChallengeCom(props) {
 
     // const [animate, cycle] = useCycle({ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
     //     , { x: width * 2 / 3, y: -height / 1.2, scale: 1.4 });
-    const animatePos = [{ x: 0, y: -height / 2.8, scale: 1 }, { x: width / 6, y: -height / 1.8, scale: 1.2 }, { x: width / 2.6, y: -height / 3, scale: 1.3 }
-        , { x: width * 2 / 3, y: -height / 1.2, scale: 1.4 }]
+    const animatePos = [{ x: 0, y: -height / 2.2, scale: 1 }, { x: width / 6, y: -height / 1.3, scale: 1.2 }, { x: width / 2.6, y: -height / 2.5, scale: 1.3 }
+        , { x: width * 2 / 3, y: -height / 1.1, scale: 1.4 }]
 
-    const animate = animatePos[props.userchallenge.userchallenge.length%3];
+    const animate = animatePos[props.userchallenge.userchallenge.length%4];
     function cycle() {
         dispatchC('MOVE');
     }
