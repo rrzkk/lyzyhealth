@@ -61,9 +61,9 @@ function ChallengeCom(props) {
     const [popover4, togglepopover4] = useState(false);
     const [popover5, togglepopover5] = useState(false);
     const [popover6, togglepopover6] = useState(false);
-    
 
-    const eatingChallenge = newchallenges.filter(el => {return(el.type === 'eating')});
+
+    const eatingChallenge = newchallenges.filter(el => { return (el.type === 'eating') });
     const eatingChallengelist = [eatingChallenge.filter(el => el.level === 1),
     eatingChallenge.filter(el => el.level === 2),
     eatingChallenge.filter(el => el.level === 3),
@@ -160,7 +160,7 @@ function ChallengeCom(props) {
     const animatePos = [{ x: 0, y: -height / 2.2, scale: 1 }, { x: width / 6, y: -height / 1.5, scale: 1.2 }, { x: width / 2.6, y: -height / 2.5, scale: 1.3 }
         , { x: width * 2 / 3, y: -height / 1.1, scale: 1.4 }]
 
-    const animate = animatePos[props.userchallenge.userchallenge.length%4];
+    const animate = animatePos[props.userchallenge.userchallenge.length % 4];
     function cycle() {
         dispatchC('MOVE');
     }
@@ -230,21 +230,21 @@ function ChallengeCom(props) {
         var re = /^[A-Za-z0-9]+$/;//only character and number
         if (re.test(evt.target.value) == true) {
             setUsername(evt.target.value);
-        } else if(evt.target.value == ''){
+        } else if (evt.target.value == '') {
             setUsername('');
-        } else if(re.test(evt.target.value) == false){
+        } else if (re.test(evt.target.value) == false) {
             alert("you can only enter numbers and letters");
-        }      
+        }
     }
     function changePassword(evt) {
         var re = /^[A-Za-z0-9]+$/;//only character and number
         if (re.test(evt.target.value) == true) {
             setPassword(evt.target.value);
-        } else if(evt.target.value == ''){
+        } else if (evt.target.value == '') {
             setPassword('');
-        } else if (re.test(evt.target.value) == false){
+        } else if (re.test(evt.target.value) == false) {
             alert("you can only enter numbers and letters");
-        }       
+        }
     }
 
     async function verifycreate(username, password) {
@@ -253,8 +253,8 @@ function ChallengeCom(props) {
 
     }
     // check the input isn't empty
-    function checkBeforeCreate(username, password){
-        if (username=='' || password=='') {
+    function checkBeforeCreate(username, password) {
+        if (username == '' || password == '') {
             alert("you cannot enter empty content");
         } else {
             verifycreate(username, password)
@@ -267,8 +267,8 @@ function ChallengeCom(props) {
         scrollProgress();
         //scrollMoreDown() ;
     }
-    function logOff(){
-        props.verifyPassWord('24332','23435');
+    function logOff() {
+        props.verifyPassWord('24332', '23435');
     }
 
     function scrollMoreDown() {
@@ -295,8 +295,8 @@ function ChallengeCom(props) {
                         <li><img src={require('../challengeassets/car3.png')} width='50px' /><a>: Finish 10-14 challenges, unlock a coupe</a> </li>
                         <li><img src={require('../challengeassets/car4.png')} width='50px' /><a>: Finish 15+ challenges, unlock a rocket</a> </li>
                     </ul>
-                    <Button color='warning' onClick={()=>logOff()}>Log off</Button>
-                   
+                    <Button color='warning' onClick={() => logOff()}>Log off</Button>
+
                 </div>);
         }
     }
@@ -454,8 +454,10 @@ function ChallengeCom(props) {
                 <br />
                 {!addProgressBtn1 &&
                     <Button className="cardbtn" onClick={() => changeEat()} color="warning">Change a Challenge</Button>}
-                {addProgressBtn1 &&
+                {addProgressBtn1 && props.login &&
                     <Button className="cardbtn" color="danger" onClick={() => { finishBtn() }}>FINISH</Button>}
+                {addProgressBtn1 && !props.login &&
+                    <Button className="cardbtn" onClick={() => togglemodel(!loginmodel)} color='warning'>Login/Signup</Button>}
                 <br />
                 <Button className="cardbtn" color="danger" onClick={() => addP1()} >{btnText1}</Button>
 
@@ -509,8 +511,10 @@ function ChallengeCom(props) {
                 <br />
                 {!addProgressBtn2 &&
                     <Button className="cardbtn" onClick={() => changeNo()} color="warning">Change a Challenge</Button>}
-                {addProgressBtn2 &&
+                {addProgressBtn2 && props.login &&
                     <Button className="cardbtn" color="danger" onClick={() => { finishBtn() }}>FINISH</Button>}
+                {addProgressBtn2 && !props.login &&
+                    <Button className="cardbtn" onClick={() => togglemodel(!loginmodel)} color='warning'>Login/Signup</Button>}
                 <br />
                 <Button className="cardbtn" color="danger" onClick={() => addP2()} >{btnText2}</Button>
 
@@ -560,8 +564,10 @@ function ChallengeCom(props) {
                 <br />
                 {!addProgressBtn3 &&
                     <Button className="cardbtn" onClick={() => changeEx()} color="warning">Change a Challenge</Button>}
-                {addProgressBtn3 &&
+                {addProgressBtn3 && props.login &&
                     <Button className="cardbtn" color="danger" onClick={() => { finishBtn() }}>FINISH</Button>}
+                {addProgressBtn3 && !props.login &&
+                    <Button className="cardbtn" onClick={() => togglemodel(!loginmodel)} color='warning'>Login/Signup</Button>}
                 <br />
                 <Button className="cardbtn" color="danger" onClick={() => addP3()} >{btnText3}</Button>
             </Card.Body>
@@ -631,11 +637,11 @@ function ChallengeCom(props) {
                         <img src={require('../challengeassets/note.png')} className="racemap"></img>
                     </div> */}
                     <div className="col-12 col-md-5 " style={{ textAlign: "center" }}>
-                    {loginstatus(username, props.userchallenge.userchallenge.length)}
+                        {loginstatus(username, props.userchallenge.userchallenge.length)}
                     </div>
                     <div className="col-12 col-md-7 ">
-                    <img src={require('../challengeassets/challengeintro.png')} className="racemap"></img>
-                    
+                        <img src={require('../challengeassets/challengeintro.png')} className="racemap"></img>
+
                     </div>
                 </div>
             </div>
@@ -664,7 +670,7 @@ function ChallengeCom(props) {
                 <b>Pick Your Challenges</b>
             </div>
             <div className="container challengebg">
-            <div className="row" style={{ margin: 50 }}>
+                <div className="row" style={{ margin: 50 }}>
                     <b><i>* If you are allergic to some food on the list, you can refer to allergy page.</i></b>
                 </div>
                 <div className="row">
@@ -686,33 +692,30 @@ function ChallengeCom(props) {
                 <b>Check Your Progress</b>
             </div>
 
-            
-            
-            <motion.div className="container challengebg" layout >               
+
+
+            <motion.div className="container challengebg" layout >
                 <div className="row">
-                    <div className="col-12 col-md-4">
-                        {addProgressBtn1 && Card1()}
-                    </div>
-                    <div className="col-12 col-md-4">
-                        {addProgressBtn2 && Card2()}
-                    </div>
-                    <div className="col-12 col-md-4">
-                        {addProgressBtn3 && Card3()}
-                    </div>
+
                 </div>
                 <div className="row" >
                     <div className="col-12 col-md-3 " >
-                    <div className="mapbtn">
-                    {/* <b>your current car type is :</b><img className="carsmall" src={require('../challengeassets/'+carImg)} width='10px'/> */}
-                    
-                        {/* <Button className="mapbtn" color="danger" onMouseEnter={() => window.dispatchEvent(new Event('resize'))} onClick={() => moveCar()} onPointerLeave={() => setExerciseLength(exerciseChallengelist[exerciselvl - 1].length)} >Click to Drive</Button> */}
-                    </div></div>
+
+                        {addProgressBtn1 && Card1()}
+
+
+                        {addProgressBtn2 && Card2()}
+
+
+                        {addProgressBtn3 && Card3()}
+
+                    </div>
                     <div className="col-12 col-md-6 cMap" >
                         <div className="col-12 col-md-8 offset-md-2">
                         </div>
                         <img src={require('../challengeassets/map.png')} className="racemap" ref={componentRef}></img>
                         <div className="col-4 col-md-4 ">
-               
+
                             <motion.div animate={animate}>
                                 {carchange(props.userchallenge.userchallenge.length)}
 
@@ -726,9 +729,9 @@ function ChallengeCom(props) {
                     </div>
                 </div>
             </motion.div>
-            
-            
-            
+
+
+
             <div className="container">
 
 
