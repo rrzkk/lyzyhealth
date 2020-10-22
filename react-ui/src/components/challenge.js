@@ -346,7 +346,7 @@ function ChallengeCom(props) {
     async function finishBtn() {
         if (props.login) {
             await props.postChallenge(props.username.username);
-            props.getUserChallenge(props.username.username);
+            await props.getUserChallenge(props.username.username);
             cycle();
         }
         else { alert("You Need Log in To Upgrade") }
