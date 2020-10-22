@@ -50,6 +50,7 @@ function Home(props) {
         </motion.div>
 
       </div> */}
+      {/* scroll to top */}
       <div className="d-none d-lg-block wrapper">
 
         <motion.div className="progressbartc" >
