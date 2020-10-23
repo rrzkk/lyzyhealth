@@ -304,40 +304,40 @@ function ChallengeCom(props) {
     }
 
     function rankinglist() {
-        let isOnlist = false;
-        let rank;
-        let name;
-        let count;
-        for (let i = 0; i < props.uc.length; i++) {
-            if (props.uc[i].username === props.username.username) {
-                if (i < 10) {
-                    isOnlist = true;
-                    rank = i + 1;
-                    name = props.uc[i].username;
-                    count = props.uc[i].count;
-                }
-            }
-        }
-        const youposition = () => {
-            return (
-                <Table borderless>
-                    <tbody>
-                        <tr>
-                            <th>...</th>
-                            <td>...</td>
-                            <td>...</td>
-                        </tr>
-                        <tr>
-                            <th>{rank}</th>
-                            <td>{name}</td>
-                            <td>{count}</td>
-                        </tr>
-                    </tbody>
+        // let isOnlist = false;
+        // let rank;
+        // let name;
+        // let count;
+        // for (let i = 0; i < props.uc.length; i++) {
+        //     if (props.uc[i].username === props.username.username) {
+        //         if (i < 10) {
+        //             isOnlist = true;
+        //             rank = i + 1;
+        //             name = props.uc[i].username;
+        //             count = props.uc[i].count;
+        //         }
+        //     }
+        // }
+        // const youposition = () => {
+        //     return (
+        //         <Table borderless>
+        //             <tbody>
+        //                 <tr>
+        //                     <th>...</th>
+        //                     <td>...</td>
+        //                     <td>...</td>
+        //                 </tr>
+        //                 <tr>
+        //                     <th>{rank}</th>
+        //                     <td>{name}</td>
+        //                     <td>{count}</td>
+        //                 </tr>
+        //             </tbody>
 
-                </Table>
-            );
-        }
-        console("grfgr");
+        //         </Table>
+        //     );
+        // }
+        console.log("grfgr");
         let itemT = props.uc.slice(0, 10).map((el, index) => {
             if (index !== 9) {
                 return (
@@ -794,7 +794,7 @@ function ChallengeCom(props) {
                                 </tr>
                             </thead>
                             <tbody>
-                                {rankinglist(props)}
+                                {rankinglist()}
                             </tbody>
                         </Table>
                     </div>
