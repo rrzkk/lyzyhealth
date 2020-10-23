@@ -303,7 +303,7 @@ function ChallengeCom(props) {
         }
     }
 
-    const rankinglist = () => {
+    const rankinglist = (props) => {
         //const test = props.uc;
         //if (test.length > 10) {
         //  test = test.slice(0, 10);
@@ -316,28 +316,31 @@ function ChallengeCom(props) {
 
         for (let i = 0; i < props.uc.length; i++) {
             if (props.uc[i].username === props.username.username) {
-                if(i<10){
-                    isOnlist=true;
-                    rank=i+1;
-                    name=props.uc[i].username;
-                    count=props.uc[i].count;
+                if (i < 10) {
+                    isOnlist = true;
+                    rank = i + 1;
+                    name = props.uc[i].username;
+                    count = props.uc[i].count;
                 }
             }
         }
         const youposition = () => {
             return (
-                <div>
-                    <tr>
-                        <th>...</th>
-                        <td>...</td>
-                        <td>...</td>
-                    </tr>
-                    <tr>
-                        <th>{rank}</th>
-                        <td>{name}</td>
-                        <td>{count}</td>
-                    </tr>
-                </div>
+                <Table borderless>
+                    <tbody>
+                        <tr>
+                            <th>...</th>
+                            <td>...</td>
+                            <td>...</td>
+                        </tr>
+                        <tr>
+                            <th>{rank}</th>
+                            <td>{name}</td>
+                            <td>{count}</td>
+                        </tr>
+                    </tbody>
+
+                </Table>
             );
         }
 
@@ -798,7 +801,7 @@ function ChallengeCom(props) {
                                 </tr>
                             </thead>
                             <tbody>
-                                {rankinglist()}
+                                {rankinglist(props)}
                             </tbody>
                         </Table>
                     </div>
