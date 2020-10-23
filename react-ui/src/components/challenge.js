@@ -337,8 +337,9 @@ function ChallengeCom(props) {
         //         </Table>
         //     );
         // }
-        console.log("grfgr");
+       
         let itemT = props.uc.slice(0, 10).map((el, index) => {
+            console.log("grfgr");
             if (index !== 9) {
                 return (
                     <tr>
@@ -361,7 +362,7 @@ function ChallengeCom(props) {
                 );
             }
         });
-        return (itemT);
+        return (<>{itemT}</>);
     }
 
     const carchange = (length) => {
