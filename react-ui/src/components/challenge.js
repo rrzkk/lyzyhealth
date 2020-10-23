@@ -161,6 +161,8 @@ function ChallengeCom(props) {
         , { x: width * 2 / 3, y: -height / 1.1, scale: 1.4 }]
 
     const animate = animatePos[props.userchallenge.userchallenge.length % 4];
+    const init= animatePos[props.userchallenge.userchallenge.length+3 % 4];
+    
     function cycle() {
         dispatchC('MOVE');
     }
@@ -716,7 +718,7 @@ function ChallengeCom(props) {
                         <img src={require('../challengeassets/map.png')} className="racemap" ref={componentRef}></img>
                         <div className="col-4 col-md-4 ">
 
-                            <motion.div animate={animate}>
+                            <motion.div animate={animate} initial={init}>
                                 {carchange(props.userchallenge.userchallenge.length)}
 
                             </motion.div>
