@@ -161,8 +161,8 @@ function ChallengeCom(props) {
         , { x: width * 2 / 3, y: -height / 1.1, scale: 1.4 }]
 
     const animate = animatePos[props.userchallenge.userchallenge.length % 4];
-    const init= animatePos[props.userchallenge.userchallenge.length+3 % 4];
-    
+    const init = animatePos[props.userchallenge.userchallenge.length + 3 % 4];
+
     function cycle() {
         dispatchC('MOVE');
     }
@@ -309,15 +309,60 @@ function ChallengeCom(props) {
         //  test = test.slice(0, 10);
         //}
         //const itemsR = test.map(el => { return (<ListGroupItem>{el.username}</ListGroupItem>) });
+        let isOnlist = false;
+        let rank;
+        let name;
+        let count;
+
+        for (let i = 0; i < props.uc.length; i++) {
+            if (props.uc[i].username === props.username.username) {
+                if(i<10){
+                    isOnlist=true;
+                    rank=i+1;
+                    name=props.uc[i].username;
+                    count=props.uc[i].count;
+                }
+            }
+        }
+        const youposition = () => {
+            return (
+                <div>
+                    <tr>
+                        <th>...</th>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                    <tr>
+                        <th>{rank}</th>
+                        <td>{name}</td>
+                        <td>{count}</td>
+                    </tr>
+                </div>
+            );
+        }
 
         const itemT = props.uc.slice(0, 10).map((el, index) => {
-            return (
-                <tr>
-                    <th>{index + 1}</th>
-                    <td>{el.username}</td>
-                    <td>{el.count}</td>
-                </tr>
-            )
+            if (index !== 9) {
+                return (
+                    <tr>
+                        <th>{index + 1}</th>
+                        <td>{el.username}</td>
+                        <td>{el.count}</td>
+                    </tr>
+                )
+            }
+            else if (index === 9) {
+                return (
+                    <div>
+                        <tr>
+                            <th>{index + 1}</th>
+                            <td>{el.username}</td>
+                            <td>{el.count}</td>
+                        </tr>
+                        {isOnlist ? <div /> : youposition}
+                    </div>
+                );
+            }
         });
         return (itemT);
 
@@ -718,7 +763,7 @@ function ChallengeCom(props) {
                         <img src={require('../challengeassets/map.png')} className="racemap" ref={componentRef}></img>
                         <div className="col-4 col-md-4 ">
 
-                            <motion.div animate={animate} initial={init}>
+                            <motion.div animate={animate} >
                                 {carchange(props.userchallenge.userchallenge.length)}
 
                             </motion.div>
