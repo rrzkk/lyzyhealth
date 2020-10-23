@@ -303,25 +303,18 @@ function ChallengeCom(props) {
         }
     }
 
-    function rankinglist(prop) {
-        //const test = props.uc;
-        //if (test.length > 10) {
-        //  test = test.slice(0, 10);
-        //}
-        //const itemsR = test.map(el => { return (<ListGroupItem>{el.username}</ListGroupItem>) });
-     
+    function rankinglist() {
         let isOnlist = false;
         let rank;
         let name;
         let count;
-
-        for (let i = 0; i < prop.uc.length; i++) {
-            if (prop.uc[i].username === prop.username.username) {
+        for (let i = 0; i < props.uc.length; i++) {
+            if (props.uc[i].username === props.username.username) {
                 if (i < 10) {
                     isOnlist = true;
                     rank = i + 1;
-                    name = prop.uc[i].username;
-                    count = prop.uc[i].count;
+                    name = props.uc[i].username;
+                    count = props.uc[i].count;
                 }
             }
         }
@@ -344,8 +337,8 @@ function ChallengeCom(props) {
                 </Table>
             );
         }
-
-        let itemT = prop.uc.slice(0, 10).map((el, index) => {
+        console("grfgr");
+        let itemT = props.uc.slice(0, 10).map((el, index) => {
             if (index !== 9) {
                 return (
                     <tr>
@@ -363,13 +356,12 @@ function ChallengeCom(props) {
                             <td>{el.username}</td>
                             <td>{el.count}</td>
                         </tr>
-                        {isOnlist ? <div /> : youposition}
+                   
                     </div>
                 );
             }
         });
         return (itemT);
-
     }
 
     const carchange = (length) => {
