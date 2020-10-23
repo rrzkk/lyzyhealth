@@ -6,7 +6,7 @@ import { useCycle } from 'framer';
 import Card from 'react-bootstrap/Card';
 import { Button, FormGroup, Label, Input, Popover, PopoverHeader, PopoverBody, Row, Modal, Table } from 'reactstrap';
 import { newchallenges } from './fakechallengedata';
-import { login } from '../react/login';
+
 import * as Scroll from 'react-scroll';
 
 
@@ -303,28 +303,33 @@ function ChallengeCom(props) {
         }
     }
 
-    let rankinglist = (props) => {
+    const rankinglist = (props) => {
         //const test = props.uc;
         //if (test.length > 10) {
         //  test = test.slice(0, 10);
         //}
         //const itemsR = test.map(el => { return (<ListGroupItem>{el.username}</ListGroupItem>) });
+        [state,setState]=useState(props);
+        useEffect(()=>{
+            setState(props)
+        },[props]);
+
         let isOnlist = false;
         let rank;
         let name;
         let count;
 
-        for (let i = 0; i < props.uc.length; i++) {
-            if (props.uc[i].username === props.username.username) {
+        for (let i = 0; i < state.uc.length; i++) {
+            if (state.uc[i].username === state.username.username) {
                 if (i < 10) {
                     isOnlist = true;
                     rank = i + 1;
-                    name = props.uc[i].username;
-                    count = props.uc[i].count;
+                    name = state.uc[i].username;
+                    count = state.uc[i].count;
                 }
             }
         }
-        let youposition = () => {
+        const youposition = () => {
             return (
                 <Table borderless>
                     <tbody>
@@ -344,7 +349,7 @@ function ChallengeCom(props) {
             );
         }
 
-        let itemT = props.uc.slice(0, 10).map((el, index) => {
+        let itemT = state.uc.slice(0, 10).map((el, index) => {
             if (index !== 9) {
                 return (
                     <tr>
