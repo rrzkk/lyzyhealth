@@ -316,7 +316,7 @@ function ChallengeCom(props) {
         let count;
 
         for (let i = 0; i < prop.uc.length; i++) {
-            if (state.uc[i].username === prop.username.username) {
+            if (prop.uc[i].username === prop.username.username) {
                 if (i < 10) {
                     isOnlist = true;
                     rank = i + 1;
