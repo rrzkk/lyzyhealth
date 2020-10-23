@@ -303,29 +303,25 @@ function ChallengeCom(props) {
         }
     }
 
-    function rankinglist(props) {
+    function rankinglist(prop) {
         //const test = props.uc;
         //if (test.length > 10) {
         //  test = test.slice(0, 10);
         //}
         //const itemsR = test.map(el => { return (<ListGroupItem>{el.username}</ListGroupItem>) });
-        const [state,setState]=useState(props);
-        useEffect(()=>{
-            setState(props)
-        },[props]);
-
+     
         let isOnlist = false;
         let rank;
         let name;
         let count;
 
-        for (let i = 0; i < state.uc.length; i++) {
-            if (state.uc[i].username === state.username.username) {
+        for (let i = 0; i < prop.uc.length; i++) {
+            if (state.uc[i].username === prop.username.username) {
                 if (i < 10) {
                     isOnlist = true;
                     rank = i + 1;
-                    name = state.uc[i].username;
-                    count = state.uc[i].count;
+                    name = prop.uc[i].username;
+                    count = prop.uc[i].count;
                 }
             }
         }
@@ -349,7 +345,7 @@ function ChallengeCom(props) {
             );
         }
 
-        let itemT = state.uc.slice(0, 10).map((el, index) => {
+        let itemT = prop.uc.slice(0, 10).map((el, index) => {
             if (index !== 9) {
                 return (
                     <tr>
