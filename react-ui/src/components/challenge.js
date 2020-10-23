@@ -302,6 +302,23 @@ function ChallengeCom(props) {
                 </div>);
         }
     }
+    const yourrank = (username, length) => {
+        if (!props.login) {
+            return (<Button onClick={() => togglemodel(!loginmodel)} color='warning'>Login/Signup</Button>);
+        }
+        else {
+            return (
+                <div><b>Hi, {props.username.username}</b><br />
+                    <b>You have finished {length} challenges</b><br /><br />
+                    <b>Unlock new car by finishing more challenges</b><br /><br />
+                    
+                    <Button color='warning' onClick={() => logOff()}>Log off</Button>
+
+                </div>);
+        }
+    }
+
+
 
     function rankinglist() {
         // let isOnlist = false;
@@ -340,7 +357,7 @@ function ChallengeCom(props) {
        
         let itemT = props.uc.slice(0, 10).map((el, index) => {
             console.log("grfgr");
-            if (index !== 9) {
+             
                 return (
                     <tr>
                         <th>{index + 1}</th>
@@ -348,19 +365,8 @@ function ChallengeCom(props) {
                         <td>{el.count}</td>
                     </tr>
                 )
-            }
-            else if (index === 9) {
-                return (
-                    <div>
-                        <tr>
-                            <th>{index + 1}</th>
-                            <td>{el.username}</td>
-                            <td>{el.count}</td>
-                        </tr>
-                   
-                    </div>
-                );
-            }
+            
+           
         });
         return (<>{itemT}</>);
     }
@@ -769,6 +775,7 @@ function ChallengeCom(props) {
                     <div className="col-12 col-md-3">
                         <div className="mapbtn">
                             {loginstatus(username, props.userchallenge.userchallenge.length)}
+
                         </div>
                     </div>
                 </div>
@@ -798,14 +805,14 @@ function ChallengeCom(props) {
                                 {rankinglist()}
                             </tbody>
                         </Table>
+                        <div>{yourrank(username, props.userchallenge.userchallenge.length)}</div>
                     </div>
                 </div>
             </div>
         </div>
 
     );
-
-
+    
 
 
 }
