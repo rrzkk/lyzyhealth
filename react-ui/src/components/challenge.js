@@ -309,7 +309,7 @@ function ChallengeCom(props) {
         //  test = test.slice(0, 10);
         //}
         //const itemsR = test.map(el => { return (<ListGroupItem>{el.username}</ListGroupItem>) });
-        [state,setState]=useState(props);
+        const [state,setState]=useState(props);
         useEffect(()=>{
             setState(props)
         },[props]);
