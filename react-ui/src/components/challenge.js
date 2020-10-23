@@ -303,7 +303,7 @@ function ChallengeCom(props) {
         }
     }
 
-    const rankinglist = (props) => {
+    let rankinglist = (props) => {
         //const test = props.uc;
         //if (test.length > 10) {
         //  test = test.slice(0, 10);
@@ -324,7 +324,7 @@ function ChallengeCom(props) {
                 }
             }
         }
-        const youposition = () => {
+        let youposition = () => {
             return (
                 <Table borderless>
                     <tbody>
@@ -344,7 +344,7 @@ function ChallengeCom(props) {
             );
         }
 
-        const itemT = props.uc.slice(0, 10).map((el, index) => {
+        let itemT = props.uc.slice(0, 10).map((el, index) => {
             if (index !== 9) {
                 return (
                     <tr>
