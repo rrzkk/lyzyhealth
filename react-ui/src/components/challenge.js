@@ -303,7 +303,7 @@ function ChallengeCom(props) {
         }
     }
 
-    const rankinglist = (props) => {
+    function rankinglist(props) {
         //const test = props.uc;
         //if (test.length > 10) {
         //  test = test.slice(0, 10);
