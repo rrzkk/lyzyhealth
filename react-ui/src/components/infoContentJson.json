@@ -3,15 +3,7 @@
         "title":"What is Nutritional Deficiency?",
         "text":"Nutritional Deficiency is a condition that results from eating a diet in which one or more nutrients are either not enough or are too much such that the diet causes health problems.In Australia, nutritional deficiency is more common among the elderly, people who don’t eat enough, or those who don’t eat the right types of foods in a balanced diet. Some people develop nutritional deficiency if they have a health issue that prevents their body from absorbing nutrients from food.There are two main types of undernutrition: protein-energy malnutrition and dietary deficiencies. Protein-energy malnutrition has two severe forms: marasmus (a lack of protein and calories) and kwashiorkor (a lack of just protein). Common micronutrient deficiencies include: a lack of iron, iodine, and vitamin A.",
         "symptoms":[
-            {"text":"pallor, or pale skin"},
-            {"text":"fatigue"},
-            {"text":"weakness"},
-            {"text":"trouble breathing"},
-            {"text":"unusual food cravings"},
-            {"text":"constipation"},
-            {"text":"sleepiness"},
-            {"text":"heart palpitations"},
-            {"text":"feeling faint or fainting"}
+            {"text":"assets/info/nutrition-symptoms.png"}
         ],
         "prevent":[
             {
@@ -28,13 +20,7 @@
         "title":"Iron Deficiency:",
         "text":"Iron deficiency is the most common nutritional deficiency in Australia, especially among children and women of childbearing age where it can lead to iron-deficiency anemia, a serious condition where red blood cell production falls. If dietary iron requirements are not met, the body's iron stores gradually run down. Iron is an important dietary mineral involved in various bodily functions. Iron is part of hemoglobin, the red pigment in the blood that carries oxygen from the lungs throughout the body, and myoglobin that transports oxygen in the muscles. Iron deficiency meansless oxygen is delivered to the cells leading to fatigue, tiredness and decreased immunity. High-risk groups include menstruating women, pregnant women, babies and toddlers, teenage girls and female athletes. Indigenous Australians, refugees and recent immigrants from developing countries, vegans and vegetarians, people who repeatedly crash diet, and hospitalized or institutionalized patients are also at risk.",
         "symptoms":[
-            {"text":"fatigue"},
-            {"text":"Dizziness"},
-            {"text":"Pallor"},
-            {"text":"Hair Loss"},
-            {"text":"Irritability"},
-            {"text":"Weakness"},
-            {"text":"Abnormal rapid breathing"}
+            {"text":"assets/info/iron-symptoms.png"}
         ],
         "prevent":[
             {
@@ -51,13 +37,7 @@
         "title":"Vitamin D Deficiency",
         "text":"Vitamin D deficiency means that you do not have enough vitamin D in your body. It is common in Australia with over 30% of adults having this deficiency.Vitamin D has many functions and it is important for bone health because it helps absorb calcium. It also plays a role in supporting growth and maintenance of the skeleton and regulating calcium levels in the blood. Getting enough vitamin D may also play a role in helping to keep you healthy by protecting against heart disease and high blood pressure, diabetes and cancers.",
         "symptoms":[
-            {"text":"Getting Sick or Infected Often"},
-            {"text":"Fatigue and Tiredness."},
-            {"text":"Bone and Back Pain"},
-            {"text":"Depression"},
-            {"text":"Bone Loss"},
-            {"text":"Hair Loss"},
-            {"text":"Muscle Pain"}
+            {"text":"assets/info/d-symptoms.png"}
         ],
         "prevent":[
             {
@@ -78,12 +58,7 @@
         "title":"Vitamin B Deficiency",
         "text":"Vitamin B deficiency affects up to 15 percent of people in Australia. Vitamin B is needed to help blood form, and for the brain and nervous system to function properly. Vitamin B deficiency can be caused by not eating enough of the right foods, especially meat and animal products. More often it is caused by the body not being able to absorb the B12 properly.",
         "symptoms":[
-            {"text":"Tiredness"},
-            {"text":"Light-headedness"},
-            {"text":"Rapid heart rate"},
-            {"text":"Easy bruising and bleeding"},
-            {"text":"Weight loss"},
-            {"text":"Sore tongue"}
+            {"text":"assets/info/b-symptoms.png"}
         ],
         "prevent":[
             {
@@ -100,14 +75,7 @@
         "title":"Calcium Deficiency",
         "text":"Over half of all Australians aged two years and over consume inadequate levels of calcium from food sources. Calcium is important for strong bones, as well as for the healthy functioning of nerves, muscles and heart. You need calcium to build and maintain healthy bones. Calcium combines with other minerals, such as phosphate, in your bones to give them structure and strength. Calcium also circulates in your blood to be used by your heart, muscles and nerves. To absorb calcium, your body needs vitamin D. Regardless of your calcium intake, if you don’t get enough vitamin D, you will have trouble absorbing calcium and keeping your bones healthy.",
         "symptoms":[
-            {"text":"Confusion or memory loss"},
-            {"text":"Muscle spasms"},
-            {"text":"Numbness and tingling in the hands, feet and face"},
-            {"text":"Depression"},
-            {"text":"Hallucination"},
-            {"text":"Muscle cramps"},
-            {"text":"Weak and brittle nails"},
-            {"text":"Easy fracturing of the bones"}
+            {"text":"assets/info/calcium_deficiency.png"}
         ],
         "prevent":[
             {

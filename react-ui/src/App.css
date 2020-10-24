@@ -659,6 +659,8 @@ text-align: center;}
   border: #eeeeee;
   border-style: solid;
   background-color: #212F3C;
+  align-items:center;
+  justify-content:center;
 }
 .infoNum{
   margin-top: 30%;
@@ -667,6 +669,8 @@ text-align: center;}
   font-style: oblique;
   font-size: 50px;
   align-self: center;
+  align-content:center;
+  justify-content:center;
 }
 .infoDes{
   margin-top: auto;
@@ -807,3 +811,7 @@ text-align: center;}
   opacity: 0;
   animation: fade2 0.1s linear;
 }
+::-webkit-scrollbar {
+  /*隐藏滚轮*/
+  display: none;
+  }

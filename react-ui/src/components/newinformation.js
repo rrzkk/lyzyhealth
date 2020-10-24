@@ -24,23 +24,23 @@ const moveToElement = (elementId) => {
         window.scrollTo({ behavior: "smooth", top: offsetTop - 76 });
     }
 };
-function leadTo1(setDiv){
+function leadTo1(setDiv) {
     setDiv(2);
     moveToElement("fullscreendiv2");
 };
-function leadTo2(setDiv){
+function leadTo2(setDiv) {
     setDiv(3);
     moveToElement("fullscreendiv3");
 };
-function leadTo3(setDiv){
+function leadTo3(setDiv) {
     setDiv(4);
     moveToElement("fullscreendiv4");
 };
-function leadTo4(setDiv){
+function leadTo4(setDiv) {
     setDiv(5);
     moveToElement("fullscreendiv5");
 };
-function leadTo5(setDiv){
+function leadTo5(setDiv) {
     setDiv(6);
     moveToElement("fullscreendiv6");
 };
@@ -118,6 +118,7 @@ function infoCards() {
         let parseFigure = parseInt(figure);
         let stepTime = duration / parseFigure;
         useEffect(() => {
+            window.scrollTo(0, 0);
             if (counter < parseFigure) {
                 if (parseFigure / duration > 16) {
                     if (counter + Math.ceil(parseFigure * 16 / duration) < parseFigure) {
@@ -131,9 +132,13 @@ function infoCards() {
 
         return (
             <div className="col-6 col-md-4 infotopcard" style={{}}>
-                <h className="infoNum">{counter}{symbol}</h>
-                <p className="infoDes">{el.text}</p>
-            </div>
+                <div className="row">
+                    <div className="col-12 col-md-12" style={{ textAlign: "center" }}>
+                        <img src={require('./' + el.url)} style={{ maxWidth: 'auto', height: 150 }}></img></div>
+                    <div className="col-12 col-md-12" style={{ textAlign: "center" }}>
+                        <h className="infoNum" style={{ color: 'orange' }}>{counter}{symbol}</h></div>
+                    <p className="infoDes">{el.text}</p>
+                </div></div>
         );
 
     }))
@@ -143,7 +148,7 @@ function symtoms(symptoms) {
     return symptoms.map(el => {
         return (
             <div>
-                {el.text}
+                <img src={require('./' + el.text)} style={{ maxWidth: 450, height: 'auto' }} />
             </div>
         );
     });
@@ -184,8 +189,8 @@ function infoContentCards(currentDiv, setDiv, setTitle, setSymptom, setPreventio
             <div
                 className=" fullscreendiv infoContent"
                 id={`fullscreendiv${index + 2}`}
-               >
-                
+                onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
+
                 <img src={require(`../infoassets/infobackground${index + 1}.png`)}
                     className=' infosubbg'
 
@@ -197,16 +202,16 @@ function infoContentCards(currentDiv, setDiv, setTitle, setSymptom, setPreventio
                         onClick={() => { setTitle(true) }}></img>
                     <div className="infoflex1">
                         <img src={require(`../infoassets/prevention${index + 1}.png`)}
-                            onClick={() => { setSymptom(true) }}></img>
+                            onClick={() => { setPrevention(true) }}></img>
                         <img src={require(`../infoassets/preventiontitle.png`)}
-                            onClick={() => { setSymptom(true) }}></img>
+                            onClick={() => { setPrevention(true) }}></img>
                     </div>
 
                     <div className="infoflex2">
                         <img width="50%" src={require(`../infoassets/symptoms${index + 1}.png`)}
-                            onClick={() => { setPrevention(true) }}></img>
+                            onClick={() => { setSymptom(true) }}></img>
                         <img src={require(`../infoassets/symptomtitle.png`)}
-                            onClick={() => { setPrevention(true) }}></img>
+                            onClick={() => { setSymptom(true) }}></img>
                     </div>
 
                 </div>
@@ -261,22 +266,22 @@ function NewInfo() {
     const [symptom, setSymptom] = useState(false);
     const [prevention, setPrevention] = useState(false);
     return (
-        <div className=" infobackground fullscreenwid" onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
-            {(currentDiv===2)?<img src={require("../infoassets/infobutton.png")} className="infoBtn1"/>:
-            <img src={require("../infoassets/infobutton.png")} className="infoBtn1f" onClick={()=>{leadTo1(setDiv)}}/>}
-            {(currentDiv===3)?<img src={require("../infoassets/infobutton.png")} className="infoBtn2"/>:
-            <img src={require("../infoassets/infobutton.png")} className="infoBtn2f" onClick={()=>{leadTo2(setDiv)}}/>}
-            {(currentDiv===4)?<img src={require("../infoassets/infobutton.png")} className="infoBtn3"/>:
-            <img src={require("../infoassets/infobutton.png")} className="infoBtn3f" onClick={()=>{leadTo3(setDiv)}}/>}
-            {(currentDiv===5)?<img src={require("../infoassets/infobutton.png")} className="infoBtn4"/>:
-            <img src={require("../infoassets/infobutton.png")} className="infoBtn4f" onClick={()=>{leadTo4(setDiv)}}/>}
-            {(currentDiv===6)?<img src={require("../infoassets/infobutton.png")} className="infoBtn5"/>:
-            <img src={require("../infoassets/infobutton.png")} className="infoBtn5f" onClick={()=>{leadTo5(setDiv)}}/>}
-            <div className="row fullscreendiv" id="fullscreendiv1" >
+        <div className=" infobackground fullscreenwid">
+            {(currentDiv === 2) ? <img src={require("../infoassets/infobutton.png")} className="infoBtn1" /> :
+                <img src={require("../infoassets/infobutton.png")} className="infoBtn1f" onClick={() => { leadTo1(setDiv) }} />}
+            {(currentDiv === 3) ? <img src={require("../infoassets/infobutton.png")} className="infoBtn2" /> :
+                <img src={require("../infoassets/infobutton.png")} className="infoBtn2f" onClick={() => { leadTo2(setDiv) }} />}
+            {(currentDiv === 4) ? <img src={require("../infoassets/infobutton.png")} className="infoBtn3" /> :
+                <img src={require("../infoassets/infobutton.png")} className="infoBtn3f" onClick={() => { leadTo3(setDiv) }} />}
+            {(currentDiv === 5) ? <img src={require("../infoassets/infobutton.png")} className="infoBtn4" /> :
+                <img src={require("../infoassets/infobutton.png")} className="infoBtn4f" onClick={() => { leadTo4(setDiv) }} />}
+            {(currentDiv === 6) ? <img src={require("../infoassets/infobutton.png")} className="infoBtn5" /> :
+                <img src={require("../infoassets/infobutton.png")} className="infoBtn5f" onClick={() => { leadTo5(setDiv) }} />}
+            <div className="row fullscreendiv" id="fullscreendiv1" onWheel={(evt) => { changingDiv(evt, currentDiv, setDiv) }}>
                 {infoCards()}
             </div>
             {infoContentCards(currentDiv, setDiv, setTitle, setSymptom, setPrevention)}
-           
+
 
             {renderModalTitle(currentDiv, title, setTitle)}
             {renderModalSymptoms(currentDiv, symptom, setSymptom)}

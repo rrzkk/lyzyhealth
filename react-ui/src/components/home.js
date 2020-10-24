@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Button } from 'reactstrap'
 import { useHistory } from "react-router-dom"
@@ -35,10 +35,12 @@ function Home(props) {
   function scrollMoreDown() {
     scroller.scrollTo('doyouknow', { smooth: true })
   }
-  function toTop(){
+  function toTop() {
     window.scrollTo(0, 0);
   }
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
   return (
     <div>
       {/* <div className="d-none d-lg-block wrapper">
@@ -54,13 +56,13 @@ function Home(props) {
       <div className="d-none d-lg-block wrapper">
 
         <motion.div className="progressbartc" >
-        <Button className="scrollTop" onClick={toTop}></Button>
+          <Button className="scrollTop" onClick={toTop}></Button>
 
         </motion.div>
 
       </div>
-      
-      
+
+
 
 
       <Parallax y={[0, 0]}>
@@ -68,24 +70,25 @@ function Home(props) {
       </Parallax>
       <Parallax y={[0, 0]}>
         <div className="container homeban">
-          <Parallax y={[0, 0]} x={[0, 20]}>
-            <div className="container ">
-              <div className="row">
-                <div className="col-12 col-md-6 homeban1">
-                  <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Do you know that:</h></div>
+
+          <div className="container ">
+            <div className="row">
+              <div className="col-12 col-md-12 homeban1">
+                <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Do you know that:</h></div>
+                <div className="container homebanblank"></div>
+                <div className='row'>
+                  <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie1.png')} width='300px' /></div>
+                  <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie2.png')} width='300px' /></div>
+                  <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie3.png')} width='300px' /></div>
                 </div>
               </div>
             </div>
-
-          </Parallax>
-          {/* add the facts here */}
-          <div className="container homebanblank"></div>
-          <div className='row'>
-            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie1.png')} width='300px' /></div>
-            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie2.png')} width='300px' /></div>
-            <div className="col-12 col-md-4" style={{ textAlign: "center" }}><img src={require('../homepage/pie3.png')} width='300px' /></div>
           </div>
-          <Parallax y={[20, 0]} x={[40, -40]} >
+
+
+          {/* add the facts here */}
+
+          <Parallax y={[20, 0]} x={[10, -10]} >
             <div className="row homebannew">
               <div className="col-12 col-md-6 offset-md-6" >
 
@@ -105,28 +108,28 @@ function Home(props) {
 
       </Parallax>
 
-      <Parallax y={[0, 0]}>
+      
         <div className="container homeban1"></div>
-      </Parallax>
+      
 
-      <Parallax y={[0, 0]}>
+      
         <div className="container homeban1">
           <Button className="homebtn" size="lg" onClick={scrollMoreDown}><h style={{ fontSize: 30, fontFamily: 'ak', color: "white" }}>Explore more</h></Button>
         </div>
-      </Parallax>
+      
 
-      <Parallax y={[0, 0]}>
+      
         <div className="container homeban1"></div>
-      </Parallax>
-      <Parallax y={[0, 0]}>
+      
+      
         <Element name="doyouknow"></Element>
         <div className="container homeban1"></div>
-      </Parallax>
+      
 
       <div className="container homeban">
-      <div className="homebanblank"></div>
+        <div className="homebanblank"></div>
         <div className="row">
-          <Parallax y={[31, 0]} x={[-20, 60]} className="col-12 col-md-6 ">
+          <Parallax y={[20, 0]} x={[40, 60]} className="col-12 col-md-6 ">
             <div className="homeban1">
               <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Nutritional Deficiency</h></div>
               <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">Understand it before fighting it! Let's give some knowledge.</h></div>
@@ -180,7 +183,7 @@ function Home(props) {
         <div className="homebanblank"></div>
         <div className="row">
 
-          <Parallax y={[20, 0]} x={[100, 40]} className="col-12 col-md-6 ">
+          <Parallax y={[20, 0]} x={[60, 40]} className="col-12 col-md-6 ">
             <div className="homeban1">
               <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Are you allergic?</h></div>
               <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">Finding your allergen replacement ahead of starting a health challenge.</h></div>
@@ -234,13 +237,13 @@ function Home(props) {
       </div>
 
       <div className="container homeban">
-      <div className="homebanblank"></div>
+        <div className="homebanblank"></div>
         <div className="homebanblank"></div>
         <div className="row">
 
-          <Parallax y={[31, 0]} x={[-20, 60]} className="col-12 col-md-6 ">
+          <Parallax y={[20, 0]} x={[40, 60]} className="col-12 col-md-6 ">
             <div className="homeban1">
-              <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Start challenge now!</h></div>
+              <div style={{ textAlign: "center" }}><h style={{ fontSize: 40, fontFamily: 'ak', color: "#B8390E" }}>Lets's gain some challenges</h></div>
               <div style={{ textAlign: "center" }}><h style={{ fontSize: 20 }} className="homefont">Choosing a challenge and sticking at it. You will get a health body.</h></div>
             </div>
 
@@ -249,7 +252,7 @@ function Home(props) {
       </div>
 
       <div className="container homeban">
-      <div className="homebanblank"></div>
+        <div className="homebanblank"></div>
         <div className="row">
           <div className="col-12 col-md-2" style={{ textAlign: "center" }}></div>
           <div className="col-12 col-md-12" style={{ textAlign: "center" }}>
@@ -287,15 +290,6 @@ function Home(props) {
 
         </div>
       </div>
-      {/* <Parallax y={[0, 0]}>
-        <div className="container homeban1"></div>
-      </Parallax> */}
-
-
-
-
-
-
 
 
     </div>
