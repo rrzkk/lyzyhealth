@@ -764,8 +764,8 @@ function ChallengeCom(props) {
                                     id="p1"></img>
 
                                 <Popover placement="bottom" isOpen={p1} target="p1" >
-                                    <PopoverHeader>P</PopoverHeader>
-                                    <PopoverBody> B</PopoverBody>
+                                    <PopoverHeader>Why eating good? </PopoverHeader>
+                                    <PopoverBody>A good eating habits is the most efficient way to prevent nutritional deficiency. Eating well is fundamental to good health and well-being. Healthy eating helps us to maintain a healthy weight and reduces our risk of nutritional deficiency, high blood pressure, high cholesterol and the risk of developing cardiovascular disease and some cancers.</PopoverBody>
                                 </Popover>
                             </div>
                             <div className="col-6" style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
@@ -775,8 +775,8 @@ function ChallengeCom(props) {
                                 onMouseOut={() => toggleP2(!p2)}
                                 id="p2"></img>
                                 <Popover placement="bottom" isOpen={p2} target="p2" >
-                                    <PopoverHeader>P</PopoverHeader>
-                                    <PopoverBody> B</PopoverBody>
+                                    <PopoverHeader>Why exercise?</PopoverHeader>
+                                    <PopoverBody>Exercise can help your body absorb nutrients. And regular physical activity can improve your muscle strength and boost your endurance. Exercise delivers oxygen and nutrients to your tissues and helps your cardiovascular system work more efficiently. And when your heart and lung health improve, you have more energy to tackle daily chores.</PopoverBody>
                                 </Popover>
                             </div>
                         </div>
@@ -791,16 +791,16 @@ function ChallengeCom(props) {
                             onMouseOut={() => toggleP3(!p3)}
                             id="p3"></img>
                             <Popover placement="bottom" isOpen={p3} target="p3" >
-                                    <PopoverHeader>P</PopoverHeader>
-                                    <PopoverBody> B</PopoverBody>
+                                    <PopoverHeader>Step 1</PopoverHeader>
+                                    <PopoverBody>Sign up / Sign in</PopoverBody>
                                 </Popover>
                             <img src={require('./assets/san.png')} width="100px"
                             onMouseOver={() => toggleP5(!p5)}
                             onMouseOut={() => toggleP5(!p5)}
                             id="p5"></img>
                             <Popover placement="bottom" isOpen={p5} target="p5" >
-                                    <PopoverHeader>P</PopoverHeader>
-                                    <PopoverBody> B</PopoverBody>
+                                    <PopoverHeader>Step 3</PopoverHeader>
+                                    <PopoverBody>Adjust challenge's category and difficulty level to suit yourself. Add this challenge to your progress! You can add 1 challenge at a time.</PopoverBody>
                                 </Popover>
                             {/* <div className="col-12 col-md-6 ">
                         <i>Log in to play this game is recommonded</i><br /><br />
@@ -829,16 +829,16 @@ function ChallengeCom(props) {
                             onMouseOut={() => toggleP4(!p4)}
                             id="p4"></img>
                             <Popover placement="bottom" isOpen={p4} target="p4" >
-                                    <PopoverHeader>P</PopoverHeader>
-                                    <PopoverBody> B</PopoverBody>
+                                    <PopoverHeader>Step 2</PopoverHeader>
+                                    <PopoverBody>Pick a challenge, change it if you want a defferent one.</PopoverBody>
                                 </Popover>
                             <img src={require('./assets/si.png')} width="100px"
                             onMouseOver={() => toggleP6(!p6)}
                             onMouseOut={() => toggleP6(!p6)}
                             id="p6"></img>
                             <Popover placement="bottom" isOpen={p6} target="p6" >
-                                    <PopoverHeader>P</PopoverHeader>
-                                    <PopoverBody> B</PopoverBody>
+                                    <PopoverHeader>Step 4</PopoverHeader>
+                                    <PopoverBody>Click FINISH after you completed the challenge! You will receive one challenge point! You can also give up to change another challenge.</PopoverBody>
                                 </Popover>
                         </div>
                     </div>
