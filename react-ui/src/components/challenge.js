@@ -308,10 +308,11 @@ function ChallengeCom(props) {
         }
         else {
             return (
-                <div><b>Hi, {props.username.username}</b><br />
+                <div
+                    style={{ width: "fit-content", textAlign: "center" }}><b>Hi, {props.username.username}</b><br />
                     <b>You have finished {length} challenges</b><br /><br />
                     <b>Unlock new car by finishing more challenges</b><br /><br />
-                    
+
                     <Button color='warning' onClick={() => logOff()}>Log off</Button>
 
                 </div>);
@@ -354,19 +355,19 @@ function ChallengeCom(props) {
         //         </Table>
         //     );
         // }
-       
+
         let itemT = props.uc.slice(0, 10).map((el, index) => {
             console.log("grfgr");
-             
-                return (
-                    <tr>
-                        <th>{index + 1}</th>
-                        <td>{el.username}</td>
-                        <td>{el.count}</td>
-                    </tr>
-                )
-            
-           
+
+            return (
+                <tr>
+                    <th>{index + 1}</th>
+                    <td>{el.username}</td>
+                    <td>{el.count}</td>
+                </tr>
+            )
+
+
         });
         return (<>{itemT}</>);
     }
@@ -459,14 +460,37 @@ function ChallengeCom(props) {
     // toggleText2=props.toggleText2;
     // toggleText3=props.toggleText3;
 
+    const returnEatingOption = (eatingChallengelist) => {
+        return (eatingChallengelist[eatlvl - 1].map((el, index) => {
+            return (
+                <option value={index} >{el.challenge_desc}</option>
+            );
+        }));
+    }
+    // eatingChallengelist
+    const returnNoEatingOption = (noEatingChallengelist) => {
+        return (noEatingChallengelist[noeatlvl - 1].map((el, index) => {
+            return (
+                <option value={index}>{el.challenge_desc}</option>
+            );
+        }));
+    }
+    // noEatingChallengelist
+    const returnExcersiceOption = (noEatingCexerciseChallengelisthallengelist) => {
+        return (exerciseChallengelist[exerciselvl - 1].map((el, index) => {
+            return (
+                <option value={index}>{el.challenge_desc}</option>
+            );
+        }));
+    }
+    // exerciseChallengelist
+
 
     const Card1 = () => {
         return (<Card className="challengecard" >
             <Card.Body>
                 <FormGroup >
                     <div className='row'>
-                        <div className="col-12 col-md-10">
-                            <Label for="exampleSelect"><b>Select Food Categories</b></Label></div>
                         <div className="col-12 col-md-2">
                             <Card.Img src={require('../challengeassets/questionmark.png')} className='questionmark'
                                 onMouseOver={() => togglepopover4(!popover4)}
@@ -474,18 +498,34 @@ function ChallengeCom(props) {
                                 id='ques1'
                             ></Card.Img>
                         </div>
+                    </div>
+                    <div className='row'>
+                        <div className="col-12 col-md-6">
+                            <Label for="exampleSelect"><b>Select Food</b></Label></div>
+                        <div className="col-12 col-md-6">
+                            <Label for="exampleSelect"><b>Select Challenge</b></Label></div>
+
                         <Popover placement="down" isOpen={popover4} target="ques1">
                             <PopoverHeader>Why we take eating challenge?</PopoverHeader>
                             <PopoverBody>Our food category is designed following the guide of healthy eating pyramid. The Healthy Eating Pyramid is a simple visual guide to the types and proportion of foods that we should eat every day for good health.</PopoverBody>
                         </Popover>
                     </div>
-                    <Input type="select" name="select" id="exampleSelect" value={eatlvl2} onChange={(evt) => changelvl1(evt)} onPointerLeave={() => setEatingLength(eatingChallengelist[eatlvl - 1].length)} style={{ width: 150 }}>
-                        <option>vegetables</option>
-                        <option>fruits</option>
-                        <option>grain food</option>
-                        <option>meat and bean products</option>
-                        <option>dairy products</option>
-                    </Input>
+                    <div className='row'>
+                        <div div className="col-12 col-md-6">
+                            <Input type="select" name="select" id="exampleSelect" value={eatlvl2} onChange={(evt) => changelvl1(evt)} onPointerLeave={() => setEatingLength(eatingChallengelist[eatlvl - 1].length)} style={{ width: 150 }}>
+                                <option>vegetables</option>
+                                <option>fruits</option>
+                                <option>grain food</option>
+                                <option>meat and bean products</option>
+                                <option>dairy products</option>
+                            </Input>
+                        </div>
+                        <div div className="col-12 col-md-6">
+                            <Input type="select" name="select" id="exampleSelect" value={eatingNo} onChange={(evt) => setEatingNo(evt.target.value)} onPointerLeave={() => setEatingLength(eatingChallengelist[eatlvl - 1].length)} style={{ width: 150 }}>
+                                {returnEatingOption(eatingChallengelist)}
+                            </Input>
+                        </div>
+                    </div>
                 </FormGroup>
                 <Card.Title style={{ textAlign: "center" }}>{eatingChallengelist[eatlvl - 1][eatingNo].challenge_desc}</Card.Title>
                 <Card.Text style={{ textAlign: "center" }}><p><a>You need to eat </a>{eatingChallengelist[eatlvl - 1][eatingNo].quantity}</p>
@@ -519,8 +559,6 @@ function ChallengeCom(props) {
             <Card.Body>
                 <FormGroup>
                     <div className='row'>
-                        <div className="col-12 col-md-10">
-                            <Label for="exampleSelect"><b>Select Difficulty Level</b></Label></div>
                         <div className="col-12 col-md-2">
                             <Card.Img src={require('../challengeassets/questionmark.png')} className='questionmark'
                                 onMouseOver={() => togglepopover5(!popover5)}
@@ -528,17 +566,33 @@ function ChallengeCom(props) {
                                 id='ques2'
                             ></Card.Img>
                         </div>
+                    </div>
+                    <div className='row'>
+                        <div className="col-12 col-md-6">
+                            <Label for="exampleSelect"><b>Select Difficulty</b></Label></div>
+                        <div className="col-12 col-md-6">
+                            <Label for="exampleSelect"><b>Select Challenge</b></Label></div>
+
                         <Popover placement="down" isOpen={popover5} target="ques2">
                             <PopoverHeader>Why we take not eating challenge?</PopoverHeader>
                             <PopoverBody>This “no eating challenge” is designed to lower the frequency of eating junk food. Eating junk food on a regular basis can lead to an increased risk of obesity and chronic diseases. 41% of teenagers’ daily energy intake (kilojoules) comes from junk food. This means junk food is taking the place of other more nutritious foods in our diets. You will have stomach to eat more nutritious food if you eat less junk food.</PopoverBody>
                         </Popover>
                     </div>
-                    <Input type="select" name="select" id="exampleSelect" value={noeatlvl2} onChange={(evt) => changelvl3(evt)} style={{ width: 150 }}>
-                        <option>easy</option>
-                        <option>medium</option>
-                        <option>difficult</option>
+                    <div className='row'>
+                        <div className="col-12 col-md-6">
+                            <Input type="select" name="select" id="exampleSelect" value={noeatlvl2} onChange={(evt) => changelvl3(evt)} style={{ width: 150 }}>
+                                <option>easy</option>
+                                <option>medium</option>
+                                <option>difficult</option>
 
-                    </Input>
+                            </Input>
+                        </div>
+                        <div className="col-12 col-md-6">
+                            <Input type="select" name="select" id="exampleSelect" value={noEatingNo} onChange={(evt) => setNoEatingNo(evt.target.value)} style={{ width: 150 }}>
+                                {returnNoEatingOption(noEatingChallengelist)}
+
+                            </Input>
+                        </div></div>
                 </FormGroup>
                 <Card.Title style={{ textAlign: "center" }}>{noEatingChallengelist[noeatlvl - 1][noEatingNo].challenge_desc}</Card.Title>
                 <Card.Text style={{ textAlign: "center" }}>
@@ -576,8 +630,6 @@ function ChallengeCom(props) {
             <Card.Body>
                 <FormGroup>
                     <div className='row'>
-                        <div className="col-12 col-md-10">
-                            <Label for="exampleSelect"><b>Select Difficulty Level</b></Label></div>
                         <div className="col-12 col-md-2">
                             <Card.Img src={require('../challengeassets/questionmark.png')} className='questionmark'
                                 onMouseOver={() => togglepopover6(!popover6)}
@@ -585,17 +637,34 @@ function ChallengeCom(props) {
                                 id='ques3'
                             ></Card.Img>
                         </div>
+                    </div>
+                    <div className='row'>
+                        <div className="col-12 col-md-6">
+                            <Label for="exampleSelect"><b>Select Difficulty</b></Label></div>
+                        <div className="col-12 col-md-6">
+                            <Label for="exampleSelect"><b>Select Challenge</b></Label></div>
+
                         <Popover placement="down" isOpen={popover6} target="ques3">
                             <PopoverHeader>Why we take exercising challenge?</PopoverHeader>
                             <PopoverBody>This exercise challenge is designed for burning fat and increase appetite. Exercise can helps boost your metabolism, meaning you burn more calories all day long. You will have the stomach to eat more nutritious food.</PopoverBody>
                         </Popover>
                     </div>
-                    <Input type="select" name="select" id="exampleSelect" value={exerciselvl2} onChange={(evt) => changelvl2(evt)} onPointerLeave={() => setNoEatingLength(noEatingChallengelist[noeatlvl - 1].length)} style={{ width: 150 }} >
-                        <option>easy</option>
-                        <option>medium</option>
-                        <option>difficult</option>
 
-                    </Input>
+                    <div className='row'>
+                        <div className="col-12 col-md-6">
+                            <Input type="select" name="select" id="exampleSelect" value={exerciselvl2} onChange={(evt) => changelvl2(evt)} onPointerLeave={() => setNoEatingLength(noEatingChallengelist[noeatlvl - 1].length)} style={{ width: 150 }} >
+                                <option>easy</option>
+                                <option>medium</option>
+                                <option>difficult</option>
+
+                            </Input>
+                        </div>
+                        <div className="col-12 col-md-6">
+                            <Input type="select" name="select" id="exampleSelect" value={exerciseNo} onChange={(evt) => setExerciseNo(evt.target.value)} onPointerLeave={() => setNoEatingLength(noEatingChallengelist[noeatlvl - 1].length)} style={{ width: 150 }} >
+                                {returnExcersiceOption(exerciseChallengelist)}
+
+                            </Input>
+                        </div></div>
                 </FormGroup>
                 <Card.Title style={{ textAlign: "center" }}>{exerciseChallengelist[exerciselvl - 1][exerciseNo].challenge_desc}</Card.Title>
                 <Card.Text style={{ textAlign: "center" }}>
@@ -645,12 +714,13 @@ function ChallengeCom(props) {
                     </p></b>
                     </div>
                 </div>
-                <div className="row ">
+               
+            </div>
+            <div className="row ">
                     <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
                         <b>Why play this game?</b>
                     </div>
                 </div>
-            </div>
 
             <div className="container challengebg">
                 <div className="row" >
@@ -793,6 +863,7 @@ function ChallengeCom(props) {
             <div className="container challengebg">
                 <div className="row" style={{ justifyContent: "center" }}>
                     <div className="col-12 col-md-8 offset-md-2">
+                        <div>{yourrank(username, props.userchallenge.userchallenge.length)}</div>
                         <Table borderless>
                             <thead>
                                 <tr>
@@ -805,14 +876,14 @@ function ChallengeCom(props) {
                                 {rankinglist()}
                             </tbody>
                         </Table>
-                        <div>{yourrank(username, props.userchallenge.userchallenge.length)}</div>
+
                     </div>
                 </div>
             </div>
         </div>
 
     );
-    
+
 
 
 }
