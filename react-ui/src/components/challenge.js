@@ -62,6 +62,15 @@ function ChallengeCom(props) {
     const [popover5, togglepopover5] = useState(false);
     const [popover6, togglepopover6] = useState(false);
 
+    const [p1,toggleP1]=useState(false);
+    const [p2,toggleP2]=useState(false);
+    const [p3,toggleP3]=useState(false);
+    const [p4,toggleP4]=useState(false);
+    const [p5,toggleP5]=useState(false);
+    const [p6,toggleP6]=useState(false);
+  
+
+
 
     const eatingChallenge = newchallenges.filter(el => { return (el.type === 'eating') });
     const eatingChallengelist = [eatingChallenge.filter(el => el.level === 1),
@@ -714,36 +723,86 @@ function ChallengeCom(props) {
                     </p></b>
                     </div>
                 </div>
-               
-            </div>
-            <div className="row ">
-                    <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
-                        <b>Why play this game?</b>
-                    </div>
-                </div>
 
-            <div className="container challengebg">
-                <div className="row" >
-                    <div className="col-12 col-md-3">
-                        <img src={require('../challengeassets/parents.png')} className="racemap"></img>
-                    </div>
-                    <div className="col-12 col-md-8 offset-md-1">
-                        <p><b>A good eating habits is the most efficient way to prevent nutritional deficiency <br /><br /> Exercise can help your body absorb nutrients.
+            </div>
+
+
+            <div className="container challengebg" style={{ marginTop: 40 }}>
+                <div className="row">
+
+                    <div className="col-12 col-md-6">
+
+                        <div className="row ">
+                            <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
+                                <b>Why play this game?</b>
+                            </div>
+                        </div>
+                        <div className="row" style={{ display: "flex", justifyContent: "center" }}>
+                            {/*<div className="col-12 col-md-3">
+                            <img src={require('../challengeassets/parents.png')} className="racemap"></img>
+                        </div>
+                        <div className="col-12 col-md-8 offset-md-1">
+                            <p><b>A good eating habits is the most efficient way to prevent nutritional deficiency <br /><br /> Exercise can help your body absorb nutrients.
 
                         <br /> <br />
                         Our game provide you with food suggestions and exercise suggestions
                         <br /> <br />
                        You can play the game and see your progress along the way
                         </b></p>
+                        </div>*/}
+                            <p><b>Our game provide food suggestions and exercise suggestions</b></p>
+
+
+
+                        </div>
+                        <div className="row" style={{ display: "flex", justifyContent: "center" }}>
+                            <div className="col-6" style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
+                                <p><b>Why eating good?</b></p><br />
+                                <img src={require('./assets/bowl.png')} width="150px"
+                                    onMouseOver={() => toggleP1(!p1)}
+                                    onMouseOut={() => toggleP1(!p1)}
+                                    id="p1"></img>
+
+                                <Popover placement="bottom" isOpen={p1} target="p1" >
+                                    <PopoverHeader>P</PopoverHeader>
+                                    <PopoverBody> B</PopoverBody>
+                                </Popover>
+                            </div>
+                            <div className="col-6" style={{ display: "flex", alignItems: "center", flexDirection: "column" }}>
+                                <p><b>Why exercising?</b></p>
+                                <img src={require('./assets/running.png')} width="150px"
+                                onMouseOver={() => toggleP2(!p2)}
+                                onMouseOut={() => toggleP2(!p2)}
+                                id="p2"></img>
+                                <Popover placement="bottom" isOpen={p2} target="p2" >
+                                    <PopoverHeader>P</PopoverHeader>
+                                    <PopoverBody> B</PopoverBody>
+                                </Popover>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
-                <b>How to Play this game?</b>
-            </div>
-            <div className="container challengebg">
-                <div className="row">
-                    {/* <div className="col-12 col-md-6 ">
+                    <div className="col-12 col-md-6">
+                        <div className="col-6 allergy-title" style={{ textAlign: "center" }}>
+                            <b>How to Play this game?</b>
+                        </div>
+                        <div className="row" style={{ display: "flex", justifyContent: "center" }}>
+                            <img src={require('./assets/yi.png')} width="100px"
+                            onMouseOver={() => toggleP3(!p3)}
+                            onMouseOut={() => toggleP3(!p3)}
+                            id="p3"></img>
+                            <Popover placement="bottom" isOpen={p3} target="p3" >
+                                    <PopoverHeader>P</PopoverHeader>
+                                    <PopoverBody> B</PopoverBody>
+                                </Popover>
+                            <img src={require('./assets/san.png')} width="100px"
+                            onMouseOver={() => toggleP5(!p5)}
+                            onMouseOut={() => toggleP5(!p5)}
+                            id="p5"></img>
+                            <Popover placement="bottom" isOpen={p5} target="p5" >
+                                    <PopoverHeader>P</PopoverHeader>
+                                    <PopoverBody> B</PopoverBody>
+                                </Popover>
+                            {/* <div className="col-12 col-md-6 ">
                         <i>Log in to play this game is recommonded</i><br /><br />
                         <b>1. Pick a challenge below, change it if you want a different one.</b><br /><br />
                         <b>2. Adjust categories and difficulty levels to suit yourself.</b><br /><br />
@@ -755,16 +814,39 @@ function ChallengeCom(props) {
                     </div>
                     <div className="col-12 col-md-3 offset-md-2">
                         <img src={require('../challengeassets/note.png')} className="racemap"></img>
-                    </div> */}
-                    <div className="col-12 col-md-5 " style={{ textAlign: "center" }}>
-                        {loginstatus(username, props.userchallenge.userchallenge.length)}
-                    </div>
-                    <div className="col-12 col-md-7 ">
-                        <img src={require('../challengeassets/challengeintro.png')} className="racemap"></img>
+                    </div> 
+                            <div className="col-12 col-md-5 " style={{ textAlign: "center" }}>
+                                {loginstatus(username, props.userchallenge.userchallenge.length)}
+                            </div>
+                            <div className="col-12 col-md-7 ">
+                                <img src={require('../challengeassets/challengeintro.png')} className="racemap"></img>
 
+                            </div>*/}
+                        </div>
+                        <div className="row" style={{ display: "flex", justifyContent: "center" }}>
+                            <img src={require('./assets/er.png')} width="100px"
+                            onMouseOver={() => toggleP4(!p4)}
+                            onMouseOut={() => toggleP4(!p4)}
+                            id="p4"></img>
+                            <Popover placement="bottom" isOpen={p4} target="p4" >
+                                    <PopoverHeader>P</PopoverHeader>
+                                    <PopoverBody> B</PopoverBody>
+                                </Popover>
+                            <img src={require('./assets/si.png')} width="100px"
+                            onMouseOver={() => toggleP6(!p6)}
+                            onMouseOut={() => toggleP6(!p6)}
+                            id="p6"></img>
+                            <Popover placement="bottom" isOpen={p6} target="p6" >
+                                    <PopoverHeader>P</PopoverHeader>
+                                    <PopoverBody> B</PopoverBody>
+                                </Popover>
+                        </div>
                     </div>
                 </div>
+
+
             </div>
+
             <Modal isOpen={loginmodel} toggle={() => togglemodel(!loginmodel)} >
                 <Card >
                     <Card.Body>
